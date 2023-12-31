@@ -562,32 +562,148 @@ message = "Pi is approximately " + str(pi_int)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Methods}
 
-Methods
-    A method is a function that belongs to a specific object type (e.g., to \texttt{str}).
-    
-    Examples of string methods:
-    \begin{itemize}
-        \item \texttt{first\_name.upper()}
-        \item \texttt{first\_name.count("a")}
-        \item \texttt{first\_name.replace("a", "@")}
-    \end{itemize}
+Methods are functions that belong to specific object types, like strings (\texttt{str})
+
+\begin{block}{\textbf{Example of String Methods}}
+\begin{itemize}
+    \item \texttt{first\_name.upper()} - Changes a string to uppercase
+    \item \texttt{first\_name.count("a")} - Counts occurrences of a specific character
+    \item \texttt{first\_name.replace("a", "@")} - Replaces characters within a string
+\end{itemize}
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Composite Data Types and Structures}
+
+\begin{frame}[fragile]{Composite Data Types and Structures}
+
+\begin{itemize}
+
+\item Composite data structures in programming encompass various types that allow the combination of multiple elements or data types into a single unit
 
 
-Composite Types: Dict, List, Tuple
-    \textbf{Dict}
-    
-    Dicts (dictionaries) are mappings that contain "named" entries with associated values.
-    
-    \begin{verbatim}
-    person = {
-        "first_name": "John",
-        "last_name": "Doe",
-        "nationality": "Canada",
-        "birth_year": 1980
-    }
-    \end{verbatim}
+\item Some composite data structures include \textbf{lists, sets, tuples and dictionaries} 
+\smallskip
+
+\begin{enumerate}
+    \item \textbf{Lists} represent collections of elements, allowing duplicates and modification of their content $\rightarrow$ \texttt{[1, 2, 1, 'apple', 'banana']}\smallskip
+    \item \textbf{Sets} contain an unordered collection of unique elements, discarding  $\rightarrow$ duplicates \textbf{lists, sets, tuples and dictionaries} \smallskip
+    \item \textbf{Tuples} resemble lists but are immutable, meaning their elements cannot be altered once defined \smallskip
+    \item \textbf{Dictionaries} store key-value pairs, offering a mapping relationship between unique keys and corresponding values
+\end{enumerate}
+
+\end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+    \scriptsize
+\begin{block}{\textbf{Dictionaries}}
+    
+Dictionaries in Python, often referred to as hash maps in other programming languages, are mutable collections that store key-value pairs. They offer a mapping structure where each key is associated with a corresponding value
+
+\end{block}
+
+\begin{verbatim}
+person = {  "first_name": "Ricardo",
+            "last_name": "Chin",
+            "nationality": "Portuguese",
+            "age": 27            }
+\end{verbatim}
+
+\begin{exampleblock}{\textbf{Dictionary Characteristics}}
+    \begin{itemize}
+        \item Key-Value Mapping: Dictionaries map unique keys to specific values. The keys within a dictionary must be unique, but the values can be duplicates
+        \item Mutable and Unordered: Dictionaries are mutable, meaning their contents can be changed after creation. \underline{Any data type can be also stored}
+    \end{itemize}    
+\end{exampleblock}
+    
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries Operations}
+
+\begin{itemize}
+    \item \textbf{Creation} \\ \\
+    Dictionaries are created using curly braces {} and follow the syntax {key1: value1, key2: value2, ...}.
+    
+    \item \textbf{Accessing Values} \\ \\
+    Values within a dictionary are accessed by their corresponding keys using square brackets ([]) or the get() method
+
+\begin{verbatim}
+print(person["first_name"])  # Output: Ricardo
+print(person.get("age"))  # Output: 27
+\end{verbatim}
+    \\
+    \item \textbf{Accessing Values} \\ \\
+     Dictionaries are mutable, allowing the addition, modification, or deletion of key-value pairs
+
+    \item \textbf{ Iterating Through a Dictionary} \\ \\
+     Python provides ways to iterate through \texttt{keys}, \texttt{values}, or both simultaneously using loops or methods like \texttt{keys()}, \texttt{values()} and \texttt{items()}.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Lists}
+\scriptsize
+    
+\begin{block}{\textbf{Lists}}
+    
+Lists in Python are versatile and mutable collections that store ordered sequences of elements. They are denoted by square brackets [ ] and enable flexible operations for modification, insertion, deletion, and retrieval of elements
+
+\end{block}
+\begin{verbatim}
+primes = [2, 3, 5, 7, 11]           users = ["Alice", "Bob", "Charlie"]
+products = [        {"name": "IPhone 12", "price": 949},
+                    {"name": "Fairphone", "price": 419},
+                    {"name": "Pixel 5", "price": 799}            ]  \end{verbatim}
+
+\begin{exampleblock}{\textbf{List Characteristics}}
+    \begin{itemize}
+        \item Ordered Collection: Lists maintain the order of elements as they are added and allow indexing to access specific elements by their position within the list
+        \item Mutable: Elements can be modified, appended, removed, or replaced after creation. Operations like append(), insert() and pop() are common. \underline{Any data type can be stored}
+    \end{itemize}    
+\end{exampleblock}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Lists Operations}
+\scriptsize
+\begin{itemize}
+    \item \textbf{Accessing Elements} \\ \\ \smallskip
+    \begin{enumerate}
+        \item  Elements within a list are accessed using zero-based indexing \\
+    
+        \item  primes[0] accesses the first element, primes[-1] accesses the last element, and slicing primes[1:3] retrieves elements from index 1 up to, but not including, index 3
+
+    \end{enumerate}
+    \smallskip
+    
+    \item \textbf{Modifying Elements} \\ \\ \smallskip
+    Elements within lists can be modified directly by assignment
+
+    \begin{verbatim} 
+primes[0] = 13  
+primes[-1] = 'Ricardo'
+primes[1] = primes[0]
+    \end{verbatim}
+     \underline{Can you guess what happens?} \smallskip
+
+    \item \textbf{Accessing Values} \\ \\ \smallskip
+     Built-in list methods like append(), extend(), insert(), remove(), and pop() to manipulate lists are common. These methods enable various operations like adding elements, removing specific elements, or altering the list's structure
+
+\end{itemize}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -606,20 +722,6 @@ Composite Types: Dict, List, Tuple
     % Content for while and for loops
 \end{frame}
 
-\section{Functions}
-\begin{frame}{Functions}
-    % Content for functions
-\end{frame}
-
-\section{Code Quality and Linting}
-\begin{frame}{Code Quality and Linting}
-    % Content for code quality and linting
-\end{frame}
-
-\section{Debugging}
-\begin{frame}{Debugging}
-    % Content for debugging
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
