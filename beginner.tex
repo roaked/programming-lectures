@@ -1,0 +1,511 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 2.0 (March 8, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, % Set the default font size, options include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+	%t, % Uncomment to vertically align all slide content to the top of the slide, rather than the default centered
+	%aspectratio=169, % Uncomment to set the aspect ratio to a 16:9 ratio which matches the aspect ratio of 1080p and 4K screens and projectors
+]{beamer}
+
+\graphicspath{{Images/}{./}} % Specifies where to look for included images (trailing slash required)
+\usepackage{graphicx}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+%----------------------------------------------------------------------------------------
+%	SELECT LAYOUT THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of default layout themes which change the colors and layouts of slides. Below is a list of all themes available, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+\usetheme{Boadilla} %ok
+%\usetheme{CambridgeUS} %red
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen} % ok
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore} %good
+%\usetheme{Szeged} %good
+%\usetheme{Warsaw}
+
+%----------------------------------------------------------------------------------------
+%	SELECT COLOR THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{monarca}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{spruce}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with several font themes to easily change the fonts used in various parts of the presentation. Review the comments beside each one to decide if you would like to use it. Note that additional options can be specified for several of these font themes, consult the beamer documentation for more information.
+
+\usefonttheme{default} % Typeset using the default sans serif font
+%\usefonttheme{serif} % Typeset using the default serif font (make sure a sans font isn't being set as the default font if you use this option!)
+%\usefonttheme{structurebold} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in bold
+%\usefonttheme{structureitalicserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in italic serif
+%\usefonttheme{structuresmallcapsserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in small caps serif
+
+%------------------------------------------------
+
+%\usepackage{mathptmx} % Use the Times font for serif text
+\usepackage{palatino} % Use the Palatino font for serif text
+
+%\usepackage{helvet} % Use the Helvetica font for sans serif text
+\usepackage[default]{opensans} % Use the Open Sans font for sans serif text
+%\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
+%\usepackage[default]{lato} % Use the Lato font for sans serif text
+
+%----------------------------------------------------------------------------------------
+%	SELECT INNER THEME
+%----------------------------------------------------------------------------------------
+
+% Inner themes change the styling of internal slide elements, for example: bullet points, blocks, bibliography entries, title pages, theorems, etc. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+%----------------------------------------------------------------------------------------
+%	SELECT OUTER THEME
+%----------------------------------------------------------------------------------------
+
+% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%\setbeamertemplate{footline} % Uncomment this line to remove the footer line in all slides
+%\setbeamertemplate{footline}[page number] % Uncomment this line to replace the footer line in all slides with a simple slide count
+
+%\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[Python: Basic Constructs]{Introduction to Python Programming}
+\subtitle{Building the Foundation for Coding Success}
+\author[Ricardo Chin]{Ricardo Chin}
+
+\begin{document}
+\begin{frame}
+    \titlepage
+    \begin{figure}
+        \includegraphics[width=0.1\linewidth]{5848152fcef1014c0b5e4967}
+    \end{figure}
+    \frametitle{Workshop Details}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS SLIDE
+%----------------------------------------------------------------------------------------
+
+
+\begin{frame}
+	\frametitle{Presentation Overview}
+	
+	\tableofcontents
+	%\tableofcontents[pausesections] % Output the table of contents (break sections up across separate slides)
+\end{frame}
+
+\section{Language Overview}
+\begin{frame}{Use Cases}
+\begin{block}{Simple Syntax - Beginner Friendly}
+\begin{itemize}
+\item Basic syntax examples (indentation for blocks, simplicity of loops, etc.)
+\item Comparisons with other languages to showcase Python's readability
+\end{itemize}
+\end{block}
+\bigskip
+\begin{block}{Versatility in Different Domains}
+\begin{itemize}
+\item Specific use cases in scientific computing (NumPy, SciPy), web development (Django, Flask), GUI programming (Tkinter, PyQt)
+\item Real-world examples of companies or projects using Python in these domains
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Use Cases}
+
+\begin{block}{Discussion on the Standard Library and Packages}
+\begin{itemize}
+\item Popular third-party packages (e.g., Pandas, Matplotlib, Requests) and their significance in expanding Python's capabilities
+\item Comparisons with other languages to showcase Python's readability
+\end{itemize}
+\end{block}
+\bigskip
+\begin{block}{Community and Support:}
+\begin{itemize}
+\item Python's has an active community, diverse user base, and strong support through forums, tutorials, and online resources.
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Python Development and Versions}
+    \begin{itemize}
+        \item Python 3: Current version (e.g., 3.12) released annually in October
+        \bigskip
+        \item Python 2: Support ended in 2019; Despite the end of support, around 10\% of developers continued to use Python 2 for various reasons, including legacy codebases and migration challenges.
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Four Code Examples}
+    \small % Reduce font size
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{verbatim}
+# Python snippet 1
+for i in range(5):
+    print(i)
+        \end{verbatim}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{verbatim}
+# Python snippet 2
+x = 10
+if x > 5:
+    print("x is greater")
+        \end{verbatim}
+    \end{minipage}
+
+    \vspace{1em} % Add vertical space between rows
+
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{verbatim}
+# Python snippet 3
+def greet(name):
+    print("Hello, " + name)
+        \end{verbatim}
+    \end{minipage}
+    
+    \vspace{1em}
+    
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{verbatim}
+# Python snippet 4
+numbers = [1, 2, 3, 4, 5]
+squared = [x ** 2 
+           for x in numbers]
+print(squared)
+        \end{verbatim}
+    \end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Installation on Windows}
+
+    \textbf{Download from} \url{https://python.org} \smallskip
+    
+    \textbf{During installation:}
+    \begin{itemize}
+        \item Check the option "Add Python 3.x to PATH"
+    \end{itemize} \smallskip
+
+    \textbf{Verify the installation:}
+    \begin{itemize}
+        \item \texttt{python --version} should display the version number
+        \item \texttt{pip install requests} should successfully download and install 'requests'
+    \end{itemize} \smallskip
+
+    \textbf{Installation includes:}
+    \begin{itemize}
+        \item Python runtime for executing Python code
+        \item Interactive Python console
+        \item IDLE: simple development environment
+        \item PIP: package manager for installing extensions
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Interactive Python Console}
+
+\textbf{Options for Running Python Code:}
+    \begin{itemize}
+        \item Writing programs as files and executing them (e.g., GUI, web apps, data processing)
+        \item Typing code into an interactive console or notebook for quick calculations, experimentation, data exploration, or analysis
+    \end{itemize} \smallskip
+
+
+\textbf{Options Available:}
+    \begin{itemize}
+        \item Local installation and usage
+        \item Online notebooks like Jupyter
+    \end{itemize} \smallskip
+
+\textbf{Launching Python Console:}
+    \begin{itemize}
+        \item Via command prompt: `python`
+        \item Using the Start Menu (e.g., Python 3.12)
+    \end{itemize} \smallskip
+    
+\textbf{Quitting:}
+    \begin{itemize}
+        \item Exiting with `exit()`
+    \end{itemize}
+\end{frame} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Variables}
+\begin{frame}[fragile]{Variables}
+    \textbf{Variables} \smallskip
+    \begin{itemize}
+        \item Examples \smallskip
+            \begin{verbatim}
+birth_year = 1970
+current_year = 2020
+age = current_year - birth_year
+            \end{verbatim}\smallskip
+        \item Naming conventions and rules \smallskip
+            \begin{itemize}
+                \item Names written in lowercase with words separated by underscores \smallskip
+                \item Consist of letters, digits, and underscores only
+            \end{itemize}
+     \bigskip
+
+
+   \item Overwriting Variables \smallskip
+    \begin{verbatim}
+name = "John"
+name = "Jane"
+a = 3
+a = a + 1
+    \end{verbatim}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Basic Data Structures}
+\begin{frame}{Basic Data Structures: dict, list, tuple}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Help and Documentation}
+\begin{frame}{Help and Documentation}
+    % Content for using help and documentation
+\end{frame}
+
+\section{Built-ins and the Standard Library}
+\begin{frame}{Built-ins and Standard Library}
+    % Content for built-in functions and standard library
+\end{frame}
+
+\section{Control Structures}
+\begin{frame}{Control Structures}
+    % Content for if/else and loops
+\end{frame}
+
+\subsection{if / else}
+\begin{frame}{if / else}
+    % Content for if / else
+\end{frame}
+
+\subsection{Loops (while, for)}
+\begin{frame}{Loops}
+    % Content for while and for loops
+\end{frame}
+
+\section{Functions}
+\begin{frame}{Functions}
+    % Content for functions
+\end{frame}
+
+\section{Code Quality and Linting}
+\begin{frame}{Code Quality and Linting}
+    % Content for code quality and linting
+\end{frame}
+
+\section{Debugging}
+\begin{frame}{Debugging}
+    % Content for debugging
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION BODY SLIDES
+%----------------------------------------------------------------------------------------
+%------------------------------------------------
+
+% \subsection{Paragraphs and Lists}
+
+% \begin{frame}
+% 	\frametitle{Paragraphs of Text}
+	
+% 	Sed iaculis \alert{dapibus gravida}. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.
+	
+% 	\bigskip % Vertical whitespace
+	
+% 	% Quote example
+% 	\begin{quote}
+% 		Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio.\\
+% 		--- Someone, somewhere\ldots
+% 	\end{quote}
+	
+% 	\bigskip % Vertical whitespace
+	
+% 	Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis.
+% \end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+% \subsection{Blocks}
+
+% \begin{frame}
+% 	\frametitle{Blocks of Highlighted Text}
+	
+% 	\begin{block}{Block Title}
+% 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue.
+% 	\end{block}
+	
+% 	\begin{exampleblock}{Example Block Title}
+% 		Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan.
+% 	\end{exampleblock}
+	
+% 	\begin{alertblock}{Alert Block Title}
+% 		Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+% 	\end{alertblock}
+	
+% 	\begin{block}{} % Block without title
+% 		Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci.
+% 	\end{block}
+% \end{frame}
+
+%------------------------------------------------
+
+% \subsection{Columns}
+
+% \begin{frame}
+% 	\frametitle{Multiple Columns}
+% 	\framesubtitle{Subtitle} % Optional subtitle
+	
+% 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+% 		\begin{column}{0.45\textwidth} % Left column width
+% 			\textbf{Heading}
+% 			\begin{enumerate}
+% 				\item Statement
+% 				\item Explanation
+% 				\item Example
+% 			\end{enumerate}
+% 		\end{column}
+% 		\begin{column}{0.5\textwidth} % Right column width
+% 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
+
+%------------------------------------------------
+
+% \section{Table and Figure Examples}
+
+% \subsection{Table}
+
+% \begin{frame}
+% 	\frametitle{Table}
+% 	\framesubtitle{Subtitle} % Optional subtitle
+	
+% 	\begin{table}
+% 		\begin{tabular}{l l l}
+% 			\toprule
+% 			\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+% 			\midrule
+% 			Treatment 1 & 0.0003262 & 0.562 \\
+% 			Treatment 2 & 0.0015681 & 0.910 \\
+% 			Treatment 3 & 0.0009271 & 0.296 \\
+% 			\bottomrule
+% 		\end{tabular}
+% 		\caption{Table caption}
+% 	\end{table}
+% \end{frame}
+
+%------------------------------------------------
+
+\end{document} 
