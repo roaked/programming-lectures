@@ -973,15 +973,30 @@ type(), read()
 
     \vspace{1em} % Add vertical space between rows
 
-    \begin{minipage}[t]{0.45\textwidth}
+    \begin{minipage}[t]{0.35\textwidth}
     \textbf{Other Useful Libraries}
         \begin{verbatim}
 random
 math
 datetime
-os (operating system, file system)
+os (op. system)
 collections
 shutil
+        \end{verbatim}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.64\textwidth}
+    \textbf{/ Use Case Examples}
+        \begin{verbatim}
+import random
+print(random.randint(1, 6))
+print(random.choice(["heads", "tails"]))
+
+file = open("message.txt", "w")
+file.write("hello\n")
+file.write("world\n")
+file.close()
+
         \end{verbatim}
     \end{minipage}
 
