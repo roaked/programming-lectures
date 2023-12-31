@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Beamer Presentation
 % LaTeX Template
 % Version 2.0 (March 8, 2022)
@@ -6,100 +6,59 @@
 % This template originates from:
 % https://www.LaTeXTemplates.com
 %
-% Author:
-% Vel (vel@latextemplates.com)
-%
 % License:
 % CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%% MADE BY RICARDO CHIN %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% December 2023
+%
+% github.com/roaked 
+% ricardochin.com
+%                                                          git: MIT License
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-	11pt, % Set the default font size, options include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
-	%t, % Uncomment to vertically align all slide content to the top of the slide, rather than the default centered
-	%aspectratio=169, % Uncomment to set the aspect ratio to a 16:9 ratio which matches the aspect ratio of 1080p and 4K screens and projectors
+	11pt, 
 ]{beamer}
 
-\graphicspath{{Images/}{./}} % Specifies where to look for included images (trailing slash required)
+\graphicspath{{Images/}{./}} 
 \usepackage{graphicx}
-\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+\usepackage{booktabs} 
+% Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
 
 %----------------------------------------------------------------------------------------
 %	SELECT LAYOUT THEME
 %----------------------------------------------------------------------------------------
 
-% Beamer comes with a number of default layout themes which change the colors and layouts of slides. Below is a list of all themes available, uncomment each in turn to see what they look like.
-
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
 \usetheme{Boadilla} %ok
 %\usetheme{CambridgeUS} %red
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
 %\usetheme{Goettingen} % ok
-%\usetheme{Hannover}
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}
-%\usetheme{Luebeck}
-%\usetheme{Madrid}
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}
-%\usetheme{PaloAlto}
-%\usetheme{Pittsburgh}
-%\usetheme{Rochester}
 %\usetheme{Singapore} %good
 %\usetheme{Szeged} %good
-%\usetheme{Warsaw}
 
 %----------------------------------------------------------------------------------------
 %	SELECT COLOR THEME
 %----------------------------------------------------------------------------------------
 
-% Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
 
-%\usecolortheme{albatross}
-%\usecolortheme{beaver}
-%\usecolortheme{beetle}
-%\usecolortheme{crane}
-%\usecolortheme{dolphin}
-%\usecolortheme{dove}
-%\usecolortheme{fly}
-%\usecolortheme{lily}
-%\usecolortheme{monarca}
-%\usecolortheme{seagull}
 \usecolortheme{seahorse}
-%\usecolortheme{spruce}
-%\usecolortheme{whale}
-%\usecolortheme{wolverine}
+
 
 %----------------------------------------------------------------------------------------
 %	SELECT FONT THEME & FONTS
 %----------------------------------------------------------------------------------------
 
-% Beamer comes with several font themes to easily change the fonts used in various parts of the presentation. Review the comments beside each one to decide if you would like to use it. Note that additional options can be specified for several of these font themes, consult the beamer documentation for more information.
-
-\usefonttheme{default} % Typeset using the default sans serif font
-%\usefonttheme{serif} % Typeset using the default serif font (make sure a sans font isn't being set as the default font if you use this option!)
-%\usefonttheme{structurebold} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in bold
-%\usefonttheme{structureitalicserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in italic serif
-%\usefonttheme{structuresmallcapsserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in small caps serif
-
-%------------------------------------------------
+\usefonttheme{default}
 
 %\usepackage{mathptmx} % Use the Times font for serif text
 \usepackage{palatino} % Use the Palatino font for serif text
-
 %\usepackage{helvet} % Use the Helvetica font for sans serif text
 \usepackage[default]{opensans} % Use the Open Sans font for sans serif text
 %\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
@@ -108,8 +67,6 @@
 %----------------------------------------------------------------------------------------
 %	SELECT INNER THEME
 %----------------------------------------------------------------------------------------
-
-% Inner themes change the styling of internal slide elements, for example: bullet points, blocks, bibliography entries, title pages, theorems, etc. Uncomment each theme in turn to see what changes it makes to your presentation.
 
 %\useinnertheme{default}
 \useinnertheme{circles}
@@ -121,8 +78,6 @@
 %	SELECT OUTER THEME
 %----------------------------------------------------------------------------------------
 
-% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
-
 %\useoutertheme{default}
 %\useoutertheme{infolines}
 %\useoutertheme{miniframes}
@@ -133,14 +88,9 @@
 %\useoutertheme{tree}
 %\useoutertheme{smoothtree}
 
-%\setbeamertemplate{footline} % Uncomment this line to remove the footer line in all slides
-%\setbeamertemplate{footline}[page number] % Uncomment this line to replace the footer line in all slides with a simple slide count
-
-%\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
-
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 %	PRESENTATION INFORMATION
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 
 \title[Python: Basic Constructs]{Introduction to Python Programming}
 \subtitle{Building the Foundation for Coding Success}
@@ -155,9 +105,9 @@
     \frametitle{Workshop Details}
 \end{frame}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 %	TABLE OF CONTENTS SLIDE
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 
 
 \begin{frame}
@@ -185,8 +135,7 @@
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Use Cases}
 
 \begin{block}{Discussion on the Standard Library and Packages}
@@ -206,7 +155,7 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}{Python Development and Versions}
@@ -349,11 +298,242 @@ a = a + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Basic Data Structures}
-\begin{frame}{Basic Data Structures: dict, list, tuple}
+\section{Basic Data Types and Structures}
+\begin{frame}{Basic Data Types}
+
+\textbf{Primitive Types:} \bigskip
+    \begin{enumerate}
+        \item \textbf{int (Integer):} Represents whole numbers, positive or negative, without any decimal points \smallskip
+        \item \textbf{float (Floating-point Number):} Represents decimal numbers, including fractions and exponential values \smallskip
+        \item \textbf{str (String):} Represents a sequence of characters enclosed in single or double quotes \smallskip
+        \item \textbf{bool (Boolean):} Represents the truth values \texttt{True} or \texttt{False} \smallskip
+        \item \textbf{None:} Denotes the absence of a value or lack of data. It's a unique type in Python \smallskip
+    \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Basic Data Types}
+
+\textbf{Integer (int)}
+
+    \begin{itemize}
+            \item Represents whole numbers, e.g., -5, 0, 100
+            \item Supports arithmetic operations: addition, subtraction, multiplication, division, and exponentiation
+            \item Operations involving integers produce integer results unless divided (/), which produces a float
+    \end{itemize} \bigskip
+
+\textbf{Floating-point Number (float)}
+
+    \begin{itemize}
+            \item Represents decimal numbers, e.g., 3.14, -0.002, 7.0
+            \item Supports all arithmetic operations similar to integers
+            \item Division (/) always produces a float
+            \item Precision in floating-point arithmetic might lead to slight rounding errors in calculations
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Integer and Float Data Types}
+
+
+\begin{block}{\textbf{Integer Operations}}
+What happens when you perform integer operations like division or exponentiation in Python?
+\end{block}
+
+\pause
+\begin{itemize}
+    \item Integer division using `/` returns a float, and exponentiation uses the `**` operator
+\end{itemize}
+\pause
+
+\begin{block}{\textbf{What if we'd like to round up or truncate our float value?}}
+Imagine you have worked 27 overhours, and you would like to know how much that translates to available days
+\end{block}
+\pause
+
+
+
+\begin{verbatim}
+days = total_hours // 7.7  # Available days
+# For total_hours = 27, days = 27 // 7.7 = 3 days
+\end{verbatim}
+\begin{verbatim}
+remaining_hours = total_days % 7  # Remaining hours
+# For total_days = 27, hours = 27 % 7.7 = 3.89 hours
+\end{verbatim}
 
 \end{frame}
 
+\begin{frame}[fragile]{Integer and Float}
+
+\begin{block}{\textbf{Integer Limits}}
+ Are there any practical limitations to the size of integers in Python? How does Python handle large integers?
+\end{block}
+\pause
+\begin{itemize}
+    \item In Python, integers have arbitrary precision, meaning they can grow as large as the available memory allows without practical limitations
+\end{itemize}
+
+\begin{block}{\textbf{Scientific Notation}}
+ How does Python handle very large or very small floating-point numbers?
+\end{block}
+\pause
+\begin{itemize}
+    \item Python uses scientific notation for very large or very small floating-point numbers $\rightarrow$ 1.5e6 represents 1.5 $ \cdot 10^{6}$ (1 500 000)
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{String and Boolean}
+
+\textbf{String (str)}
+    \begin{itemize}
+        \item Represents sequences of characters enclosed in single (' ') or double (" ") quotes 
+        \item Supports various string manipulation operations: concatenation, slicing, formatting, etc $\rightarrow$ in built functions will be seen later
+        \item Immutable - once created, a string cannot be modified in place
+    \end{itemize}
+
+
+\textbf{Boolean (bool)}
+    \begin{itemize}
+        \item Represents truth values: \texttt{True} or \texttt{False}.
+        \item Essential for conditional and logical operations: if statements, while loops, etc
+        \item Results of logical expressions (e.g., comparisons) are of type bool
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{String and Boolean}
+
+\begin{block}{\textbf{Questions}}
+\begin{enumerate}
+    \item What is the difference between single, double and triple quotes?
+    \item String concatenation?
+    \item How can I do string indexing and slicing?
+\end{enumerate}
+\end{block}
+
+\pause
+
+\textbf{Answers}
+\begin{enumerate}
+    \item No significant difference between single and double quotes, except when the string itself contains one of these characters. Triple quotes are used for multiline strings
+    \item String concatenation in Python involves using the + operator to combine two strings together (str1 + " " + str2)
+    \item String indexing allows accessing individual characters within a string using indices. Slicing retrieves substrings by specifying a range of indices. \textbf{Indexing in Python starts at index i = 0!}
+\end{enumerate}
+    
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{String and Boolean}
+\small % Reduce font size
+ 
+\textbf{String Concatenation}   
+\begin{verbatim}
+s1, s2, name = "Hello", "World", Ricardo
+result = s1 + " " + s2 + ". This is " + name 
+\end{verbatim}
+
+\textbf{F-strings}   
+\begin{verbatim}
+ans = f"{s1} {s2}. This is {name}!"
+\end{verbatim}
+
+\textbf{String Indexing and Slicing}
+\hfill \textsc{$\rightarrow$ Notice the index}
+
+\begin{verbatim}
+text = "Python"
+char = text[2]  # Accessing the character 't' at index 2
+substring = text[1:4]  # Slicing to get 'yth'
+\end{verbatim}
+
+
+\begin{exampleblock}{\textbf{Tip}}
+    Commonly utilized built in functions consist on slice(), strip(), reverse(), lower() and upper() for string operations
+\end{exampleblock}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{String and Boolean}
+
+\textbf{How do we include characters like " in a string?}
+
+\begin{verbatim}
+string_t = "When you drink, you must say: "Prost!""
+\end{verbatim}
+
+Python treats the sequence $\backslash"$ like a single quote
+
+\begin{verbatim}
+string_t = "When you drink, you must say: \"Prost!\""
+\end{verbatim}
+
+You can also introduce line breaks using \backslash n 
+
+\begin{verbatim}
+res = "string_t\nstring_t"
+print(res)
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{None}
+\textbf{None Data Type}
+    \begin{itemize}
+        \item Denotes the absence of a value or lack of data
+        \item Often used to reset variables
+        \item Evaluates to False in boolean contexts
+    \end{itemize}
+
+\begin{verbatim}
+first_name = "Ricardo"
+middle_name = None
+last_name = "Chin"
+\end{verbatim}
+\begin{exampleblock}{\textbf{Tip}}
+    Best practices include using None as a default value for optional function arguments or variables to signify missing values
+\end{exampleblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Building Data Types}
+
+
+\textbf{None}
+    \begin{itemize}
+        \item Denotes the absence of a value or lack of data
+        \item Often used to reset variables
+        \item Evaluates to False in boolean contexts
+    \end{itemize}
+\end{frame}
+
+
+\begin{alertblock}{\textbf{Operations}}
+    \begin{itemize}
+        \item \textbf{Type Coercion and Mixed Operations}  $\rightarrow$ When an operation involves both integers and floats, Python automatically promotes integers to floats to maintain precision
+        \item \textbf{Casting between Integers and Floats} $\rightarrow$ Explicit casting can be done using int() and float() functions \smallskip
+
+        \begin{enumerate}
+            \item Integer to Float: float(5) converts the integer 5 to the float 5.0.
+            \item Float to Integer: int(3.7) converts the float 3.7 to the integer 3
+        \end{enumerate}
+    \end{itemize}
+\end{alertblock}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
