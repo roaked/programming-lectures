@@ -654,7 +654,7 @@ print(person.get("age"))  # Output: 27
     
 \begin{block}{\textbf{Lists}}
     
-Lists in Python are versatile and mutable collections that store ordered sequences of elements. They are denoted by square brackets [ ] and enable flexible operations for modification, insertion, deletion, and retrieval of elements
+Lists or arrays are versatile and mutable collections that store ordered sequences of elements. They are denoted by square brackets [ ] and enable flexible operations for modification, insertion, deletion, and retrieval of elements
 
 \end{block}
 \begin{verbatim}
@@ -702,6 +702,125 @@ primes[1] = primes[0]
     \item \textbf{Accessing Values} \\ \\ \smallskip
      Built-in list methods like append(), extend(), insert(), remove(), and pop() to manipulate lists are common. These methods enable various operations like adding elements, removing specific elements, or altering the list's structure
 
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}[fragile]{Sets}
+\scriptsize
+    
+\begin{block}{\textbf{Sets}}
+    
+Sets are unique, unordered collections of elements that \textbf{do not allow duplicates}. They're denoted by curly braces {} or using the set() constructor. Primarily used for membership testing, eliminating duplicates from sequences, and performing set operations like union, intersection, and difference
+
+\end{block}
+\begin{verbatim}
+# Creating a set directly
+my_set = {1, 2, 3, 4, 5}
+
+# Creating a set using the set() constructor
+another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
+
+\begin{exampleblock}{\textbf{Sets Characteristics}}
+    \begin{itemize}
+        \item \textbf{Uniqueness}: Sets contain unique elements, ensuring that each element appears only once within the set
+        \item \textbf{Hash-based Storage}: Internally, sets utilize hash tables to store elements, allowing for quick membership checks and set operations
+    \end{itemize}    
+\end{exampleblock}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Sets Operations}
+\scriptsize
+\begin{itemize}
+    \item \textbf{Adding Elements} \\ \\ \smallskip
+
+    Elements can be added to a set using the add() method or by using the union ($\vert$) operator
+    
+\begin{verbatim} 
+my_set = {1, 2, 3}
+my_set.add(4)  # Adds the element 4 to my_set
+\end{verbatim}
+
+    \item \textbf{Removing Elements}
+    
+    Elements can be removed using the remove() or discard() methods
+    
+    \begin{verbatim} 
+my_set.remove(2)  # Removes the element 2 from my_set
+    \end{verbatim}
+
+    \item \textbf{Sets Tasks} \\ \\ \smallskip
+
+     Sets support various operations like union ($\vert$), intersection (\&), difference (-), and symmetric difference (\^{})
+     
+\begin{verbatim} 
+union_set = my_set | another_set  # Union 
+
+intersection_set = my_set & another_set  # Intersection 
+
+difference_set = my_set - another_set  
+# Elements in my_set but not in another_set
+
+symmetric_difference_set = my_set ^ another_set  
+# Elements in either my_set or another_set but not both
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}[fragile]{Tuples}
+\scriptsize
+    
+\begin{block}{\textbf{Tuples}}
+
+    Tuples
+
+\end{block}
+\begin{verbatim}
+# Creating a set directly
+my_set = {1, 2, 3, 4, 5}
+
+# Creating a set using the set() constructor
+another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
+
+\begin{exampleblock}{\textbf{Tuples Characteristics}}
+    \begin{itemize}
+        \item a
+        \item b
+    \end{itemize}    
+\end{exampleblock}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Tuples Operations}
+\scriptsize
+\begin{itemize}
+    \item a
+
+
+
+    
 \end{itemize}
 \end{frame}
 
