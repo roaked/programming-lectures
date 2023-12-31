@@ -92,7 +92,7 @@
 %	PRESENTATION INFORMATION
 %----------------------------------------------------------------------------------
 
-\title[Python: Basic Constructs]{Introduction to Python Programming}
+\title[Python: Early Fundamentals]{Introduction to Python Programming}
 \subtitle{Building the Foundation for Coding Success}
 \author[Ricardo Chin]{Ricardo Chin}
 
@@ -598,6 +598,33 @@ Methods are functions that belong to specific object types, like strings (\textt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}[fragile]{Object Mutation}
+\begin{itemize}
+
+\item  Certain objects can undergo direct mutation, such as through methods like \texttt{.append()} or \texttt{.pop()}
+
+\item Mutable objects like lists and dicts fall under this category
+
+\item On the flip side, several basic objects, once created, remain immutable. Yet, they can be substituted by other objects as needed. It includes integers, floats, strings, booleans and tuples
+\end{itemize}
+
+
+\begin{alertblock}{Summary}
+    In the following slides, I will describe briefly each of the composite data structures. For more info:
+    \begin{enumerate}
+
+\item  \begin{verbatim}
+help(list)
+\end{verbatim}
+
+\item  \url{https://docs.python.org/3/library/index.html} (Google: "python library")
+    \end{enumerate}
+\end{alertblock}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[fragile]{Dictionaries}
     \scriptsize
 \begin{block}{\textbf{Dictionaries}}
@@ -643,7 +670,7 @@ print(person.get("age"))  # Output: 27
      Dictionaries are mutable, allowing the addition, modification, or deletion of key-value pairs
 
     \item \textbf{ Iterating Through a Dictionary} \\ \\
-     Python provides ways to iterate through \texttt{keys}, \texttt{values}, or both simultaneously using loops or methods like \texttt{keys()}, \texttt{values()} and \texttt{items()}.
+     Python provides ways to iterate through \texttt{keys}, \texttt{values}, or both simultaneously using loops or methods like \texttt{keys()}, \texttt{values()} and \texttt{items()}
 \end{itemize}
 \end{frame}
 
@@ -831,22 +858,37 @@ another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
     % Content for if/else and loops
 \end{frame}
 
-\subsection{if / else}
-\begin{frame}{if / else}
-    % Content for if / else
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interesting References}
+\begin{frame}[fragile]{Interesting References}
+\begin{exampleblock}{\textbf{Books}}
+    
+\begin{itemize}
+
+
+\item \href{https://automatetheboringstuff.com/}{Automate the Boring Stuff with Python by Al Sweigart}
+
+\item \href{http://greenteapress.com/thinkpython2/thinkpython2.pdf}{Think Python, 2nd Edition by Allen B. Downey}
+
+\item \href{https://www.py4e.com/book.php}{Python for Everybody by Dr. Charles Severance}
+
+\end{itemize}
+\end{exampleblock}
+
+\begin{exampleblock}{\textbf{Online Courses and Tutorials}}
+
+\begin{itemize}
+
+\item \href{https://www.codecademy.com/learn/learn-python-3}{Codecademy - Beginner Course}
+
+\item \href{https://learnxinyminutes.com/docs/python/}{Learn X in Y Minutes - Python}
+
+\item \href{https://ehmatthes.github.io/pcc_2e/cheat_sheets/cheat_sheets/}{Python Cheat Sheets by Eric Matthes}
+\end{itemize}
+\end{exampleblock}
 \end{frame}
-
-\subsection{Loops (while, for)}
-\begin{frame}{Loops}
-    % Content for while and for loops
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 
 
 
