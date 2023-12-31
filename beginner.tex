@@ -887,6 +887,63 @@ another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{First Program}
+\small
+\begin{frame}[fragile]{First Python Program}
+
+We'll create a file called \texttt{greeting.py}
+
+Our program will ask the user their name and greet them
+
+\pause
+
+
+\begin{verbatim}
+print("What is your name?")
+name = input() # input will always return a string
+\end{verbatim}
+
+Okay..now we wrote our name, how do we display the result?
+
+\pause
+\begin{verbatim}
+print("Nice to meet you, " + name)
+\end{verbatim}
+
+For increasing readability, we might want to add comments to our code.
+Comments start with # and describe code functionality.
+Typically placed above the code they explain.
+
+\begin{verbatim}
+# Determine the length of the name
+name_length = len(name)
+\end{verbatim}
+
+To execute the program type the command line \texttt{python greeting.py} on the terminal or the green play button in VS Code
+    
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Exercises}
+
+
+\begin{itemize}
+    \item Write a program which asks the user for their name. It should respond with the number of letters in the user's name
+
+    For this purpose use the function \texttt{len(...)} to determine the length of a string
+
+    \item Write a program called \texttt{age.py} which will ask the user for their birth year and will respond with the user's age in the year 2022
+
+    \item Write a program called \texttt{sum.py} which will ask the user for N numbers and will do the same of numbers in the range from 1 to N
+
+    \item Write a program called \texttt{length\_of\_concatenation.py} which will ask the user for 2 strings, concatenate them and afterwards will return the length of the concatenated strings
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Control Structures}
 \begin{frame}{Control Structures}
