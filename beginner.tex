@@ -314,7 +314,6 @@ a = a + 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Basic Data Types}
-
 \textbf{Integer (int)}
 
     \begin{itemize}
@@ -389,7 +388,6 @@ remaining_hours = total_days % 7  # Remaining hours
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{String and Boolean}
-
 \textbf{String (str)}
     \begin{itemize}
         \item Represents sequences of characters enclosed in single (' ') or double (" ") quotes 
@@ -458,7 +456,7 @@ substring = text[1:4]  # Slicing to get 'yth'
 
 
 \begin{exampleblock}{\textbf{Tip}}
-    Commonly utilized built in functions consist on slice(), strip(), reverse(), lower() and upper() for string operations
+    \textbf{String Operations:} slice(), strip(), reverse(), lower() and upper()
 \end{exampleblock}
 
 \end{frame}
@@ -511,17 +509,8 @@ last_name = "Chin"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Building Data Types}
-
-
-\textbf{None}
-    \begin{itemize}
-        \item Denotes the absence of a value or lack of data
-        \item Often used to reset variables
-        \item Evaluates to False in boolean contexts
-    \end{itemize}
-\end{frame}
-
+\begin{frame}[fragile]{Variable Conversions}
+    
 
 \begin{alertblock}{\textbf{Operations}}
     \begin{itemize}
@@ -535,19 +524,72 @@ last_name = "Chin"
     \end{itemize}
 \end{alertblock}
 
+\begin{verbatim}
+freedom = True and some_function()
 
+pi = 3.1415
+pi_int = int(pi)
+message = "Pi is approximately " + str(pi_int)
+\end{verbatim}
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Help and Documentation}
-\begin{frame}{Help and Documentation}
-    % Content for using help and documentation
+\section{Functions}
+\begin{frame}[fragile]{Functions}
+    Functions are like specialized tools that perform specific tasks
+    
+    \begin{block}{\textbf{Example of Predefined Functions}}
+    \begin{itemize}
+        \item \texttt{len()} - Calculates the length of a string or list
+        \item \texttt{id()} - Retrieves a unique ID for an object
+        \item \texttt{type()} - Identifies the type of an object
+        \item \texttt{print()} - Displays information on the screen
+    \end{itemize}
+    \end{block}
+    
+    A function can be passed the so-called input parameters and produce a result (a return value)
+    
+    \begin{block}{\textbf{Example of Input / Output Usage}}
+    \begin{itemize}
+        \item \texttt{len()} - Takes a string or list as input, returns the count
+        \item \texttt{print()} - Receives various types of inputs but doesn't specifically return a value
+    \end{itemize}
+    \end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Methods}
+
+Methods
+    A method is a function that belongs to a specific object type (e.g., to \texttt{str}).
+    
+    Examples of string methods:
+    \begin{itemize}
+        \item \texttt{first\_name.upper()}
+        \item \texttt{first\_name.count("a")}
+        \item \texttt{first\_name.replace("a", "@")}
+    \end{itemize}
+
+
+Composite Types: Dict, List, Tuple
+    \textbf{Dict}
+    
+    Dicts (dictionaries) are mappings that contain "named" entries with associated values.
+    
+    \begin{verbatim}
+    person = {
+        "first_name": "John",
+        "last_name": "Doe",
+        "nationality": "Canada",
+        "birth_year": 1980
+    }
+    \end{verbatim}
 \end{frame}
 
-\section{Built-ins and the Standard Library}
-\begin{frame}{Built-ins and Standard Library}
-    % Content for built-in functions and standard library
-\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Control Structures}
 \begin{frame}{Control Structures}
