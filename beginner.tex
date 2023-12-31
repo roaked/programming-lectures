@@ -268,6 +268,41 @@ print(squared)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{frame}{Integrated Development Environments (IDEs)}
+\begin{exampleblock}{\textbf{Available Open-source IDEs}}
+\begin{itemize}
+    \item VS Code 
+
+    \item PyCharm
+
+    \item Spyder
+\end{itemize}
+\end{exampleblock}\bigskip
+
+\textbf{VS Code Setup}
+
+\begin{itemize}
+    \item Installation:
+    \begin{enumerate}
+        \item  Open the extensions view from the left sidebar (fifth icon)
+        \item Search and install the extension named "Python" by Microsoft
+    \end{enumerate} \bigskip
+    
+    \item Registering Python Installation with VS Code:
+    \begin{enumerate}
+        \item Open the command palette (F1 or Ctrl + Shift + P)
+        \item Search for \texttt{"Python: Select Interpreter."}
+        \item Choose the desired Python version (usually only one available)
+     \end{enumerate}
+
+     
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Variables}
 \begin{frame}[fragile]{Variables}
     \textbf{Variables} \smallskip
@@ -280,11 +315,9 @@ age = current_year - birth_year
             \end{verbatim}\smallskip
         \item Naming conventions and rules \smallskip
             \begin{itemize}
-                \item Names written in lowercase with words separated by underscores \smallskip
+                \item Written in lowercase with words separated by underscores \smallskip
                 \item Consist of letters, digits, and underscores only
             \end{itemize}
-     \bigskip
-
 
    \item Overwriting Variables \smallskip
     \begin{verbatim}
@@ -293,6 +326,8 @@ name = "Jane"
 a = 3
 a = a + 1
     \end{verbatim}
+
+    \item \textbf{Printing using print(\texttt{variable\_name})}
     \end{itemize}
 \end{frame}
 
