@@ -185,27 +185,79 @@
 
 Keyword \texttt{is} checks whether two names refer to the same object
 
-\vspace{.2cm}
+\vspace{.4cm}
 
-\begin{minipage}[t]{0.45\textwidth}
+\begin{minipage}[t]{0.30\textwidth}
 \begin{verbatim}
-a = [1, 2]
-b = a
-x = [1, 2]
-
-a == b # True
-a is b # True
-a == x # True
-a is x # False
+    a = [1, 2]
+    b = a
+    x = [1, 2]
+    
+    a == b # True
+    a is b # True
+    a == x # True
+    a is x # False
 \end{verbatim}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.45\textwidth}
+\begin{minipage}[t]{0.50\textwidth}
+As \texttt{None} is a singleton, we can check for it via \texttt{is None}
 
-aa
+\begin{verbatim}
+if a is None:
+    print("a is None")
+\end{verbatim}
 
 \end{minipage}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{BoolType} %change
+
+\textbf{BoolType}
+\vspace{.2cm}
+\begin{itemize}
+    \item The \texttt{bool} type is a built-in data type representing truth values.
+    \item It has two possible values: \texttt{True} and \texttt{False}
+\end{itemize}
+
+\begin{minipage}[t]{0.30\textwidth}
+\begin{verbatim}
+a = True
+if a:
+    print('hello')
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \begin{verbatim}
+x, y = 10, 20
+is_greater = x > y   # False
+if is_greater:
+    print("x greater than y")
+else:
+    print("x not greater than y")
+    \end{verbatim}
+\end{minipage}
+
+Booleans are a subset of integers (subclass of int) where \texttt{True} behaves as 1 and \texttt{False} as 0 in numerical contexts
+
+\centering
+\vspace{.4cm}
+\texttt{False + True # 1}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Numbers} %change
+
+
+
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
