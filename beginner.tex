@@ -372,7 +372,7 @@ age = 27 + 1
 
 
 \begin{block}{\textbf{Integer Operations}}
-What happens when you perform integer operations like division or exponentiation in Python?
+What data type do you receive when you perform integer operations like division or exponentiation in Python? How would you do it?
 \end{block}
 
 \pause
@@ -382,7 +382,7 @@ What happens when you perform integer operations like division or exponentiation
 \pause
 
 \begin{block}{\textbf{What if we'd like to round up or truncate our float value?}}
-Imagine you have worked 27 overhours, and you would like to know how much that translates to available days
+Imagine you have worked 27 overhours and you would like to know how much that translates to available days. How do you do it?
 \end{block}
 \pause
 
@@ -1004,13 +1004,115 @@ file.close()
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Control Structures}
 \begin{frame}{Control Structures}
-    % Content for if/else and loops
+Control structures are essential components in programming languages that enable the control flow of a program
+
+\begin{block}{\textbf{Control Structures}}
+\begin{itemize}
+\item if / else statements
+\item loops
+\begin{itemize}
+    \item while loop
+    \item do while loop
+    \item for loop (counting loop)
+    \item foreach loop
+\end{itemize}
+\end{itemize}
+
+\end{block}
+
+The structure is usually pretty straightforward
+
+\begin{itemize}
+\item if ... else ...
+\item loops
+\begin{itemize}
+    \item while
+    \item for ... in ...
+    \item for ... in range(...)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Comparisons}
+To utilize \texttt{if} and \texttt{while} statements, comparisons between values are necessary
+
+\begin{verbatim}
+    a = 1
+    b = 0
+    
+    print(a == b)  # Is a equal to b?
+    print(a != b)  # Is a not equal to b?
+    print(a < b)   # Is a less than b?
+    print(a > b)   # Is a greater than b?
+    print(a <= b)  # Is a less than or equal to b?
+    print(a >= b)  # Is a greater than or equal to b?
+
+\end{verbatim}
+
+Comparisons yield boolean values \texttt{True / False}. We can capture this outcome in a variable
+
+\begin{verbatim}
+    # Checking if 'age' is 18 or older
+    is_adult = age >= 18  
+\end{verbatim}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Comparisons}
+It is possible to combine comparisons using \texttt{and, or} and \texttt{not}
+
+\begin{verbatim}
+if age >= 18 and country == "Austria":
+    print("May drink alcohol.")
+
+if temperature < -15 or temperature > 40:
+    print("Extreme weather!")
+
+if shopping_basket not None:
+    print("There are still items left.")
+
+name = "Alice"
+other_name = "Bob
+
+print(name == other_name) # Are names identical?
+print("Alli" in name)     # Does the text contain "Alli"?
+print("Ali" not in name)  # Does the text contain "Ali"?
+\end{verbatim}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Comparisons}
+\texttt{if statements} help computers decide what to do based on certain conditions. It's like giving the computer a set of instructions
+
+\begin{verbatim}
+if age >= 18 and country == "Austria":
+    print("May drink alcohol.")
+
+if temperature < -15 or temperature > 40:
+    print("Extreme weather!")
+
+if shopping_basket not None:
+    print("There are still items left.")
+
+name = "Alice"
+other_name = "Bob
+
+print(name == other_name) # Are names identical?
+print("Alli" in name)     # Does the text contain "Alli"?
+print("Ali" not in name)  # Does the text contain "Ali"?
+\end{verbatim}
+
 \end{frame}
 
 
@@ -1047,58 +1149,6 @@ file.close()
 
 
 
-
-%----------------------------------------------------------------------------------------
-%	PRESENTATION BODY SLIDES
-%----------------------------------------------------------------------------------------
-%------------------------------------------------
-
-% \subsection{Paragraphs and Lists}
-
-% \begin{frame}
-% 	\frametitle{Paragraphs of Text}
-	
-% 	Sed iaculis \alert{dapibus gravida}. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.
-	
-% 	\bigskip % Vertical whitespace
-	
-% 	% Quote example
-% 	\begin{quote}
-% 		Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio.\\
-% 		--- Someone, somewhere\ldots
-% 	\end{quote}
-	
-% 	\bigskip % Vertical whitespace
-	
-% 	Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis.
-% \end{frame}
-
-%------------------------------------------------
-
-%------------------------------------------------
-
-% \subsection{Blocks}
-
-% \begin{frame}
-% 	\frametitle{Blocks of Highlighted Text}
-	
-% 	\begin{block}{Block Title}
-% 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue.
-% 	\end{block}
-	
-% 	\begin{exampleblock}{Example Block Title}
-% 		Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan.
-% 	\end{exampleblock}
-	
-% 	\begin{alertblock}{Alert Block Title}
-% 		Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-% 	\end{alertblock}
-	
-% 	\begin{block}{} % Block without title
-% 		Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci.
-% 	\end{block}
-% \end{frame}
-
 %------------------------------------------------
 
 % \subsection{Columns}
@@ -1121,31 +1171,5 @@ file.close()
 % 		\end{column}
 % 	\end{columns}
 % \end{frame}
-
-%------------------------------------------------
-
-% \section{Table and Figure Examples}
-
-% \subsection{Table}
-
-% \begin{frame}
-% 	\frametitle{Table}
-% 	\framesubtitle{Subtitle} % Optional subtitle
-	
-% 	\begin{table}
-% 		\begin{tabular}{l l l}
-% 			\toprule
-% 			\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-% 			\midrule
-% 			Treatment 1 & 0.0003262 & 0.562 \\
-% 			Treatment 2 & 0.0015681 & 0.910 \\
-% 			Treatment 3 & 0.0009271 & 0.296 \\
-% 			\bottomrule
-% 		\end{tabular}
-% 		\caption{Table caption}
-% 	\end{table}
-% \end{frame}
-
-%------------------------------------------------
 
 \end{document} 
