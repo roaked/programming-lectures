@@ -1322,28 +1322,65 @@ while num <= 5:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{frame}[fragile]{While Loops}
 
 \begin{alertblock}{\textbf{Exercises}}
 \begin{itemize}
-    \item Exercise 1: Prints numbers from 0 to 9 in separate lines
-    \item Exercise 2: Calculate the cumulative sum of numbers from 0 to 9
-    \item Exercise 3: Create multiplication table of 5
-    \item Exercise 4: Print a pattern using loops
-        \begin{verbatim}
-            1
-            12
-            123
-            1234
-            12345
-        \end{verbatim}
-    \item Exercise 5: Print the duplicates of a given list [3, 4, 3, 5, 6, 7, 8, 5]
-    \item Exercise 6: Print the first 5 terms of the Fibonacci Series
+    \item Exercise 1: Do a countdown from 10 to 0
+    \item Exercise 2: Create a simple guessing game
+    \item Exercise 3: Find the highest number in a list
+    \item Exercise 4: Count and print the number of occurrences of a specific letter ('a') in a string \texttt{"apple and banana are fruits"}
+    \item Exercise 5: Create an infinite loop of "Hello world!" prints
+    \item Exercise 6: Create a team list program
+    \begin{center}
+    \begin{verbatim}
+        Register a person or "X" to quit: 
+        Ricardo
+        
+        Your team consists of:
+        ["Anand", "Ricardo", "Simon"]
+    \end{verbatim}
+    \end{center}
 \end{itemize}    
 \end{alertblock}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Break Statement}
+
+The \texttt{break} statement is a control flow statement used to terminate the execution of a loop prematurely
+
+\begin{verbatim}
+    while True:
+    if condition:
+        break  # Terminate loop if condition is met
+    # Other statements
+\end{verbatim}
+
+When encountered within a loop (such as \texttt{for} or \texttt{while}), the \texttt{break} statement causes the loop to immediately stop iterating
+
+\begin{verbatim}
+    while True: # cause infinite loop
+        guess = int(input("Enter a number (0 to exit): "))
+        if guess == 0:
+            print("Exiting the loop.")
+            break
+        else:
+            print(f"You entered: {guess}")
+\end{verbatim}
+
+\texttt{break} is particularly useful when the loop needs to end before its natural completion based on a specific condition
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Program Structure}
+\begin{frame}[fragile]{Program Structure}
+
+
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
