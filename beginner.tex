@@ -1438,16 +1438,16 @@ Statements can span multiple lines by enclosing them in parentheses \texttt{()} 
 \end{block}
 
 \begin{verbatim}
-a = (2 + 3 + 4 + 5 + 6 +
-     7 + 8 + 9 + 10)
+                a = (2 + 3 + 4 + 5 + 6 +
+                     7 + 8 + 9 + 10)
 \end{verbatim}
 
 \centering
 \texttt{()} or alternatively using newline \texttt{\backslash}
 
 \begin{verbatim}
-a = 2 + 3 + 4 + 5 + 6 + \
-    7 + 8 + 9 + 10
+                a = 2 + 3 + 4 + 5 + 6 + \
+                    7 + 8 + 9 + 10
 \end{verbatim}
 \end{frame}
 
@@ -1487,10 +1487,125 @@ a = 2 + 3 + 4 + 5 + 6 + \
 
 \begin{frame}[fragile]{Defining Functions}
 
-\begin{enumerate}
-    
-\end{enumerate}
+\textbf{Syntax} --- \textsc{def function\_name(parameters)}
 
+\begin{verbatim}
+    def average(a, b):
+    m = (a + b) / 2
+    return m
+\end{verbatim}
+
+\textbf{Usage} --- Functions encapsulate reusable blocks of code, performing specific tasks
+
+\begin{alertblock}{Exercises}
+    \begin{itemize}   
+        \item \textbf{Calculating Area}: Create a function to calculate the area of a rectangle or circle
+        \item \textbf{Converter}: Develop a function that converts temperature between Fahrenheit and Celsius
+        \item \textbf{String Manipulation}: Write a function that reverses a given string
+        \item \textbf{List Operations}: Create a function to find the maximum or minimum number in a list    
+    \end{itemize} 
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Variable Scope}
+
+\textbf{Function Scope} --- Variables defined within a function have local scope, separate from variables defined outside the function
+
+\begin{verbatim}
+m = "Hello, world"
+
+def average(a, b):
+    m = (a + b) / 2
+    return m
+
+x = average(1, 2)
+print(m)  # Prints "Hello, world" as the function creates a local 'm'
+
+\end{verbatim}
+
+\textbf{Read Access} --- Functions can access variables from the outer scope, but modifications create local variables
+
+\vspace{.5cm}
+
+\textbf{Immutable vs. Mutable} --- Immutable types (like strings) cannot be modified in place; assigning creates a new local variable
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Function Exercises}
+
+\begin{alertblock}{Function Exercises}
+    \begin{enumerate}
+        \item Leap Year Check: Verify if a given year is a leap year based on certain criteria
+        \item Prime Number Check: Determine whether a number is a prime number or not
+        \item Finding Prime Numbers: Create a function that returns all prime numbers within a specified interval
+        \item Fibonacci Number Calculation: Compute Fibonacci numbers within a given range
+        \item Lottery Numbers Generation: Generate a list of random lottery numbers
+        \item Yes/No Question Function: Create a function that asks a yes/no question and returns True or False
+    \end{enumerate}
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Modules, Packages and Libraries}
+
+\textbf{Module} --- A module is a file containing Python code that defines variables, functions, and classes. It can be imported and used in other Python files. \textbf{Example:} \texttt{math}, \texttt{os}, \texttt{random}
+
+\vspace{.5cm}
+
+\textbf{Package} --- A package is a directory that contains multiple Python modules, typically accompanied by an \_\_init\_\_.py file to indicate it's a package. \textbf{Example:} \texttt{numpy }, \texttt{pandas }, \texttt{matplotlib}
+
+\vspace{.5cm}
+
+
+\begin{block}{\textbf{Examples Imports}}
+    \begin{itemize}
+        \item \textbf{Module Import} --- \texttt{import urllib.request}
+        \item \textbf{Function Import} --- \texttt{from urllib.request import urlopen}
+        \item \textbf{Object Import} --- \texttt{import sys}
+    \end{itemize}
+\end{block}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Local Modules, PIP and PyPi}
+
+\begin{block}{\textbf{Importing Local Modules}}
+Local modules are Python files created and used within the same project
+
+\begin{verbatim}
+    def greet(name):
+    return f"Hello, {name}!"
+\end{verbatim}
+
+\begin{verbatim}
+    import my_module
+    print(my_module.greet("Alice"))
+\end{verbatim}
+
+To create a local module, save a Python file \texttt{(.py)} and import its contents in another Python file using import
+\end{block}
+
+\vspace{.2cm}
+
+\textbf{PyPI (Python Package Index)} --- PyPI is the official repository for Python packages, hosting thousands of installable Python packages/modules
+
+\vspace{.2cm}
+
+\textbf{PIP (Python Package Manager)} --- PIP is a package manager for Python, used to install, manage, and remove Python packages from PyPI
 
 \end{frame}
 
