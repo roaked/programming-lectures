@@ -869,38 +869,44 @@ symmetric_difference_set = my_set ^ another_set
 \scriptsize
     
 \begin{block}{\textbf{Tuples}}
-
-    Tuples
-
+ Tuples are ordered collections of elements, similar to lists, but they are immutable, meaning their contents cannot be modified after creation. Tuples are denoted by parentheses () and can contain various data types, including integers, strings, floats, other tuples, etc
 \end{block}
 \begin{verbatim}
-# Creating a set directly
-my_set = {1, 2, 3, 4, 5}
-
-# Creating a set using the set() constructor
-another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
+# Creating a tuple
+my_tuple = (1, 'apple', 3.5, (4, 5, 6))
+\end{verbatim}
 
 \begin{exampleblock}{\textbf{Tuples Characteristics}}
     \begin{itemize}
-        \item a
-        \item b
+        \item \textbf{Ordered Sequence}: Maintain order of elements, allowing access via indexing
+        \item \textbf{Immutable Nature}: Elements cannot be changed, added, or removed
+        \item \textbf{Flexible Data Types}: Can hold elements of different data types within the same structure, similar to lists
     \end{itemize}    
 \end{exampleblock}
 
-
 \end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[fragile]{Tuples Operations}
 \scriptsize
 \begin{itemize}
-    \item a
+    \item \textbf{Accessing Elements}: Elements within a tuple are accessed using zero-based indexing or slicing. For example, my\_tuple[0] accesses the first element, my\_tuple[-1] accesses the last element, and slicing my\_tuple[1:3] retrieves elements from index 1 up to, but not including, index 3
 
+    \vspace{.5cm}
 
+    \begin{verbatim}
+# Accessing elements in a tuple
+print(my_tuple[1])  # Output: 'apple'
+    \end{verbatim}
 
+    \item \textbf{Tuple Methods}: Tuples have limited methods due to their immutability. However, they have methods like \texttt{count()} and \texttt{index()} for counting occurrences and finding the index of elements within the tuple
+
+    \begin{verbatim}
+# Tuple methods
+print(my_tuple.count('apple'))  # Counts occurrences of 'apple' 
+print(my_tuple.index(3.5))  # Returns the index of 3.5 
+    \end{verbatim}
     
 \end{itemize}
 \end{frame}
