@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 2.0 (March 8, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%% MADE BY RICARDO CHIN %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% December 2023
+%
+% github.com/roaked 
+% ricardochin.com
+%                                                          git: MIT License
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, 
+]{beamer}
+
+\graphicspath{{Images/}{./}} 
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
+% Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+\tikzset{
+    myarrow/.style={
+        draw,
+        fill=orange,
+        single arrow,
+        minimum height=3.5ex,
+        single arrow head extend=1ex
+    }
+}
+\newcommand{\arrowup}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
+}
+\newcommand{\arrowdown}{%
+\tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	SELECT LAYOUT THEME
+%----------------------------------------------------------------------------------------
+
+\usetheme{Boadilla} %ok
+%\usetheme{CambridgeUS} %red
+%\usetheme{Goettingen} % ok
+%\usetheme{Singapore} %good
+%\usetheme{Szeged} %good
+
+%----------------------------------------------------------------------------------------
+%	SELECT COLOR THEME
+%----------------------------------------------------------------------------------------
+
+
+\usecolortheme{seahorse}
+
+
+%----------------------------------------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%----------------------------------------------------------------------------------------
+
+\usefonttheme{default}
+
+%\usepackage{mathptmx} % Use the Times font for serif text
+\usepackage{palatino} % Use the Palatino font for serif text
+%\usepackage{helvet} % Use the Helvetica font for sans serif text
+\usepackage[default]{opensans} % Use the Open Sans font for sans serif text
+%\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
+%\usepackage[default]{lato} % Use the Lato font for sans serif text
+
+%----------------------------------------------------------------------------------------
+%	SELECT INNER THEME
+%----------------------------------------------------------------------------------------
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+%----------------------------------------------------------------------------------------
+%	SELECT OUTER THEME
+%----------------------------------------------------------------------------------------
+
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%----------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------
+
+\title[Python: Early Fundamentals]{Intermediate Workshop to Python Programming}
+\subtitle{Building the Foundation for Coding Success}
+\author[Ricardo Chin]{Ricardo Chin}
+
+\begin{document}
+\begin{frame}
+    \titlepage
+    \begin{figure}
+        \includegraphics[width=0.1\linewidth]{5848152fcef1014c0b5e4967}
+    \end{figure}
+    \frametitle{Workshop Details}
+\end{frame}
+
+%----------------------------------------------------------------------------------
+%	TABLE OF CONTENTS SLIDE
+%----------------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Presentation Overview}
+	
+	\tableofcontents
+	%\tableofcontents[pausesections] % Output the table of contents (break sections up across separate slides)
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Data Types} %change
+\begin{frame}[fragile]{Data Types in Depth} %change
+
+\begin{center}
+--- Previously in \textsc{Python Programming} ---
+
+\vspace{.25cm}
+\arrowdown
+\end{center}
+
+\begin{itemize}
+    \item \texttt{int}: Whole numbers without decimal points
+    \item \texttt{float}: Numbers with decimal points
+    \item \texttt{bool}: Represents the truth values \texttt{True} or \texttt{False}
+    \item \texttt{NoneType} (\texttt{None}): Represents absence of a value (or null)
+    \item \texttt{string}: Ordered sequence of characters 
+\end{itemize}
+
+\vspace{.2cm}
+
+\textbf{Collections}
+\begin{itemize}
+    \item \texttt{list}: Ordered and mutable sequence of elements.
+    \item \texttt{tuple}: Ordered and immutable sequence of elements.
+    \item \texttt{dict}: Unordered collection of key-value pairs.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{NoneType} %change
+
+\textbf{NoneType}
+\begin{itemize}
+    \item \texttt{None} is a Singleton --- there is only ever a single instance of it inside a running Python program
+    \item Multiple variables may refer to that same instance
+\end{itemize}
+
+\vspace{.2cm}
+
+\textbf{Comparisons using Keyword \texttt{"is"}}
+
+\vspace{.2cm}
+
+Keyword \texttt{is} checks whether two names refer to the same object
+
+\vspace{.2cm}
+
+\begin{minipage}[t]{0.45\textwidth}
+\begin{verbatim}
+a = [1, 2]
+b = a
+x = [1, 2]
+
+a == b # True
+a is b # True
+a == x # True
+a is x # False
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+
+aa
+
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interesting References}
+\begin{frame}[fragile]{Interesting References}
+\begin{exampleblock}{\textbf{Books}}
+    
+\begin{itemize}
+
+
+\item \href{https://automatetheboringstuff.com/}{Automate the Boring Stuff with Python by Al Sweigart}
+
+\item \href{http://greenteapress.com/thinkpython2/thinkpython2.pdf}{Think Python, 2nd Edition by Allen B. Downey}
+
+\item \href{https://www.py4e.com/book.php}{Python for Everybody by Dr. Charles Severance}
+
+\end{itemize}
+\end{exampleblock}
+
+\begin{exampleblock}{\textbf{Online Courses and Tutorials}}
+
+\begin{itemize}
+
+\item \href{https://www.codecademy.com/learn/learn-python-3}{Codecademy - Beginner Course}
+
+\item \href{https://learnxinyminutes.com/docs/python/}{Learn X in Y Minutes - Python}
+
+\item \href{https://ehmatthes.github.io/pcc_2e/cheat_sheets/cheat_sheets/}{Python Cheat Sheets by Eric Matthes}
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{The End}
+
+\centering
+
+\Huge Thank you!
+
+\end{frame}
+
+
+%------------------------------------------------
+
+% \subsection{Columns}
+
+% \begin{frame}
+% 	\frametitle{Multiple Columns}
+% 	\framesubtitle{Subtitle} % Optional subtitle
+	
+% 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+% 		\begin{column}{0.45\textwidth} % Left column width
+% 			\textbf{Heading}
+% 			\begin{enumerate}
+% 				\item Statement
+% 				\item Explanation
+% 				\item Example
+% 			\end{enumerate}
+% 		\end{column}
+% 		\begin{column}{0.5\textwidth} % Right column width
+% 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
+
+\end{document} 
