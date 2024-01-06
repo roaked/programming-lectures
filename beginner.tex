@@ -1092,28 +1092,122 @@ print("Ali" not in name)  # Does the text contain "Ali"?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{Comparisons}
+\begin{frame}[fragile]{If-statements}
 \texttt{if statements} help computers decide what to do based on certain conditions. It's like giving the computer a set of instructions
 
 \begin{verbatim}
-if age >= 18 and country == "Austria":
-    print("May drink alcohol.")
+number = 27 
 
-if temperature < -15 or temperature > 40:
-    print("Extreme weather!")
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
 
-if shopping_basket not None:
-    print("There are still items left.")
-
-name = "Alice"
-other_name = "Bob
-
-print(name == other_name) # Are names identical?
-print("Alli" in name)     # Does the text contain "Alli"?
-print("Ali" not in name)  # Does the text contain "Ali"?
 \end{verbatim}
 
+\begin{exampleblock}{\textbf{How does it work?}}
+\begin{itemize}
+
+    \item Checks if number is even by using the modulus operator \texttt{\%}
+    \item If the remainder of \texttt{number / 2} is \texttt{0}, it prints "The number is even."
+    \item If not, it prints "The number is odd."
+\end{itemize}
+\end{exampleblock}
+
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{If, elif and else Statements}
+For multiple conditions to check: \texttt{if, elif and else} are used. The computer goes through each condition, executing the first one that's true
+
+\begin{verbatim}
+if number < 0:
+    print("The number is negative.")
+elif number == 0:
+    print("The number is zero.")
+elif number % 2 == 0:
+    print("The number is divisible by 2.")
+else:
+    print("The number doesn't fall into any category.")
+\end{verbatim}
+
+\begin{block}{\textbf{Code Blocks}}
+\begin{itemize}
+    \item Code block is a group of statements that are executed together when a condition (like an \texttt{if statement}) is true
+    \item The colon \texttt{:} signifies the start of a code block, and the indented lines following the colon are considered part of that block
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{If, elif and else Statements}
+
+\begin{alertblock}{\textbf{Exercise: Coin Flip}}
+Simulate coin flipping via \texttt{random.choice(["heads", "tails"])}
+
+Let the user guess the outcome and tell them if they were right
+\end{alertblock}
+
+\pause
+
+\begin{verbatim}
+
+import random
+
+# Simulating coin flipping and user guess
+coin_outcome = random.choice(["heads", "tails"])
+user_guess = input("Guess the outcome (heads or tails): ")
+
+# Checking if the user's guess matches the outcome
+if user_guess.lower() == coin_outcome:
+    print("Congratulations! Your guess was correct.")
+else:
+    print(f"Sorry, the coin landed on {coin_outcome}.")
+    print("Your guess was incorrect.")
+
+
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{For Loops}
+
+\texttt{For} loop is like a helpful assistant that goes through a list of items, one by one, and performs a set of instructions for each item.
+
+\begin{verbatim}
+
+names = ["Alice", "Bob", "Ricardo"]
+
+for name in names:
+    print("Hello, " + name + "!")
+
+\end{verbatim}
+
+\begin{exampleblock}{\textbf{How does it work?}}
+    \begin{itemize}
+        \item The \texttt{for} loop starts by saying, "Hey Python, let's go through each name in the \texttt{names} list."
+        \item For each name, the loop performs the action inside its block of code. In this case, it says hello to each person by printing "Hello, [name]!"
+    \end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{For Loops}
+
+\begin{exampleblock}{\textbf{What is happening?}}
+    \begin{itemize}
+        \item \texttt{name} is like a placeholder that takes on the value of each item in the \texttt{names} list, one at a time
+        \item The loop repeats the code block for every item in the list until it reaches the end
+    \end{itemize}
+\end{exampleblock}
+\end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
