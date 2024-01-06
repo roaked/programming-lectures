@@ -31,7 +31,26 @@
 \graphicspath{{Images/}{./}} 
 \usepackage{graphicx}
 \usepackage{booktabs} 
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
 % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+\tikzset{
+    myarrow/.style={
+        draw,
+        fill=orange,
+        single arrow,
+        minimum height=3.5ex,
+        single arrow head extend=1ex
+    }
+}
+\newcommand{\arrowup}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
+}
+\newcommand{\arrowdown}{%
+\tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
+}
+
 
 %----------------------------------------------------------------------------------------
 %	SELECT LAYOUT THEME
@@ -1377,11 +1396,72 @@ When encountered within a loop (such as \texttt{for} or \texttt{while}), the \te
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Program Structure}
-\begin{frame}[fragile]{Program Structure}
+\begin{frame}[fragile]{Pass Statement}
 
+
+\texttt{Pass} statement is used as a placeholder for an empty code block where Python syntax requires a statement but no action is needed
+
+\begin{center}
+    \arrowdown
+\end{center}
+
+\begin{block}{\textbf{Empty Codeblocks}}
+\begin{verbatim}
+# TODO: warn the user if path doesn't exist
+if not os.path.exists(my_path):
+    pass
+\end{verbatim}
+\end{block}
+
+\texttt{if condition: pass} indicates to "do nothing" when a certain condition is met
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Statements Across Lines}
+
+Statements can span multiple lines by enclosing them in parentheses \texttt{()} without the need for line continuation characters.
+
+\begin{center}
+    \arrowdown
+\end{center}
+
+\begin{block}{\textbf{Long Assignments}}
+\texttt{a = (2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)} can be written across multiple lines for readability
+\end{block}
+
+\begin{verbatim}
+a = (2 + 3 + 4 + 5 + 6 +
+     7 + 8 + 9 + 10)
+\end{verbatim}
+
+\centering
+\texttt{()} or alternatively using newline \texttt{\backslash}
+
+\begin{verbatim}
+a = 2 + 3 + 4 + 5 + 6 + \
+    7 + 8 + 9 + 10
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Positional and Keyword Parameters}
+
+\begin{enumerate}
+    \item \textbf{Positional Parameters}: Passed based on their position in the function call
+
+    \textbf{Example}: open("myfile.txt", "w", -1, "utf-8"), where "myfile.txt" is the file name, "w" is the mode, -1 might be the buffer size, and "utf-8" is the encoding.
+
+
+    \item \textbf{Keyword Parameters}: Passed with a keyword and value, allowing flexibility and clarity
+
+    \textbf{Example}: open("myfile.txt", encoding="utf-8", mode="w"), explicitly defining the encoding and mode
+\end{enumerate}
+
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1414,6 +1494,16 @@ When encountered within a loop (such as \texttt{for} or \texttt{while}), the \te
 \end{exampleblock}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{The End}
+
+\centering
+
+\Huge Thank you!
+
+\end{frame}
 
 
 %------------------------------------------------
