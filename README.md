@@ -40,7 +40,7 @@ Ensure you have a LaTeX distribution installed on your system. Popular distribut
    - View the output in the LaTeX Workshop panel at the bottom of the VSCode window
 
 
-## **Troubleshooting LaTeX in Cocmpiling // + Git Bash**
+## **Troubleshooting --- LaTeX in Compiling // + Git Bash**
 
 ### 1. Check LaTeX Distribution Installation
 
