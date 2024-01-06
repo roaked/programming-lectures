@@ -15,4 +15,4 @@ jobs:
       - name: Set up LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: lectures/beginner.tex 
+          root_file: beginner.tex 
