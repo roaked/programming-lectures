@@ -1200,12 +1200,148 @@ for name in names:
 
 \begin{frame}[fragile]{For Loops}
 
-\begin{exampleblock}{\textbf{What is happening?}}
-    \begin{itemize}
-        \item \texttt{name} is like a placeholder that takes on the value of each item in the \texttt{names} list, one at a time
-        \item The loop repeats the code block for every item in the list until it reaches the end
-    \end{itemize}
+\begin{alertblock}{\textbf{Exercises}}
+Assume the list = [1, 2, 3, 4, 5]
+\begin{itemize}
+    \item Exercise 1: Prints numbers of the list in separate lines
+    \item Exercise 2: Calculate the cumulative sum of the list
+    \item Exercise 3: Print only the odd numbers
+    \item Exercise 4: Print a pattern using loops
+        \begin{verbatim}
+            *
+            **
+            ***
+            ****
+            *****
+        \end{verbatim}
+    \item Exercise 5: Create a list with the square valued of each number
+\end{itemize}    
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Counting Loops}
+
+Counting loops are used to iterate through a sequence of numbers or perform an action a certain number of times. In Python, \texttt{for} loops and the \texttt{range()} function are commonly used for counting loops
+
+\begin{verbatim}
+    # Counting from 0 to 9 using a for loop
+    for i in range(10): # 10 excluded
+        print(i)
+\end{verbatim}
+
+\begin{exampleblock}{\textbf{How does it work?}}
+\begin{itemize}
+    \item \texttt{range(10)} generates a sequence of numbers from 0 to 9 ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    \item The \texttt{for} loop iterates through each number in this sequence, storing the value in \texttt{i}, and executes the code block (in this case, printing \texttt{i})
+\end{itemize}
 \end{exampleblock}
+
+\vspace{.1cm}
+For counting loops, \texttt{i} is commonly used as a variable name, especially when the purpose is straightforward iteration
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Counting Loops}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Exercise 1: Prints numbers from 0 to 9 in separate lines
+    \item Exercise 2: Calculate the cumulative sum of numbers from 0 to 9
+    \item Exercise 3: Create multiplication table of 5
+    \item Exercise 4: Print a pattern using loops
+        \begin{verbatim}
+            1
+            12
+            123
+            1234
+            12345
+        \end{verbatim}
+    \item Exercise 5: Print the duplicates of a given list [3, 4, 3, 5, 6, 7, 8, 5]
+    \item Exercise 6: Print the first 5 terms of the Fibonacci Series
+\end{itemize}    
+\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{While Loops}
+
+\texttt{while} loops repeatedly execute a block of code as long as a specified condition is true. They are useful when the number of iterations is not fixed beforehand and depends on certain conditions
+
+\begin{verbatim}
+    while condition:
+    # code block to execute as long as it stays true
+    # the condition is re-evaluated after each iteration
+\end{verbatim}
+
+\begin{block}{\textbf{Key Points}}
+    \begin{enumerate}
+        \item \texttt{Condition}: Repeats continuously while statement is \texttt{True}
+
+        \item \texttt{Iteration}: The code inside the loop runs repeatedly until the condition becomes False. If the condition is initially False, the code inside the loop will not execute
+
+        \item  \texttt{Updating Condition}: It's crucial to have a way to change the condition inside the loop to avoid an infinite loop. Usually, a variable involved in the condition is modified within the loop
+    \end{enumerate}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{While Loops}
+
+Let's print numbers from 1 to 5 using a \texttt{while} loop:
+
+\begin{verbatim}
+num = 1
+while num <= 5:
+    print(num)
+    
+    # Incrementing variable `num` 
+    num += 1 
+    # Break out of the loop when num > 5 (condition)
+\end{verbatim}
+
+\begin{block}{\textbf{Advantages}}
+    \begin{itemize}
+        \item \texttt{Dynamic Control}: Useful when the number of iterations isn't predetermined and depends on conditions
+
+        \item \texttt{Flexibility}: Allows for a wide range of applications such as user input, iteration based on changing conditions, and more
+
+    \end{itemize}
+\end{block}
+
+ If the condition never becomes \texttt{False} or if there's no logic to change the condition, it causes an infinite loop
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{While Loops}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Exercise 1: Prints numbers from 0 to 9 in separate lines
+    \item Exercise 2: Calculate the cumulative sum of numbers from 0 to 9
+    \item Exercise 3: Create multiplication table of 5
+    \item Exercise 4: Print a pattern using loops
+        \begin{verbatim}
+            1
+            12
+            123
+            1234
+            12345
+        \end{verbatim}
+    \item Exercise 5: Print the duplicates of a given list [3, 4, 3, 5, 6, 7, 8, 5]
+    \item Exercise 6: Print the first 5 terms of the Fibonacci Series
+\end{itemize}    
+\end{alertblock}
 \end{frame}
 
 
