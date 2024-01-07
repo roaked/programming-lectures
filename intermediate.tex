@@ -111,7 +111,7 @@
 %	PRESENTATION INFORMATION
 %----------------------------------------------------------------------------------
 
-\title[Python: Early Fundamentals]{Intermediate Workshop to Python Programming}
+\title[Python: Intermediate Fundamentals]{Intermediate Workshop to Python Programming}
 \subtitle{Building the Foundation for Coding Success}
 \author[Ricardo Chin]{Ricardo Chin}
 
@@ -281,7 +281,7 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{Integer Representations} %change
+\begin{frame}[fragile]{Integer Type Representations} %change
 
 \begin{block}{\textbf{Integers}}
 \begin{enumerate}
@@ -314,7 +314,7 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{Float Representations} %change
+\begin{frame}[fragile]{Float Type Representations} %change
 
 \begin{block}{\textbf{Integers}}
 \begin{enumerate}
@@ -332,13 +332,14 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 \begin{figure}
     \centering
     \includegraphics[width = 12cm]{Images/bits.png}
+    \caption{Based on IEEE 754 --- Standardized Floating-point Arithmetic}
 \end{figure}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{Float Representations} %change
+\begin{frame}[fragile]{Float Type Representations} %change
 
 \begin{alertblock}{\textbf{Warning!}}
     Floating-point numbers, while versatile, can't perfectly represent all real numbers. This limitation leads to rounding errors, causing some numbers to be approximations rather than precise representations
@@ -384,14 +385,26 @@ In binary floats:
 \vspace{.1cm}
 
 \begin{verbatim}
-0.1 + 0.2 == 0.3 # Returns False
+0.1 + 0.2 == 0.3 # Returns False if float assigned
 
-import math
+import math      # tolerance = 1e-09
 math.isclose(0.1 + 0.2, 0.3) # Returns True
 \end{verbatim}
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Complex Type and Augmented Assignments} %change
+
+\textbf{Example 1 --- Precision Limitations}
+\begin{enumerate}
+    \item Computing $\pi$ + $\pi$ might yield 6.2 when using decimal numbers with a precision of 2, whereas a more precise result would be 6.3
+\end{enumerate}
+
+
+\end{frame}
 
 
 
