@@ -160,9 +160,9 @@
 
 \textbf{Collections}
 \begin{itemize}
-    \item \texttt{list}: Ordered and mutable sequence of elements.
-    \item \texttt{tuple}: Ordered and immutable sequence of elements.
-    \item \texttt{dict}: Unordered collection of key-value pairs.
+    \item \texttt{list}: Ordered and mutable sequence of elements
+    \item \texttt{tuple}: Ordered and immutable sequence of elements
+    \item \texttt{dict}: Unordered collection of key-value pairs
 \end{itemize}
 
 \end{frame}
@@ -218,7 +218,7 @@ if a is None:
 \textbf{BoolType}
 \vspace{.2cm}
 \begin{itemize}
-    \item The \texttt{bool} type is a built-in data type representing truth values.
+    \item The \texttt{bool} type is a built-in data type representing truth values
     \item It has two possible values: \texttt{True} and \texttt{False}
 \end{itemize}
 
@@ -253,7 +253,61 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 
 \begin{frame}[fragile]{Numbers} %change
 
+\begin{block}{\textbf{Operations with Numbers}}
+    \begin{itemize}
+        \item Integer Division: 10 // 3 = 3
+        \item Remainder: 10 \% 3 = 1
+        \item Exponentiation: 2 ** 3 = 8
+    \end{itemize}
+    
+\end{block}
+\vspace{.22cm}
+\pause
+\begin{center}
+    \arrowdown
+\end{center}
+\vspace{.22cm}
 
+\begin{block}{\textbf{Underscores in Numeric Literals for Enhanced Readibility}}
+    \begin{itemize}
+        \item Revenue: 1000000000
+        \item Revenue: 1\_000\_000\_000
+    \end{itemize}
+    
+\end{block}
+    
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Integer Representations} %change
+
+\begin{block}{\textbf{Integers}}
+\begin{enumerate}
+    \item Python supports integers of arbitrary size, allowing representation of very large numbers 
+
+    \item It also supports different numeral systems
+    \vspace{.1cm}
+    \begin{itemize}
+        \item Decimal --- \texttt{a = 42}
+        \item Binary ---  \texttt{b = 0b101010}
+        \item Octal ---  \texttt{c = 0o52}
+        \item Hexadecimal ---  \texttt{d = 0x2a}
+        \item Conversion from a string in binary to an integer --- \texttt{e = int('101010', 2)}
+    \end{itemize}
+
+\end{enumerate}
+\end{block}
+
+
+\begin{exampleblock}{\textbf{Maximum Size of Integers on the Current System}}
+\vspace{.05cm}
+    \begin{verbatim}
+    import sys
+    print(sys.maxsize)  # Maximum size
+    \end{verbatim}
+\end{exampleblock}
 
 \end{frame}
 
