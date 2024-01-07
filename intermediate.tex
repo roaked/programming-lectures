@@ -138,7 +138,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Data Types} %change
+\section{Numeric Data Types} %change
 \begin{frame}[fragile]{Data Types: Deeper Dive} %change
 
 \begin{center}
@@ -505,8 +505,136 @@ $\ddot\smile$ & 11110000 10011111 10011001 10000010 \\
 \hline
 \end{tabular}
 \end{center}
-
     
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Strings}
+
+Strings represent sequences of Unicode characters, allowing the manipulation and representation of text data
+
+\begin{center}
+    \arrowdown
+\end{center}
+
+\begin{enumerate}
+    \item \textbf{String Literals} --- Representations of strings in Python
+    \begin{itemize}
+        \item Single quotes: \texttt{a = 'test'}
+        \item Double quotes: \texttt{b = "test"}
+    \end{itemize}
+    \vspace{.3cm}
+
+    \item \textbf{Multi-line String Literals} --- Multi-line representation 
+    \texttt{\\
+    a = """this\\
+    is a multi-line\\
+    string literal
+    """}
+    \vspace{.3cm}
+    
+    \item \textbf{Escape Sequences} --- \texttt{a = "He said:\textbackslash{}n\textbackslash{}"Hi!\textbackslash{}""} \\
+    \textbackslash{}n for line feed or line break!
+\end{enumerate}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Strings}
+
+If there is no need to use any escape sequences in a string
+
+\begin{verbatim}
+    path = r"C:\documents\course\news.txt"
+\end{verbatim}
+
+Handy when writing directory paths and regular expressions
+
+\begin{exampleblock}{Useful String Methods}
+    \begin{itemize}
+        \item \texttt{.lower()} and \texttt{.upper()}
+        \item \texttt{.startswith(...)} and \texttt{.endswith(".xlsx")}
+        \item \texttt{.center(10)} --- centered in 10 chars
+        \item \texttt{.ljust(10)} --- left justified or \texttt{.rjust(10)} --- right justified
+        \item \texttt{.strip()} --- removes leading and trailing spaces
+        \item \texttt{.split(' ')} --- splits a string into a list of substrings
+        \item \texttt{' '.join(list)} --- join a list of strings into a single string 
+    \end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{String Exercises}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{enumerate}
+    \item Later
+\end{enumerate}    
+\end{alertblock}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{String Formatting}
+
+String formatting allows for the inclusion of values within strings
+
+\begin{verbatim}
+name = "Ricardo"     
+# Concatenation
+greeting = "Hello, " + name + "!"
+
+# f-string (formatted string literals)
+greeting = f"Hello, {name}!"
+\end{verbatim}
+
+There are other formatting ways which are currently a bit obsolete
+
+\begin{verbatim}
+city, temperature = 'Graz', 5.7    
+'weather in %s: %f°C' % (city, temperature)
+'weather in {0}: {1}°C'.format(city, temperature)
+'weather in {}: {}°C'.format(city, temperature)
+'weather in {c}: {t}°C'.format(c=city, t=temperature)
+f'weather in {city}: {temperature}°C' # fstring pref
+\end{verbatim}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Format Specifications}
+
+If we want to specify the format value itself --- ie, \texttt{.4g} or \texttt{.4f}
+
+\begin{verbatim}
+# Four decimal places after the decimal point
+print(f"Pi is {math.pi:.4f}") # Output: Pi is 3.1416
+
+# Four significant digits
+print(f"Pi is {math.pi:.4g}") # Output: Pi is 3.142
+\end{verbatim}
+
+If we want to specify the sentence alignment
+
+\begin{verbatim}
+first_name, last_name = "Ricardo", "Chin"
+
+# Right-aligned (total width 8 characters)
+print(f"{first_name:>8}")  # Output: " Ricardo"
+print(f"{last_name:>8}")   # Output: "    Chin"
+\end{verbatim}
+
+\begin{itemize}
+    \item \href{https://mkaz.blog/working-with-python/string-formatting/}{String Formatting Reference --- Hyperlink}
+\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -530,6 +658,8 @@ $\ddot\smile$ & 11110000 10011111 10011001 10000010 \\
 \begin{exampleblock}{\textbf{Online Courses and Tutorials}}
 
 \begin{itemize}
+
+\item \href{https://mkaz.blog/working-with-python/string-formatting/}{String Formatting}
 
 \item \href{https://www.codecademy.com/learn/learn-python-3}{Codecademy - Beginner Course}
 
