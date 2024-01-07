@@ -139,7 +139,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Data Types} %change
-\begin{frame}[fragile]{Data Types in Depth} %change
+\begin{frame}[fragile]{Data Types: Deeper Dive} %change
 
 \begin{center}
 --- Previously in \textsc{Python Programming} ---
@@ -301,7 +301,7 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 \end{block}
 
 
-\begin{exampleblock}{\textbf{Maximum Size of Integers on the Current System}}
+\begin{exampleblock}{\textbf{Tip ---} Maximum Size of Integers on the Current System}
 \vspace{.05cm}
     \begin{verbatim}
     import sys
@@ -310,6 +310,89 @@ Booleans are a subset of integers (subclass of int) where \texttt{True} behaves 
 \end{exampleblock}
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Float Representations} %change
+
+\begin{block}{\textbf{Integers}}
+\begin{enumerate}
+    \item Floating-point numbers in Python use 64 bits
+        \begin{itemize}
+            \item \textbf{Numbering} --- \hspace{.1cm} \texttt{a = .12} \hspace{.1cm} or \hspace{.3cm} \texttt{b = 2.55}
+            \item \textbf{Scientific Notation} --- \hspace{.1cm} \texttt{c = 6e23}
+            \item \textbf{Special Values} --- \texttt{d = float('nan')}  or  \hspace{.1cm} \texttt{e = float('inf')}
+        \end{itemize}
+
+
+\end{enumerate}
+\end{block}
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 12cm]{Images/bits.png}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Float Representations} %change
+
+\begin{alertblock}{\textbf{Warning!}}
+    Floating-point numbers, while versatile, can't perfectly represent all real numbers. This limitation leads to rounding errors, causing some numbers to be approximations rather than precise representations
+\end{alertblock}
+
+\pause
+\begin{center}
+    \arrowdown
+\end{center}
+
+
+In the decimal system:
+\begin{enumerate}
+    \item Fractions like 1/3 and 1/7 can't be represented exactly
+    \item Constant like $\pi$ isn't fully representable without approximation
+\end{enumerate}
+
+In binary floats:
+\begin{enumerate}
+    \item Decimals like 1/2 and 1/10 can't be precisely represented
+    \item Fractions like 1/3 and even π suffer from approximation
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Float Rounding Errors} %change
+
+\begin{alertblock}{\textbf{Warning!}}
+    As a consequence to not being able to perfectly represent all real numbers, float numbers will lead to rounding error mismatches
+\end{alertblock}
+
+\textbf{Example 1 --- Precision Limitations}
+\begin{enumerate}
+    \item Computing $\pi$ + $\pi$ might yield 6.2 when using decimal numbers with a precision of 2, whereas a more precise result would be 6.3
+\end{enumerate}
+
+\textbf{Example 1 --- Arithmetic Precision}
+\begin{enumerate}
+    \item Simple addition like 0.1 + 0.2 might oddly evaluate to $\approx$ 0.30000000000000004 due to limitations in 64-bit floats
+\end{enumerate}
+\vspace{.1cm}
+
+\begin{verbatim}
+0.1 + 0.2 == 0.3 # Returns False
+
+import math
+math.isclose(0.1 + 0.2, 0.3) # Returns True
+\end{verbatim}
+
+\end{frame}
+
+
 
 
 
