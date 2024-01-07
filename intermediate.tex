@@ -433,9 +433,78 @@ Other operations include: \hspace{.1cm} \texttt{-=, *=, ...}
 \section{Character Encodings}
 \begin{frame}{Character Encodings}
 
+Character encodings are used to represent characters in a form that computers can understand and manipulate --- mapping characters to bit sequences
 
+\begin{block}{\textbf{Types of Character Encodings}}
+     \begin{enumerate}
+         \item ASCII (American Standard Code for Information Interchange)
+         \begin{itemize}
+             \item Encodes the first 128 Unicode characters using 7 bits, covering basic English characters, digits, and symbols
+             \item Represents characters like 'A', '!', '\$', space, and line breaks
+         \end{itemize}
+         \item Latin1 (ISO 8859-1)
+         \begin{itemize}
+             \item Extends ASCII to encode the first 256 Unicode characters using 8 bits
+             \item Adds additional characters like '$\ddot{a}$ ', '$á$ ', '$\beta$', '$\S$', etc
+        
+         \end{itemize}
+         \item UTF-8, UTF-16, UTF-32
+         \begin{itemize}
+             \item Encode the entire Unicode character set
+             \item UTF-8, a popular encoding, uses variable-width encoding
+         \end{itemize}
+     \end{enumerate}
+\end{block}
+    
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Character Encodings}
+
+Examples in ASCII / Latin1 / UTF-8:
+
+\begin{center}
+\vspace{.1cm}
+\begin{tabular}{|c|c|}
+\hline
+Character & Byte Representation \\
+\hline
+! & 00100001 \\
+A & 01000001 \\
+Line Feed | Line Break | "\textbackslash{}n" & 00001010 \\
+\hline
+\end{tabular}
+\end{center}
+
+Examples in Latin1:
+
+\begin{center}
+\vspace{.1cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|}
+\hline
+Character & Byte Representation \\
+\hline
+$\ddot{A}$ & 11000100 \\
+\hline
+\end{tabular}
+\end{center}
+
+Examples in UTF-8:
+
+\begin{center}
+\vspace{.1cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|}
+\hline
+Character & Byte Representation \\
+\hline
+$\ddot{A}$ & 11000011 10100100 \\
+$\ddot\smile$ & 11110000 10011111 10011001 10000010 \\
+\hline
+\end{tabular}
+\end{center}
 
     
 \end{frame}
