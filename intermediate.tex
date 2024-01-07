@@ -639,6 +639,41 @@ print(f"{last_name:>8}")   # Output: "    Chin"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}[fragile]{Format Specifications}
+
+\begin{alertblock}{\textbf{Exercise}}
+\begin{itemize}
+    \item Create a program that formats a set of names and associated floating-point numbers representing current spare money, finds longest name, returns the names aligned to the right (longest name) and the spare money with 1 floating point
+\end{itemize}
+\begin{verbatim} 
+# Names
+data = [("Ricardo",  12.51), ("Anand",     8.75),
+        ("Simon",    15.32), ("Khaled",   10.27)]
+\end{verbatim}
+\end{alertblock}
+\pause
+\begin{verbatim}
+# Find the length of the longest name
+longest_name = max(len(name) for name, _ in data)
+
+# Aligned to longest name and spare money with .1f
+for name, value in data:
+    print(f"{name:>{longest_name}}{value:.1f}")
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Data Structures}
+\begin{frame}[fragile]{Lists}
+
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Interesting References}
 \begin{frame}[fragile]{Interesting References}
 \begin{exampleblock}{\textbf{Books}}
