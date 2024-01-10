@@ -6,6 +6,7 @@ Ensure you have a LaTeX distribution installed on your system, such as ```MiKTeX
 
 - [TeX Live](https://www.tug.org/texlive/acquire-netinstall.html)
 - [MiKTeX](https://miktex.org/howto/download-miktex)
+- [Pygments](http://pygments.org/)
 
 ## **Setup**
 
@@ -39,6 +40,21 @@ Ensure you have a LaTeX distribution installed on your system. Popular distribut
    - Press `Ctrl+Alt+B` or `Cmd+Alt+B` to compile the LaTeX document
    - View the output in the LaTeX Workshop panel at the bottom of the VSCode window
 
+### 6. Installing Pygments for Customization
+
+- To utilize Pygments within a LaTeX document, you typically use the minted package, which interfaces with Pygments to highlight code within your LaTeX document
+
+```bash
+pip install Pygments
+```
+
+- When compiling your LaTeX document that uses the minted package, you'll need to use the `--shell-escape` flag. For example, if you're using `pdflatex`:
+
+```bash
+pdflatex -shell-escape yourfile.tex
+```
+
+- This flag allows LaTeX to execute external programs (in this case, Pygments) to generate the highlighted code!
 
 ## **Troubleshooting --- LaTeX in Compiling // + Git Bash**
 
