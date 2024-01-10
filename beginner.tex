@@ -35,10 +35,18 @@
 \usetikzlibrary{shapes.arrows}
 % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
 
+
+\definecolor{offwhite}{HTML}{F8F8F2}
+\definecolor{lightgrey}{HTML}{75715E}
+\definecolor{mediumgrey}{HTML}{49483E}
+\definecolor{darkgrey}{HTML}{272822}
+\definecolor{blue}{HTML}{900C3F}
+\definecolor{arrow}{HTML}{900C3F}
+
 \tikzset{
     myarrow/.style={
         draw,
-        fill=orange,
+        fill=arrow,
         single arrow,
         minimum height=3.5ex,
         single arrow head extend=1ex
@@ -51,6 +59,44 @@
 \tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
 }
 
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style= monokai,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=20pt,
+  right=0pt,
+  top=1pt,
+  bottom=1pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=1pt,
+  bottomrule=1.5pt,
+  toprule=1.5pt,
+  colback=darkgrey,
+  colframe=blue!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[blue!20!white] (frame.south west) rectangle ([xshift=15pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3}
 
 %----------------------------------------------------------------------------------------
 %	SELECT LAYOUT THEME
@@ -68,6 +114,7 @@
 
 
 \usecolortheme{seahorse}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -190,43 +237,42 @@
 
 \begin{frame}[fragile]{Four Code Examples}
     \small % Reduce font size
-    \begin{minipage}[t]{0.45\textwidth}
-        \begin{verbatim}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{mintedbox}{python}
 # Python snippet 1
 for i in range(5):
     print(i)
-        \end{verbatim}
+        \end{mintedbox}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.45\textwidth}
-        \begin{verbatim}
+    \begin{minipage}[t]{0.55\textwidth}
+        \begin{mintedbox}{python}
 # Python snippet 2
 x = 10
 if x > 5:
     print("x is greater")
-        \end{verbatim}
+        \end{mintedbox}
     \end{minipage}
 
     \vspace{1em} % Add vertical space between rows
 
-    \begin{minipage}[t]{0.45\textwidth}
-        \begin{verbatim}
+    \begin{minipage}[t]{1\textwidth}
+        \begin{mintedbox}{python}
 # Python snippet 3
 def greet(name):
     print("Hello, " + name)
-        \end{verbatim}
+        \end{mintedbox}
     \end{minipage}
     
     \vspace{1em}
     
-    \begin{minipage}[t]{0.45\textwidth}
-        \begin{verbatim}
+    \begin{minipage}[t]{1\textwidth}
+        \begin{mintedbox}{python}
 # Python snippet 4
 numbers = [1, 2, 3, 4, 5]
-squared = [x ** 2 
-           for x in numbers]
+squared = [x ** 2 for x in numbers]
 print(squared)
-        \end{verbatim}
+        \end{mintedbox}
     \end{minipage}
 \end{frame}
 
@@ -332,20 +378,20 @@ print(squared)
                 \end{itemize} \bigskip
             
         \item Variable Examples \smallskip
-            \begin{verbatim}
+            \begin{mintedbox}{python}
 birth_year = 2000
 current_year = 2024
 age = current_year - birth_year
-            \end{verbatim}\smallskip
+            \end{mintedbox}\smallskip
     
 
    \item Overwriting Variables \smallskip
-    \begin{verbatim}
+    \begin{mintedbox}{python}
 birth_year = 1996
 birth_year = 1997
 age = 27
 age = 27 + 1
-    \end{verbatim}
+    \end{mintedbox}
     \item \textbf{Printing using print(\texttt{variable\_name})}
     \end{itemize}
 \end{frame}
@@ -391,7 +437,7 @@ age = 27 + 1
 
 
 \begin{block}{\textbf{Integer Operations}}
-What data type do you receive when you perform integer operations like division or exponentiation in Python? How would you do it?
+How would you do integer operations with division or exponentiation? What data type do you obtain?
 \end{block}
 
 \pause
@@ -407,14 +453,14 @@ Imagine you have worked 27 overhours and you would like to know how much that tr
 
 
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 days = total_hours // 7.7  # Available days
 # For total_hours = 27, days = 27 // 7.7 = 3 days
-\end{verbatim}
-\begin{verbatim}
+\end{mintedbox}
+\begin{mintedbox}{python}
 remaining_hours = total_days % 7  # Remaining hours
 # For total_days = 27, hours = 27 % 7.7 = 3.89 hours
-\end{verbatim}
+\end{mintedbox}
 
 \end{frame}
 
@@ -489,24 +535,24 @@ remaining_hours = total_days % 7  # Remaining hours
 \small % Reduce font size
  
 \textbf{String Concatenation}   
-\begin{verbatim}
+\begin{mintedbox}{python}
 s1, s2, name = "Hello", "World", Ricardo
 result = s1 + " " + s2 + ". This is " + name 
-\end{verbatim}
+\end{mintedbox}
 
 \textbf{F-strings}   
-\begin{verbatim}
+\begin{mintedbox}{python}
 ans = f"{s1} {s2}. This is {name}!"
-\end{verbatim}
+\end{mintedbox}
 
 \textbf{String Indexing and Slicing}
 \hfill \textsc{$\rightarrow$ Notice the index}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 text = "Python"
-char = text[2]  # Accessing the character 't' at index 2
+char = text[2] # Accessing the character 't' at idx 2
 substring = text[1:4]  # Slicing to get 'yth'
-\end{verbatim}
+\end{mintedbox}
 
 
 \begin{exampleblock}{\textbf{Tip}}
@@ -522,22 +568,22 @@ substring = text[1:4]  # Slicing to get 'yth'
 
 \textbf{How do we include characters like " in a string?}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 string_t = "When you drink, you must say: "Prost!""
-\end{verbatim}
+\end{mintedbox}
 
 Python treats the sequence $\backslash"$ like a single quote
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 string_t = "When you drink, you must say: \"Prost!\""
-\end{verbatim}
+\end{mintedbox}
 
 You can also introduce line breaks using \backslash n 
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 res = "string_t\nstring_t"
 print(res)
-\end{verbatim}
+\end{mintedbox}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -550,11 +596,11 @@ print(res)
         \item Evaluates to False in boolean contexts
     \end{itemize}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 first_name = "Ricardo"
 middle_name = None
 last_name = "Chin"
-\end{verbatim}
+\end{mintedbox}
 \begin{exampleblock}{\textbf{Tip}}
     Best practices include using None as a default value for optional function arguments or variables to signify missing values
 \end{exampleblock}
@@ -578,13 +624,13 @@ last_name = "Chin"
     \end{itemize}
 \end{alertblock}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 freedom = True and some_function()
 
 pi = 3.1415
 pi_int = int(pi)
 message = "Pi is approximately " + str(pi_int)
-\end{verbatim}
+\end{mintedbox}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -667,9 +713,7 @@ Methods are functions that belong to specific object types, like strings (\textt
     In the following slides, I will describe briefly each of the composite data structures. For more info:
     \begin{enumerate}
 
-\item  \begin{verbatim}
-help(list)
-\end{verbatim}
+\item  \texttt{help(list)}
 
 \item  \url{https://docs.python.org/3/library/index.html} (Google: "python library")
     \end{enumerate}
@@ -687,12 +731,12 @@ Dictionaries in Python, often referred to as hash maps in other programming lang
 
 \end{block}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 person = {  "first_name": "Ricardo",
             "last_name": "Chin",
             "nationality": "Portuguese",
             "age": 27            }
-\end{verbatim}
+\end{mintedbox}
 
 \begin{exampleblock}{\textbf{Dictionary Characteristics}}
     \begin{itemize}
@@ -715,10 +759,10 @@ person = {  "first_name": "Ricardo",
     \item \textbf{Accessing Values} \\ \\
     Values within a dictionary are accessed by their corresponding keys using square brackets ([]) or the get() method
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 print(person["first_name"])  # Output: Ricardo
 print(person.get("age"))  # Output: 27
-\end{verbatim}
+\end{mintedbox}
     \\
     \item \textbf{Accessing Values} \\ \\
      Dictionaries are mutable, allowing the addition, modification, or deletion of key-value pairs
@@ -738,11 +782,12 @@ print(person.get("age"))  # Output: 27
 Lists or arrays are versatile and mutable collections that store ordered sequences of elements. They are denoted by square brackets [ ] and enable flexible operations for modification, insertion, deletion, and retrieval of elements
 
 \end{block}
-\begin{verbatim}
-primes = [2, 3, 5, 7, 11]           users = ["Alice", "Bob", "Charlie"]
-products = [        {"name": "IPhone 12", "price": 949},
-                    {"name": "Fairphone", "price": 419},
-                    {"name": "Pixel 5", "price": 799}            ]  \end{verbatim}
+\begin{mintedbox}{python}
+primes = [2, 3, 5, 7, 11]           
+users = ["Ricardo", "Pedro", "Henrique"]
+products = [        {"name": "iPhone 15 Max Pro", "price": 1699},
+                    {"name": "Fairphone", "price": 599},
+                    {"name": "Pixel 8", "price": 999}            ]  \end{mintedbox}
 
 \begin{exampleblock}{\textbf{List Characteristics}}
     \begin{itemize}
@@ -773,11 +818,11 @@ products = [        {"name": "IPhone 12", "price": 949},
     \item \textbf{Modifying Elements} \\ \\ \smallskip
     Elements within lists can be modified directly by assignment
 
-    \begin{verbatim} 
+    \begin{mintedbox}{python}
 primes[0] = 13  
 primes[-1] = 'Ricardo'
 primes[1] = primes[0]
-    \end{verbatim}
+    \end{mintedbox}
      \underline{Can you guess what happens?} \smallskip
 
     \item \textbf{Accessing Values} \\ \\ \smallskip
@@ -798,12 +843,13 @@ primes[1] = primes[0]
 Sets are unique, unordered collections of elements that \textbf{do not allow duplicates}. They're denoted by curly braces {} or using the set() constructor. Primarily used for membership testing, eliminating duplicates from sequences, and performing set operations like union, intersection, and difference
 
 \end{block}
-\begin{verbatim}
+\begin{mintedbox}{python}
 # Creating a set directly
 my_set = {1, 2, 3, 4, 5}
 
 # Creating a set using the set() constructor
-another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
+another_set = set([3, 4, 5, 6, 7]) 
+\end{mintedbox}
 
 \begin{exampleblock}{\textbf{Sets Characteristics}}
     \begin{itemize}
@@ -826,34 +872,31 @@ another_set = set([3, 4, 5, 6, 7]) \end{verbatim}
 
     Elements can be added to a set using the add() method or by using the union ($\vert$) operator
     
-\begin{verbatim} 
+\begin{mintedbox}{python} 
 my_set = {1, 2, 3}
-my_set.add(4)  # Adds the element 4 to my_set
-\end{verbatim}
+my_set.add(4) # Adds the element 4 to my_set
+\end{mintedbox}
 
     \item \textbf{Removing Elements}
     
     Elements can be removed using the remove() or discard() methods
     
-    \begin{verbatim} 
-my_set.remove(2)  # Removes the element 2 from my_set
-    \end{verbatim}
+    \begin{mintedbox}{python}
+my_set.remove(2) # Removes element 2 from my_set
+    \end{mintedbox}
 
     \item \textbf{Sets Tasks} \\ \\ \smallskip
 
-     Sets support various operations like union ($\vert$), intersection (\&), difference (-), and symmetric difference (\^{})
+     Operations like union ($\vert$), intersection (\&), difference (-), and symmetric difference (\^{})
      
-\begin{verbatim} 
+\begin{mintedbox}{python}
 union_set = my_set | another_set  # Union 
-
-intersection_set = my_set & another_set  # Intersection 
-
+inter_set = my_set & another_set  # Intersection
 difference_set = my_set - another_set  
 # Elements in my_set but not in another_set
-
 symmetric_difference_set = my_set ^ another_set  
-# Elements in either my_set or another_set but not both
-\end{verbatim}
+# Elements in either but not both
+\end{mintedbox}
 
 \end{itemize}
 \end{frame}
@@ -871,10 +914,10 @@ symmetric_difference_set = my_set ^ another_set
 \begin{block}{\textbf{Tuples}}
  Tuples are ordered collections of elements, similar to lists, but they are immutable, meaning their contents cannot be modified after creation. Tuples are denoted by parentheses () and can contain various data types, including integers, strings, floats, other tuples, etc
 \end{block}
-\begin{verbatim}
+\begin{mintedbox}{python}
 # Creating a tuple
 my_tuple = (1, 'apple', 3.5, (4, 5, 6))
-\end{verbatim}
+\end{mintedbox}
 
 \begin{exampleblock}{\textbf{Tuples Characteristics}}
     \begin{itemize}
@@ -893,20 +936,22 @@ my_tuple = (1, 'apple', 3.5, (4, 5, 6))
 \begin{itemize}
     \item \textbf{Accessing Elements}: Elements within a tuple are accessed using zero-based indexing or slicing. For example, my\_tuple[0] accesses the first element, my\_tuple[-1] accesses the last element, and slicing my\_tuple[1:3] retrieves elements from index 1 up to, but not including, index 3
 
-    \vspace{.5cm}
+    \vspace{.25cm}
 
-    \begin{verbatim}
+    \begin{mintedbox}{python}
 # Accessing elements in a tuple
 print(my_tuple[1])  # Output: 'apple'
-    \end{verbatim}
+    \end{mintedbox}
 
     \item \textbf{Tuple Methods}: Tuples have limited methods due to their immutability. However, they have methods like \texttt{count()} and \texttt{index()} for counting occurrences and finding the index of elements within the tuple
 
-    \begin{verbatim}
-# Tuple methods
-print(my_tuple.count('apple'))  # Counts occurrences of 'apple' 
-print(my_tuple.index(3.5))  # Returns the index of 3.5 
-    \end{verbatim}
+    \begin{mintedbox}{python}
+# Counts occurrences of 'apple' 
+print(my_tuple.count('apple'))  
+
+# Returns the index of 3.5 
+print(my_tuple.index(3.5))  
+    \end{mintedbox}
     
 \end{itemize}
 \end{frame}
@@ -923,26 +968,28 @@ Our program will ask the user their name and greet them
 \pause
 
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 print("What is your name?")
 name = input() # input will always return a string
-\end{verbatim}
+\end{mintedbox}
 
 Okay..now we wrote our name, how do we display the result?
 
 \pause
-\begin{verbatim}
+\begin{mintedbox}{python}
 print("Nice to meet you, " + name)
-\end{verbatim}
+\end{mintedbox}
+
 
 For increasing readability, we might want to add comments to our code.
 Comments start with # and describe code functionality.
 Typically placed above the code they explain.
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 # Determine the length of the name
 name_length = len(name)
-\end{verbatim}
+\end{mintedbox}
+
 
 To execute the program type the command line \texttt{python greeting.py} on the terminal or the green play button in VS Code
     
@@ -1067,25 +1114,24 @@ The structure is usually pretty straightforward
 \begin{frame}[fragile]{Comparisons}
 To utilize \texttt{if} and \texttt{while} statements, comparisons between values are necessary
 
-\begin{verbatim}
-    a = 1
-    b = 0
-    
-    print(a == b)  # Is a equal to b?
-    print(a != b)  # Is a not equal to b?
-    print(a < b)   # Is a less than b?
-    print(a > b)   # Is a greater than b?
-    print(a <= b)  # Is a less than or equal to b?
-    print(a >= b)  # Is a greater than or equal to b?
+\begin{mintedbox}{python}
+a = 1
+b = 0
 
-\end{verbatim}
+print(a == b)  # Is a equal to b?
+print(a != b)  # Is a not equal to b?
+print(a < b)   # Is a less than b?
+print(a > b)   # Is a greater than b?
+print(a <= b)  # Is a less than or equal to b?
+print(a >= b)  # Is a greater than or equal to b?
+\end{mintedbox}
 
 Comparisons yield boolean values \texttt{True / False}. We can capture this outcome in a variable
 
-\begin{verbatim}
-    # Checking if 'age' is 18 or older
-    is_adult = age >= 18  
-\end{verbatim}
+\begin{mintedbox}{python}
+# Checking if 'age' is 18 or older
+is_adult = age >= 18  
+\end{mintedbox}
 
 
 \end{frame}
@@ -1095,7 +1141,7 @@ Comparisons yield boolean values \texttt{True / False}. We can capture this outc
 \begin{frame}[fragile]{Comparisons}
 It is possible to combine comparisons using \texttt{and, or} and \texttt{not}
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 if age >= 18 and country == "Austria":
     print("May drink alcohol.")
 
@@ -1109,9 +1155,9 @@ name = "Alice"
 other_name = "Bob
 
 print(name == other_name) # Are names identical?
-print("Alli" in name)     # Does the text contain "Alli"?
-print("Ali" not in name)  # Does the text contain "Ali"?
-\end{verbatim}
+print("Alli" in name)     # Does it contain "Alli"?
+print("Ali" not in name)  # Does it contain "Ali"?
+\end{mintedbox}
 
 \end{frame}
 
@@ -1120,15 +1166,14 @@ print("Ali" not in name)  # Does the text contain "Ali"?
 \begin{frame}[fragile]{If Statements}
 \texttt{if statements} help computers decide what to do based on certain conditions. It's like giving the computer a set of instructions
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 number = 27 
 
 if number % 2 == 0:
     print("The number is even.")
 else:
     print("The number is odd.")
-
-\end{verbatim}
+\end{mintedbox}
 
 \begin{exampleblock}{\textbf{How does it work?}}
 \begin{itemize}
@@ -1146,7 +1191,7 @@ else:
 \begin{frame}[fragile]{If, elif and else Statements}
 For multiple conditions to check: \texttt{if, elif and else} are used. The computer goes through each condition, executing the first one that's true
 
-\begin{verbatim}
+\begin{mintedbox}{python}
 if number < 0:
     print("The number is negative.")
 elif number == 0:
@@ -1154,8 +1199,8 @@ elif number == 0:
 elif number % 2 == 0:
     print("The number is divisible by 2.")
 else:
-    print("The number doesn't fall into any category.")
-\end{verbatim}
+    print("The number isn't in any category.")
+\end{mintedbox}
 
 \begin{block}{\textbf{Code Blocks}}
 \begin{itemize}
