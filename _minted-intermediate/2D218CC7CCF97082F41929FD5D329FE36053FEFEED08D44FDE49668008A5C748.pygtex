@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{x}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{20}
+\PYG{n}{is\PYGZus{}greater} \PYG{o}{=} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n}{y}   \PYG{c+c1}{\PYGZsh{} False}
+\PYG{k}{if} \PYG{n}{is\PYGZus{}greater}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x greater than y\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x not greater than y\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} TODO: warn the user if path doesn\PYGZsq{}t exist}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{my\PYGZus{}path}\PYG{p}{):}
+    \PYG{k}{pass}
+\end{Verbatim}

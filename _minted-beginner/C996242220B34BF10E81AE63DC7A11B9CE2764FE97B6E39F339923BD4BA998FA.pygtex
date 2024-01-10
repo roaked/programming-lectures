@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kn}{import} \PYG{n+nn}{my\PYGZus{}module}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{my\PYGZus{}module}\PYG{o}{.}\PYG{n}{greet}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Alice\PYGZdq{}}\PYG{p}{))}
+\end{Verbatim}

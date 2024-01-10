@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Language Overview}{3}{0}{1}
+\beamer@sectionintoc {2}{Variables}{10}{0}{2}
+\beamer@sectionintoc {3}{Basic Data Types and Structures}{11}{0}{3}
+\beamer@sectionintoc {4}{Functions}{27}{0}{4}
+\beamer@sectionintoc {5}{Composite Data Types and Structures}{29}{0}{5}
+\beamer@sectionintoc {6}{First Program}{39}{0}{6}
+\beamer@sectionintoc {7}{Control Structures}{44}{0}{7}
+\beamer@sectionintoc {8}{Program Structure}{59}{0}{8}
+\beamer@sectionintoc {9}{Interesting References}{67}{0}{9}

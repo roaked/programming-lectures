@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{n}{age} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18} \PYG{o+ow}{and} \PYG{n}{country} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Austria\PYGZdq{}}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}May drink alcohol.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n}{temperature} \PYG{o}{\PYGZlt{}} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{15} \PYG{o+ow}{or} \PYG{n}{temperature} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{40}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Extreme weather!\PYGZdq{}}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n}{shopping\PYGZus{}basket} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}There are still items left.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Alice\PYGZdq{}}
+\PYG{n}{other\PYGZus{}name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Bob}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{name} \PYG{o}{==} \PYG{n}{other\PYGZus{}name}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Are names identical?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Alli\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{name}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} Does it contain \PYGZdq{}Alli\PYGZdq{}?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Ali\PYGZdq{}} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{name}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Does it contain \PYGZdq{}Ali\PYGZdq{}?}
+\end{Verbatim}

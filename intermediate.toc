@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Numeric Data Types}{3}{0}{1}
+\beamer@sectionintoc {2}{Character Encodings}{14}{0}{2}
+\beamer@sectionintoc {3}{Data Structures}{23}{0}{3}
+\beamer@sectionintoc {4}{Interesting References}{24}{0}{4}

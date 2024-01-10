@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{days} \PYG{o}{=} \PYG{n}{total\PYGZus{}hours} \PYG{o}{//} \PYG{l+m+mf}{7.7}  \PYG{c+c1}{\PYGZsh{} Available days}
+\PYG{c+c1}{\PYGZsh{} For total\PYGZus{}hours = 27, days = 27 // 7.7 = 3 days}
+\end{Verbatim}

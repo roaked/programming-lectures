@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{person} \PYG{o}{=} \PYG{p}{\PYGZob{}}  \PYG{l+s+s2}{\PYGZdq{}first\PYGZus{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}\PYG{p}{,}
+            \PYG{l+s+s2}{\PYGZdq{}last\PYGZus{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Chin\PYGZdq{}}\PYG{p}{,}
+            \PYG{l+s+s2}{\PYGZdq{}nationality\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Portuguese\PYGZdq{}}\PYG{p}{,}
+            \PYG{l+s+s2}{\PYGZdq{}age\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{27}            \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

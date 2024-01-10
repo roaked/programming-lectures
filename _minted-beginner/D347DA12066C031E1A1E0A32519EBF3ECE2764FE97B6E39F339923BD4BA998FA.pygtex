@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{birth\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{1996}
+\PYG{n}{birth\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{1997}
+\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{27}
+\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{27} \PYG{o}{+} \PYG{l+m+mi}{1}
+\end{Verbatim}

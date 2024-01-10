@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{num} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{k}{while} \PYG{n}{num} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{5}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{num}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Incrementing variable `num`}
+    \PYG{n}{num} \PYG{o}{+=} \PYG{l+m+mi}{1}
+    \PYG{c+c1}{\PYGZsh{} Break out of the loop when num \PYGZgt{} 5 (condition)}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+
+\PYG{n}{coin\PYGZus{}outcome} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{choice}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}heads\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}tails\PYGZdq{}}\PYG{p}{])}
+\PYG{n}{user\PYGZus{}guess} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Guess (heads or tails): \PYGZdq{}}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n}{user\PYGZus{}guess}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{==} \PYG{n}{coin\PYGZus{}outcome}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Congratulations! Your guess was correct.\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Sorry, landed on }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{coin\PYGZus{}outcome}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{.\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Your guess was incorrect.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

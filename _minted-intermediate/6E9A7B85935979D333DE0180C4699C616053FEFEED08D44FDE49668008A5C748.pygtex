@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Four decimal places after the decimal point}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Pi is }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{math}\PYG{o}{.}\PYG{n}{pi}\PYG{l+s+si}{:}\PYG{l+s+s2}{.4f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Output: Pi is 3.1416}
+
+\PYG{c+c1}{\PYGZsh{} Four significant digits}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Pi is }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{math}\PYG{o}{.}\PYG{n}{pi}\PYG{l+s+si}{:}\PYG{l+s+s2}{.4g}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Output: Pi is 3.142}
+\end{Verbatim}

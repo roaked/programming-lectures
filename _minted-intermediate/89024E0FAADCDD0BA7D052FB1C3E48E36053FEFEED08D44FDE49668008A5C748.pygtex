@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{first\PYGZus{}name}\PYG{p}{,} \PYG{n}{last\PYGZus{}name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Chin\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Right\PYGZhy{}aligned (total width 8 characters)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{first\PYGZus{}name}\PYG{l+s+si}{:}\PYG{l+s+s2}{\PYGZgt{}8}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Output: \PYGZdq{} Ricardo\PYGZdq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{last\PYGZus{}name}\PYG{l+s+si}{:}\PYG{l+s+s2}{\PYGZgt{}8}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} Output: \PYGZdq{}    Chin\PYGZdq{}}
+\end{Verbatim}

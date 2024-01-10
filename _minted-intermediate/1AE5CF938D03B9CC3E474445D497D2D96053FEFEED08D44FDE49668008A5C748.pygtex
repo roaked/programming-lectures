@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}
+\PYG{c+c1}{\PYGZsh{} Concatenation}
+\PYG{n}{greeting} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Hello, \PYGZdq{}} \PYG{o}{+} \PYG{n}{name} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}!\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} f\PYGZhy{}string (formatted string literals)}
+\PYG{n}{greeting} \PYG{o}{=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Hello, }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{name}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{!\PYGZdq{}}
+\end{Verbatim}

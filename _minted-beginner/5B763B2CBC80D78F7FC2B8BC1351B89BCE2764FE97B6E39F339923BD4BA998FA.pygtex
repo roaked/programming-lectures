@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Python snippet 2}
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x is greater\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

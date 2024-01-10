@@ -1,0 +1,6 @@
+# Find the length of the longest name
+longest_name = max(len(name) for name, _ in data)
+
+# Aligned to longest name and spare money with .1f
+for name, value in data:
+    print(f"{name:>{longest_name}}{value:.1f}")

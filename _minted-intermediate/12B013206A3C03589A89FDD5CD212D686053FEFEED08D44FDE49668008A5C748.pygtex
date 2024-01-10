@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Find the length of the longest name}
+\PYG{n}{longest\PYGZus{}name} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)} \PYG{k}{for} \PYG{n}{name}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o+ow}{in} \PYG{n}{data}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Aligned to longest name and spare money with .1f}
+\PYG{k}{for} \PYG{n}{name}\PYG{p}{,} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{data}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{name}\PYG{l+s+si}{:}\PYG{l+s+s2}{\PYGZgt{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{longest\PYGZus{}name}\PYG{l+s+si}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{n}{value}\PYG{l+s+si}{:}\PYG{l+s+s2}{.1f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

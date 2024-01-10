@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Register} \PYG{n}{a} \PYG{n}{person} \PYG{o+ow}{or} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}} \PYG{n}{to} \PYG{n}{quit}\PYG{p}{:}
+\PYG{n}{Ricardo}
+
+\PYG{n}{Your} \PYG{n}{team} \PYG{n}{consists} \PYG{n}{of}\PYG{p}{:}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Anand\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Simon\PYGZdq{}}\PYG{p}{]}
+\end{Verbatim}

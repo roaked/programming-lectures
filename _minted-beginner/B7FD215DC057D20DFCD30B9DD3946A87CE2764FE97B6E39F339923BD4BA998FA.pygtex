@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Python snippet 4}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{]}
+\PYG{n}{squared} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x} \PYG{o}{**} \PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{numbers}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{squared}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{union\PYGZus{}set} \PYG{o}{=} \PYG{n}{my\PYGZus{}set} \PYG{o}{|} \PYG{n}{another\PYGZus{}set}  \PYG{c+c1}{\PYGZsh{} Union}
+\PYG{n}{inter\PYGZus{}set} \PYG{o}{=} \PYG{n}{my\PYGZus{}set} \PYG{o}{\PYGZam{}} \PYG{n}{another\PYGZus{}set}  \PYG{c+c1}{\PYGZsh{} Intersection}
+\PYG{n}{difference\PYGZus{}set} \PYG{o}{=} \PYG{n}{my\PYGZus{}set} \PYG{o}{\PYGZhy{}} \PYG{n}{another\PYGZus{}set}
+\PYG{c+c1}{\PYGZsh{} Elements in my\PYGZus{}set but not in another\PYGZus{}set}
+\PYG{n}{symmetric\PYGZus{}difference\PYGZus{}set} \PYG{o}{=} \PYG{n}{my\PYGZus{}set} \PYG{o}{\PYGZca{}} \PYG{n}{another\PYGZus{}set}
+\PYG{c+c1}{\PYGZsh{} Elements in either but not both}
+\end{Verbatim}

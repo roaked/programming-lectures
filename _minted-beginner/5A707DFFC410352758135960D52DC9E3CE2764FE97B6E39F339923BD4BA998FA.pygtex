@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{==} \PYG{n}{b}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Is a equal to b?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{!=} \PYG{n}{b}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Is a not equal to b?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} Is a less than b?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{b}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} Is a greater than b?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZlt{}=} \PYG{n}{b}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Is a less than or equal to b?}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{n}{b}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Is a greater than or equal to b?}
+\end{Verbatim}

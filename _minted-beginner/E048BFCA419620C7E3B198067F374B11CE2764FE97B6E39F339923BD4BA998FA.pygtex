@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{remaining\PYGZus{}hours} \PYG{o}{=} \PYG{n}{total\PYGZus{}days} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{7}  \PYG{c+c1}{\PYGZsh{} Remaining hours}
+\PYG{c+c1}{\PYGZsh{} For total\PYGZus{}days = 27, hours = 27 \PYGZpc{} 7.7 = 3.89 hours}
+\end{Verbatim}

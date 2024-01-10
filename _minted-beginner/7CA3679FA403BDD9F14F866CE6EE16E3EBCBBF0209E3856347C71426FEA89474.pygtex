@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{while} \PYG{n}{condition}\PYG{p}{:}
+    \PYG{c+c1}{\PYGZsh{} code block to execute as long as it stays true}
+    \PYG{c+c1}{\PYGZsh{} the condition is re\PYGZhy{}evaluated after each iteration}
+\end{Verbatim}

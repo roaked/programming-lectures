@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} cause infinite loop}
+    \PYG{n}{guess} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter a number (0 to exit):\PYGZdq{}}\PYG{p}{))}
+    \PYG{k}{if} \PYG{n}{guess} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Exiting the loop.\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{break}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}You entered: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{guess}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

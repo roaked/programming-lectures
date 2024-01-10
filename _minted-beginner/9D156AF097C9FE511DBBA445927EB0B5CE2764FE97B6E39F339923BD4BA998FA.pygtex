@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}What is your name?\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{name} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} input will always return a string}
+\end{Verbatim}

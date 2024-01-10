@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{freedom} \PYG{o}{=} \PYG{k+kc}{True} \PYG{o+ow}{and} \PYG{n}{some\PYGZus{}function}\PYG{p}{()}
+
+\PYG{n}{pi} \PYG{o}{=} \PYG{l+m+mf}{3.1415}
+\PYG{n}{pi\PYGZus{}int} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{)}
+\PYG{n}{message} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Pi is approximately \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{pi\PYGZus{}int}\PYG{p}{)}
+\end{Verbatim}

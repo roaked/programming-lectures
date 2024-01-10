@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{birth\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{2000}
+\PYG{n}{current\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{2024}
+\PYG{n}{age} \PYG{o}{=} \PYG{n}{current\PYGZus{}year} \PYG{o}{\PYGZhy{}} \PYG{n}{birth\PYGZus{}year}
+\end{Verbatim}

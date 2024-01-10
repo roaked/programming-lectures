@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{first\PYGZus{}name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}
+\PYG{n}{middle\PYGZus{}name} \PYG{o}{=} \PYG{k+kc}{None}
+\PYG{n}{last\PYGZus{}name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Chin\PYGZdq{}}
+\end{Verbatim}

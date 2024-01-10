@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{condition}\PYG{p}{:}
+    \PYG{k}{break}  \PYG{c+c1}{\PYGZsh{} Terminate loop if condition is met}
+\end{Verbatim}

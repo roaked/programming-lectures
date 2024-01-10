@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Checking if \PYGZsq{}age\PYGZsq{} is 18 or older}
+\PYG{n}{is\PYGZus{}adult} \PYG{o}{=} \PYG{n}{age} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18}
+\end{Verbatim}
