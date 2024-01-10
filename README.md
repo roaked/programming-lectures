@@ -6,6 +6,7 @@ Ensure you have a LaTeX distribution installed on your system, such as ```MiKTeX
 
 - [TeX Live](https://www.tug.org/texlive/acquire-netinstall.html)
 - [MiKTeX](https://miktex.org/howto/download-miktex)
+- [Perl](https://strawberryperl.com/)
 - [Pygments](http://pygments.org/)
 
 ## **Setup**
