@@ -1225,13 +1225,127 @@ my_account._BankAccount__validate_withdrawal(200)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{Inheritance and Composition}
+\begin{frame}[fragile]{Inheritance}
+
+\begin{block}{\textbf{What is this fancy word: Inheritance?}}
+It is a mechanism in OOP where a new class is created by inheriting attributes and behaviours from an existing class. The subclass automatically gains the methods and attributes of the superclass
+\end{block}
+\begin{enumerate}
+    \item \textbf{New class} --- \texttt{superclass/base class}
+    \item \textbf{Existing class} --- \texttt{subclass/derived class}
+\end{enumerate}
+
+\begin{mintedbox}{python}
+class User(object):
+    def __init__(self, username):
+        self.username = username
+        
+class AdminUser(User): # inherited attributes from User
+    def __init__(self, username, admin_level):
+        super().__init__(username)
+        self.admin_level = admin_level
+\end{mintedbox}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance}
+
+Inheritance is commonly used in defining database models --- example in a popular web framework \texttt{Django}  
+
+\begin{mintedbox}{python}
+from django.db import models
+
+class Employee(models.Model):
+    name = models.CharField(max_length=50)
+    position = models.CharField(max_length=50)
+    salary = models.DecimalField(max_digits=10, decimal_places=2)
+
+class RegularEmployee(Employee):
+    department = models.CharField(max_length=50)
+
+class Manager(Employee):
+    department_mgmt = models.CharField(max_length=50)
+    team_size = models.PositiveIntegerField()
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance}
+
+\begin{mintedbox}{python}
+# Creating instances of RegularEmployee and Manager
+...
+
+# Saving instances to the Django database
+regular_employee.save()
+manager.save()
+
+# Querying the database
+all_employees = Employee.objects.all()
+regular_employees = RegularEmployee.objects.all()
+managers = Manager.objects.all()
+
+# Accessing fields
+print(regular_employee.department)
+print(manager.department_managed)
+print(manager.team_size)
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Composition}
+\begin{block}{\textbf{Composition?}}
+Composition is an alternative to inheritance. It involves creating objects from other classes within a class, allowing for more flexibility and avoiding the pitfalls of deep class hierarchies
+\end{block}
+
+
+\begin{mintedbox}{python}
+class TicTacToeGame(object):
+    def __init__(self):
+        # Game logic implementation
+
+class GameGUI(object):
+    def __init__(self):
+        self.game = TicTacToeGame()
+        # GUI implementation using TicTacToeGame
+\end{mintedbox}
 
 \begin{itemize}
-    \item 
+    \item  GameGUI uses composition by having an instance of TicTacToeGame within it. This way, it can access and use the functionality of TicTacToeGame 
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Composition}
+\begin{block}{\textbf{Composition?}}
+Composition is an alternative to inheritance. It involves creating objects from other classes within a class, allowing for more flexibility and avoiding the pitfalls of deep class hierarchies
+\end{block}
+
+
+\begin{mintedbox}{python}
+class TicTacToeGame(object):
+    def __init__(self):
+        # Game logic implementation
+
+class GameGUI(object):
+    def __init__(self):
+        self.game = TicTacToeGame()
+        # GUI implementation using TicTacToeGame
+\end{mintedbox}
+
+\begin{itemize}
+    \item  GameGUI uses composition by having an instance of TicTacToeGame within it. This way, it can access and use the functionality of TicTacToeGame 
+\end{itemize}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
