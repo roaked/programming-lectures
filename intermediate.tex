@@ -30,7 +30,6 @@
 
 \graphicspath{{Images/}{./}} 
 \usepackage{graphicx}
-\usepackage{amsmath}
 \usepackage{booktabs} 
 \usepackage{tikz}
 \usetikzlibrary{shapes.arrows}
@@ -412,7 +411,7 @@ In the decimal system:
 In binary floats:
 \begin{enumerate}
     \item Decimals like 1/2 and 1/10 can't be precisely represented
-    \item Fractions like 1/3 and even $\pi$ suffer from approximation
+    \item Fractions like 1/3 and even π suffer from approximation
 \end{enumerate}
 
 \end{frame}
@@ -514,7 +513,7 @@ Character encodings are used to represent characters in a form that computers ca
 
 \begin{frame}{Character Encodings}
 
-Examples in ASCII, Latin1 or UTF-8:
+Examples in ASCII / Latin1 / UTF-8:
 
 \begin{center}
 \vspace{.1cm}
@@ -714,15 +713,222 @@ for name, value in data:
 \end{mintedbox} 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Bytes and Hexadecimal Notation}
+
+\textbf{Bytes}
+
+\begin{itemize}
+    \item Sequences of integers (8 bits) in the range of 0 to 255
+    \item Represent various data types, including images, text, and more
+    \item Commonly used with storage media or network responses
+\end{itemize}
+
+\textbf{Hexadecimal}
+\begin{itemize}
+    \item Bytes are often written in hexadecimal notation
+    \item Values 0 to 15 represented by digits 0-9 and letters A-F
+\end{itemize}
+\begin{table}[]
+    \centering
+    \tiny
+    \begin{tabular}{c|c}
+        Decimal & Hexadecimal \\ \hline 
+        1 &  0x1\\
+        9 & 0x9 \\
+        10 & 0xa \\
+        15 & 0xf \\
+        16 & 0x10 \\
+        17 & 0x11 \\
+        31 & 0x1f \\
+        32 & 0x20 \\
+    \end{tabular}
+\end{table}
+\begin{itemize}
+    \item Python uses the '0x' prefix to denote hexadecimal literals
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Bytes and String Encodings}
+
+\textbf{Creating Bytes from Lists}
+
+\begin{mintedbox}{python}
+a = bytes([0, 64, 112, 160, 255])
+b = bytes([0, 0x40, 0x70, 0xa0, 0xff])
+print(bytes([0x00, 0x40, 0x70, 0xa0, 0xff])) # 'a'
+\end{mintedbox}
+
+\begin{itemize}
+    \item Illustrates creating bytes from a list of numbers
+    \item Hexadecimal values can also be used directly
+\end{itemize}
+
+\textbf{Creating Bytes from Byte Literal Strings}
+
+\begin{mintedbox}{python}
+c = b"\x00\x40\x70\xa0\xff"
+\end{mintedbox}
+
+\begin{itemize}
+    \item 'b' prefix indicates a byte string
+    \item Bytes usually hold encoded text, so we can do: \texttt{'ä'.encode('utf-8')} and \texttt{b'\xc3\xa4'.decode('utf-8')}
+    \item Also possible to represent it with ASCII characters
+\end{itemize}
+
+
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Data Structures}
 \begin{frame}[fragile]{Lists}
 
+\textbf{Lists}
+\begin{itemize}
+    \item Dynamic arrays for storing sequences of objects
+    \item Versatile and mutable
+    \item Ideal for homogenous entries of the same type and structure
+\end{itemize}
 
+\begin{mintedbox}{python}
+primes = [2, 3, 5, 7, 11]
+users = ["Ricardo", "Anand", "Blazhe"]
+\end{mintedbox} 
 
+\textbf{List Operations}
+
+\begin{itemize}
+    \item Indexing
+\end{itemize}
+\begin{mintedbox}{python}
+primes[0] # returns 2 
+primes[-1] # returns last element of the list -> 11
+\end{mintedbox} 
+\begin{itemize}
+    \item Accessing multiple elements (sublists)
+\end{itemize}
+ \begin{mintedbox}{python}
+primes[1:4] # returns [3, 5, 7]
+\end{mintedbox}    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Lists}
+
+\begin{itemize}
+    \item Modifying lists (append, insert, pop)
+\end{itemize}
+\begin{mintedbox}{python}
+primes.append(13) # add 13 to the list primes
+primes.insert(0, "Khaled") # Khaled to beginning
+primes.pop() # pops last element of the list
+primes.pop(0) # pops element at index 0
+\end{mintedbox} 
+\begin{itemize}
+    \item Characteristics of the list
+\end{itemize}
+\begin{mintedbox}{python}
+len(primes) # returns the size of the list
+max(primes) # returns the max value of the list
+min(primes) # returns the min value of the list
+\end{mintedbox}   
+\begin{itemize}
+    \item Sorting lists
+\end{itemize}
+\begin{mintedbox}{python}
+primes.sort() # increasing, alphabet for strings
+primes.sort(reverse = True) # sorts decreasingly
+primes.sort(key = len) # sorts by length
+\end{mintedbox}      
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Lists}
+\begin{itemize}
+    \item Iterating through lists
+\begin{mintedbox}{python}
+for prime in primes:
+    print(prime)
+\end{mintedbox}    
+    \item Conditionals in lists
+\begin{mintedbox}{python}
+if "Ricardo" in users:
+    print("Ricardo is here.")
+\end{mintedbox}
+\end{itemize}
+\textbf{Example:}
+
+\begin{mintedbox}{python}
+users.sort(key = len)
+
+def count_a(s):
+    return s.count("a")
+    
+users.sort(key=count_a)
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{List Exercises}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Create a list of your favorite colors\\
+        Print the length of the list\\
+        Access and print the first and last elements of the list\\
+
+    \item Create a list of characters from 'a' to 'e' \\
+        Print a slice of the list containing elements 'b' and 'c' \\
+        Modify the original list to replace 'c' with 'z' and print it \\
+
+    \item More...
+\end{itemize}
+
+\end{alertblock}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Tuples}
+
+\textbf{Tuples}
+
+\begin{itemize}
+    \item Lightweight and immutable sequences of objects
+    \item Entries separated by commas, typically surrounded by round brackets
+    \item Commonly used for grouping related data
+\end{itemize}
+
+\begin{mintedbox}{python}
+single_value = ('Ricardo', ) # or
+single_value = 'Ricardo', # notice the comma
+values = ('Ricardo', 'Chin') # or
+values = 'Ricardo', 'Chin'
+\end{mintedbox}
+
+\begin{itemize}
+    \item Elements in a tuple can be accessed using indexing
+    \item \texttt{values[0]} returns 'Ricardo'
+\end{itemize}
+
+\begin{mintedbox}{python}
+first_name, last_name = two_values # var to tuple
+first_name, last_name = last_name, first_name
+\end{mintedbox}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -768,7 +974,6 @@ for name, value in data:
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %------------------------------------------------
 
