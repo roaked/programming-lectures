@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{c} \PYG{o}{=} \PYG{l+s+sa}{b}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}x00\PYGZbs{}x40\PYGZbs{}x70\PYGZbs{}xa0\PYGZbs{}xff}\PYG{l+s+s2}{\PYGZdq{}}
+\end{Verbatim}

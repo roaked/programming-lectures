@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{first\PYGZus{}name}\PYG{p}{,} \PYG{n}{last\PYGZus{}name} \PYG{o}{=} \PYG{n}{two\PYGZus{}values} \PYG{c+c1}{\PYGZsh{} var to tuple}
+\PYG{n}{first\PYGZus{}name}\PYG{p}{,} \PYG{n}{last\PYGZus{}name} \PYG{o}{=} \PYG{n}{last\PYGZus{}name}\PYG{p}{,} \PYG{n}{first\PYGZus{}name}
+\end{Verbatim}

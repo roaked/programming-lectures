@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} increasing, alphabet for strings}
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{(}\PYG{n}{reverse} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} sorts decreasingly}
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{(}\PYG{n}{key} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} sorts by length}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{for} \PYG{n}{prime} \PYG{o+ow}{in} \PYG{n}{primes}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{prime}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+m+mi}{13}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} add 13 to the list primes}
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Khaled\PYGZdq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Khaled to beginning}
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} pops last element of the list}
+\PYG{n}{primes}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} pops element at index 0}
+\end{Verbatim}

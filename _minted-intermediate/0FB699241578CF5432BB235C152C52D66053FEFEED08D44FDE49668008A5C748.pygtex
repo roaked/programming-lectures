@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{users}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{(}\PYG{n}{key} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{count\PYGZus{}a}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{s}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{users}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{(}\PYG{n}{key}\PYG{o}{=}\PYG{n}{count\PYGZus{}a}\PYG{p}{)}
+\end{Verbatim}

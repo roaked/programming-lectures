@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{users}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Ricardo is here.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
