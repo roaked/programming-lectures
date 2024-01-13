@@ -929,6 +929,118 @@ first_name, last_name = last_name, first_name
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Dictionaries}
+
+\begin{itemize}
+    \item Mappings of keys to values
+    \item Example dictionary representing my information
+\end{itemize}
+
+\begin{mintedbox}{python}
+individual = {
+    "first_name": "Ricardo",
+    "last_name": "Chin",
+    "nationality": "Portuguese",
+    "birth_year": 1996
+}
+\end{mintedbox}
+
+\begin{itemize}
+    \item Elements in a dictionary can be accessed using the keys
+\end{itemize}
+
+\begin{mintedbox}{python}
+individual["first_name"]  # return "Ricardo"
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Iterations Over Dictionaries}
+
+\begin{mintedbox}{python}
+for key in individual:
+    print(key)
+\end{mintedbox}
+
+\begin{itemize}
+    \item Keys: "first\_name", "last\_name", "nationality", "birth\_year"
+\end{itemize}
+
+\begin{exampleblock}{\textbf{Tip}}
+    Dictionary keys are maintained in insertion order
+\end{exampleblock}
+
+\textbf{Iterations Over Key-Value Pairs}
+\begin{mintedbox}{python}
+for key, value in person.items():
+    print(f'{key}, {value}')
+\end{mintedbox}
+
+\begin{itemize}
+    \item Shows how to iterate over key-value pairs in dictionaries
+    \item Utilizes the \texttt{items()} method for iteration
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Operations on Dictionaries}
+
+\begin{mintedbox}{python}
+d = {0: 'Ricardo', 1: 'Anand', 2: 'Blazhe'}
+d[2] # value of key 2
+d[2] = 'Thomas'
+d[3]  # raises KeyError
+d.get(3)  # returns None (similar to above, but safe)
+d.setdefault(2, 'n')
+d.setdefault(3, 'n')
+
+d.keys() # get keys from dictionary
+d.items() # get key-value pairs from dictionary
+d1.update(d2) # overwrites if key is existing already
+\end{mintedbox}
+
+\begin{itemize}
+    \item Using \texttt{get()} and \texttt{setdefault()} for safe key retrieval
+    \item Retrieving keys and items (key-value pairs)
+    \item Updating dictionaries using \texttt{update(d)} or \texttt{extend(value)}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionary Exercises}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Later...
+\end{itemize}
+
+\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Object Oriented Programming}
+\begin{frame}[fragile]{Object Oriented Programming (OOP)}
+
+\begin{block}{\textbf{Introduction to OOP}}
+    
+\end{block}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
