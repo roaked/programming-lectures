@@ -1037,8 +1037,199 @@ d1.update(d2) # overwrites if key is existing already
 \begin{frame}[fragile]{Object Oriented Programming (OOP)}
 
 \begin{block}{\textbf{Introduction to OOP}}
-    
+    \begin{itemize}
+        \item Python follows the OOP paradigm
+        \item The mantra: "Everything is an object.
+    \end{itemize}
 \end{block}
+
+\textbf{Examples:}
+
+\begin{mintedbox}{python}
+# Example 1: Integer
+a = 20
+
+# Example 2: Method Call on Integer
+bytes_representation = a.to_bytes(1, "big")
+
+# Example 3: Method Call on String
+uppercase_hello = "hello".upper()
+\end{mintedbox}
+
+The integer \texttt{a}, the method \texttt{to\_bytes()}, and the string method \texttt{upper()}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Types and Instances}
+
+\begin{itemize}
+    \item Everything is an object and each object has a type
+\end{itemize}
+
+\begin{mintedbox}{python}
+message = "hello"
+\end{mintedbox}
+
+\begin{itemize}
+    \item This line creates a variable message and assigns it the value "hello". For terminology reasons, "hello" is an instance of the string type \texttt{str}
+\end{itemize}
+
+\begin{mintedbox}{python}
+type(message)
+isinstance(message, str)
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{type()} returns the type of the object
+    \item \texttt{isinstance()} checks if the object is an instance of a particular type
+    \item the outcome is a Boolean returning \texttt{True} if message is an instance of a \texttt{str} type, otherwise \texttt{False}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{itemize}
+    \item Classes are defined by the keyword \texttt{Class}
+    \item The definition of class usually encompasses:
+    \begin{enumerate}
+        \item \textbf{Attributes} --- Properties of a class where data is stored
+        \item \textbf{Methods} --- Specific behaviours or functionalities of that class
+        \item \textbf{Constructor} --- \texttt{The \_\_init\_\_} method is a special method. It is called when an object is created and is used to initialize the object's attributes
+    \end{enumerate}
+\end{itemize}
+
+\begin{mintedbox}{python}
+class BankAccount(object):
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+    
+    def deposit(self, amount):
+        # Method for depositing money
+    
+    def withdraw(self, amount):
+        # Method for withdrawing money
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+\tiny
+\begin{mintedbox}{python}
+class BankAccount(object):
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self, amount): # Deposit amount 
+        self.balance += amount
+        print(f"New balance: {self.balance}€")
+
+    def withdraw(self, amount): # Withdraw amount
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"New balance: {self.balance}€")
+        else:
+            print("Insufficient funds.")
+
+    def check_balance(self): # Current balance
+        print(f"Current balance: {self.balance}€")
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+\begin{mintedbox}{python}
+# Create an instance of the BankAccount class
+my_account = BankAccount("100_000", 1000)
+# Use the methods of the BankAccount class
+my_account.check_balance()  # Current balance: 1000€
+my_account.deposit(500)     # New balance: 1500€
+my_account.withdraw(200)    # New balance: 1300€
+my_account.withdraw(1500)   # Insufficient funds. 
+my_account.check_balance()  # Current balance: 1300€
+\end{mintedbox}
+
+\begin{itemize}
+    \item The constructor \texttt{\_\_init\_\_} initializes an object with attributes
+\end{itemize}
+
+\begin{alertblock}{\textbf{Warning!}}
+    \begin{itemize}
+        \item The double underscore in the constructor \texttt{\_\_init\_\_} indicates that this method is intended for internal use within the class and should not be accessed or modified directly from outside the class. This is called \textbf{mangling}
+    \end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{itemize}
+    \item We can instance private attributes and methods
+\end{itemize}
+\begin{mintedbox}{python}
+class BankAccount:
+    def __init__(self, account_number, balance):
+        self.__account_number = account_number  
+        self.__balance = balance # Private attrivyte             
+
+    def __validate_withdrawal(self, amount): 
+        """Validate if withdrawal is possible."""
+        return amount <= self.__balance
+\end{mintedbox}
+
+\begin{itemize}
+    \item Attempting to access these directly from outside the class using name mangling is technically possible but not recommended
+\end{itemize}
+
+\begin{mintedbox}{python}
+print(my_account._BankAccount__account_number) 
+my_account._BankAccount__validate_withdrawal(200)
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{alertblock}{\textbf{Exercise}}
+\begin{itemize}
+    \item Class \texttt{Rectangle} with attributes length and width. Add methods \texttt{calculate\_area()} and \texttt{calculate\_perimeter()} to compute the area and perimeter of the rectangle
+    \vspace{.1cm}
+
+    \item Class \texttt{Circle} with attribute radius. Add methods \texttt{calculate\_area()} and \texttt{calculate\_circumference()} to compute the area and circumference of the circle
+    \vspace{.1cm}
+
+    \item Class \texttt{Student} with attributes name, age, and grades (a list of grades). Add methods \texttt{add\_grade()} to add a grade to the list and \texttt{average\_grade()} to calculate and return the average
+    \vspace{.1cm}
+
+    \item Class \texttt{Playlist}  with attributes name and songs (a list of song objects). Add methods \texttt{add\_song(song\_title)}, \texttt{remove\_song(song\_title)}, and \texttt{display\_songs()}
+\end{itemize}
+
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance and Composition}
+
+\begin{itemize}
+    \item 
+\end{itemize}
 
 \end{frame}
 
