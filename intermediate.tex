@@ -1346,6 +1346,284 @@ class GameGUI(object):
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Docstrings}
+These OOP concepts can drastically decrease readibility --- \textbf{This is why docstrings are useful:}
+\vspace{.05cm}
+\begin{enumerate}
+    \item They provide documentation for functions, classes, and modules describing purpose, usage, and behaviour of the code
+    \item Placed at the beginning of the function, class, or module
+\end{enumerate}
+
+\begin{mintedbox}{python}
+def fib(n):
+"""Compute the n-th Fibonacci number.
+
+Parameters:
+- n (int): A nonnegative integer.
+
+Returns:
+int: The n-th Fibonacci number."""
+# Function implementation...
+\end{mintedbox}
+
+\underline{Further info}: \texttt{help()} function or accessing the \texttt{\_\_doc\_\_} attribute
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Control Structures}
+\begin{frame}[fragile]{Control Structures}
+Control structures are essential components in programming languages that enable the control flow of a program
+
+\begin{block}{\textbf{Control Structures}}
+\begin{itemize}
+\item if ... else ...
+\item loops
+\begin{itemize}
+    \item while
+    \item for ... in ...
+    \item for ... in range()
+\end{itemize}
+\item try ... except ... finally
+\end{itemize}
+\end{block}
+
+The structure is usually pretty straightforward
+
+\begin{mintedbox}{python}
+for i in range(5):
+print(i)
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{If Statements}
+\footnotesize
+Previously we saw conditions for \texttt{if} and \texttt{while} where we usually used expressions that evaluate to boolean values \texttt{(if a == b)}
+
+\begin{center}
+    \arrowdown
+\end{center}
+Any value can be used in a condition as most values are considered "truthy"
+
+\begin{mintedbox}{python}
+name = input("Enter your name: ")
+if name:
+    print(f"Hello, {name}!")
+else:
+    print("Empty.")
+\end{mintedbox}
+
+\begin{center}
+    \arrowdown
+\end{center}
+\begin{mintedbox}{python}
+print(f"Hello, {name}!") if name else print("Empty.")
+\end{mintedbox}
+\begin{minipage}{0.505\textwidth}
+\begin{mintedbox}{python}
+13 <= age and age <= 19
+\end{mintedbox}
+\end{minipage}
+\hfill
+\begin{minipage}{0.485\textwidth}
+\begin{mintedbox}{python}
+13 <= age <= 19
+\end{mintedbox}
+\end{minipage}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{For Loops}
+
+\textbf{Recap:} Tuple unpacking allows to assign multiple variables at once when iterating over a sequence
+
+\begin{itemize}
+    \item \texttt{enumerate()} is a built-in function that returns an iterator of tuples containing indices and values from a list
+\end{itemize}
+
+\begin{mintedbox}{python}
+names = ['Ricardo', 'Anand', 'Khaled']
+
+for i, name in enumerate(names):
+print(f'{i}: {name}')
+\end{mintedbox}
+
+Enumerate returns a data structure that behaves like this list:
+
+\begin{mintedbox}{python}
+0: Ricardo
+1: Anand
+2: Khaled
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{enumerate()} generates pairs of index and value, allowing to iterate over both simultaneously
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Nested For Loops}
+
+\begin{itemize}
+    \item \texttt{os.walk()} is used to iterate over all files and subdirectories in a specified directory. We can also nest \texttt{for} loops for going through all the files in the directories
+\end{itemize}
+
+\begin{mintedbox}{python}
+import os
+
+for directory, dirs, files in os.walk("C:\\"): # all
+    for file in files: # Each file in the directory
+        if not file.endswith(".xlsx"): # Not excel?
+            continue # We skip non-excel files
+        
+        # Process text files
+        file_path = os.path.join(directory, file)
+        print(f"Processing: {file_path}")
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{continue} statement skips the processing for non-xlsx files
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{List Comprehensions}
+
+List comprehensions provide a concise way to create lists based on existing lists, allowing for transformations and filtering
+
+\begin{mintedbox}{python}
+names = ["Ricardo", "Anand", "Khaled"]
+
+uppercase_names = [name.upper() for name in names]
+\end{mintedbox}
+\begin{mintedbox}{python} 
+# Results
+["RICARDO", "ANAND", "KHALED"]
+\end{mintedbox}
+
+Another example:
+
+\begin{mintedbox}{python}
+amounts = [10, -7, 8, 19, -2]
+
+positive_amounts = [amount for amount in amounts if amount > 0]
+\end{mintedbox}
+
+This creates a new list \texttt{positive\_amounts} containing only the positive values from the original list \texttt{amounts}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionary Comprehensions}
+
+Dictionary comprehensions are expressions followed by a \texttt{for} clause inside curly braces {}, and optionally, one or more \texttt{if} clauses
+
+\begin{mintedbox}{python}
+{key_exp: value_exp for item in iterable if condition}
+\end{mintedbox}
+
+Where an iterable (list, tuple, etc.) contains various items
+
+\begin{mintedbox}{python}
+numbers = [1, 2, 3, 4, 5] # Square of numbers
+squares = {num: num**2 for num in numbers}
+\end{mintedbox}
+
+\begin{mintedbox}{python}
+grades = {'Alice': 90, 'Bob': 85, 'Charlie': 92} 
+adjusted_grades = {name: grade + 5 for name, grade in grades.items()}
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Comprehensions}
+
+\begin{alertblock}{\textbf{Exercises}}
+    \begin{itemize}
+        \item ...later...
+    \end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Exception Handling}
+
+Exception handling allows us to manage errors gracefully
+
+\begin{mintedbox}{python}
+def divide(a, b):
+    try:
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        result = a / b
+        print(f"The result is: {result}")
+    except ValueError as ve:
+        print(f"Error: {ve}")
+    finally:
+        print("This will be executed no matter what")
+
+divide(10, 0) # Try other values
+\end{mintedbox}
+
+\begin{enumerate}
+    \item The \texttt{try} block attempts to execute the division operation
+    \item If a \texttt{ValueError} is raised (due to division by zero), the \texttt{except} block catches it and prints an error message
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Modules}
+\begin{frame}[fragile]{Module Name and Entrypoint}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Virtual Environments}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Arbitrary Number of Arguments (Args / Kwargs)}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Global and Local Scope}
+
+....
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
