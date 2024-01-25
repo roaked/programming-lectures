@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Tuple methods}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{my\PYGZus{}tuple}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}apple\PYGZsq{}}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} Counts occurrences of \PYGZsq{}apple\PYGZsq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{my\PYGZus{}tuple}\PYG{o}{.}\PYG{n}{index}\PYG{p}{(}\PYG{l+m+mf}{3.5}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} Returns the index of 3.5}
+\end{Verbatim}

@@ -59,7 +59,6 @@
 \tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
 }
 
-
 \usepackage{tcolorbox}
 \tcbuselibrary{minted,breakable,xparse,skins}
 
@@ -126,7 +125,6 @@
 
 %\usepackage{mathptmx} % Use the Times font for serif text
 \usepackage{palatino} % Use the Palatino font for serif text
-\usepackage{pygmentex}
 %\usepackage{helvet} % Use the Helvetica font for sans serif text
 \usepackage[default]{opensans} % Use the Open Sans font for sans serif text
 %\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
@@ -289,49 +287,20 @@ print(squared)
         \item Check the option "Add Python 3.x to PATH"
     \end{itemize} \smallskip
 
-    \textbf{Verify the installation:}
+    \textbf{Verify the installation using Windows+R -> CMD:}
     \begin{itemize}
         \item \texttt{python --version} should display the version number
         \item \texttt{pip install requests} should successfully download and install 'requests'
+        \item \texttt{python.exe -m pip install --upgrade pip}
     \end{itemize} \smallskip
 
     \textbf{Installation includes:}
     \begin{itemize}
         \item Python runtime for executing Python code
-        \item Interactive Python console
         \item IDLE: simple development environment
         \item PIP: package manager for installing extensions
     \end{itemize}
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Interactive Python Console}
-
-\textbf{Options for Running Python Code:}
-    \begin{itemize}
-        \item Writing programs as files and executing them (e.g., GUI, web apps, data processing)
-        \item Typing code into an interactive console or notebook for quick calculations, experimentation, data exploration, or analysis
-    \end{itemize} \smallskip
-
-
-\textbf{Options Available:}
-    \begin{itemize}
-        \item Local installation and usage
-        \item Online notebooks like Jupyter
-    \end{itemize} \smallskip
-
-\textbf{Launching Python Console:}
-    \begin{itemize}
-        \item Via command prompt: `python`
-        \item Using the Start Menu (e.g., Python 3.12)
-    \end{itemize} \smallskip
-    
-\textbf{Quitting:}
-    \begin{itemize}
-        \item Exiting with `exit()`
-    \end{itemize}
-\end{frame} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -345,7 +314,7 @@ print(squared)
 
     \item Spyder
 \end{itemize}
-\end{exampleblock}\bigskip
+\end{exampleblock}
 
 \textbf{VS Code Setup}
 
@@ -354,13 +323,14 @@ print(squared)
     \begin{enumerate}
         \item  Open the extensions view from the left sidebar (fifth icon)
         \item Search and install the extension named "Python" by Microsoft
-    \end{enumerate} \bigskip
+    \end{enumerate} \smallskip
     
     \item Registering Python Installation with VS Code:
     \begin{enumerate}
         \item Open the command palette (F1 or Ctrl + Shift + P)
         \item Search for \texttt{"Python: Select Interpreter."}
         \item Choose the desired Python version (usually only one available)
+        \item Create a Powershell integrated terminal
      \end{enumerate}
 
      
@@ -938,7 +908,7 @@ my_tuple = (1, 'apple', 3.5, (4, 5, 6))
 \begin{itemize}
     \item \textbf{Accessing Elements}: Elements within a tuple are accessed using zero-based indexing or slicing. For example, my\_tuple[0] accesses the first element, my\_tuple[-1] accesses the last element, and slicing my\_tuple[1:3] retrieves elements from index 1 up to, but not including, index 3
 
-    \vspace{.25cm}
+    \vspace{.5cm}
 
     \begin{mintedbox}{python}
 # Accessing elements in a tuple
@@ -948,11 +918,9 @@ print(my_tuple[1])  # Output: 'apple'
     \item \textbf{Tuple Methods}: Tuples have limited methods due to their immutability. However, they have methods like \texttt{count()} and \texttt{index()} for counting occurrences and finding the index of elements within the tuple
 
     \begin{mintedbox}{python}
-# Counts occurrences of 'apple' 
-print(my_tuple.count('apple'))  
-
-# Returns the index of 3.5 
-print(my_tuple.index(3.5))  
+# Tuple methods
+print(my_tuple.count('apple'))  # Counts occurrences of 'apple' 
+print(my_tuple.index(3.5))  # Returns the index of 3.5 
     \end{mintedbox}
     
 \end{itemize}
@@ -970,28 +938,26 @@ Our program will ask the user their name and greet them
 \pause
 
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 print("What is your name?")
 name = input() # input will always return a string
-\end{mintedbox}
+\end{verbatim}
 
 Okay..now we wrote our name, how do we display the result?
 
 \pause
-\begin{mintedbox}{python}
+\begin{verbatim}
 print("Nice to meet you, " + name)
-\end{mintedbox}
-
+\end{verbatim}
 
 For increasing readability, we might want to add comments to our code.
 Comments start with # and describe code functionality.
 Typically placed above the code they explain.
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 # Determine the length of the name
 name_length = len(name)
-\end{mintedbox}
-
+\end{verbatim}
 
 To execute the program type the command line \texttt{python greeting.py} on the terminal or the green play button in VS Code
     
@@ -1116,24 +1082,25 @@ The structure is usually pretty straightforward
 \begin{frame}[fragile]{Comparisons}
 To utilize \texttt{if} and \texttt{while} statements, comparisons between values are necessary
 
-\begin{mintedbox}{python}
-a = 1
-b = 0
+\begin{verbatim}
+    a = 1
+    b = 0
+    
+    print(a == b)  # Is a equal to b?
+    print(a != b)  # Is a not equal to b?
+    print(a < b)   # Is a less than b?
+    print(a > b)   # Is a greater than b?
+    print(a <= b)  # Is a less than or equal to b?
+    print(a >= b)  # Is a greater than or equal to b?
 
-print(a == b)  # Is a equal to b?
-print(a != b)  # Is a not equal to b?
-print(a < b)   # Is a less than b?
-print(a > b)   # Is a greater than b?
-print(a <= b)  # Is a less than or equal to b?
-print(a >= b)  # Is a greater than or equal to b?
-\end{mintedbox}
+\end{verbatim}
 
 Comparisons yield boolean values \texttt{True / False}. We can capture this outcome in a variable
 
-\begin{mintedbox}{python}
-# Checking if 'age' is 18 or older
-is_adult = age >= 18  
-\end{mintedbox}
+\begin{verbatim}
+    # Checking if 'age' is 18 or older
+    is_adult = age >= 18  
+\end{verbatim}
 
 
 \end{frame}
@@ -1143,7 +1110,7 @@ is_adult = age >= 18
 \begin{frame}[fragile]{Comparisons}
 It is possible to combine comparisons using \texttt{and, or} and \texttt{not}
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 if age >= 18 and country == "Austria":
     print("May drink alcohol.")
 
@@ -1157,9 +1124,9 @@ name = "Alice"
 other_name = "Bob
 
 print(name == other_name) # Are names identical?
-print("Alli" in name)     # Does it contain "Alli"?
-print("Ali" not in name)  # Does it contain "Ali"?
-\end{mintedbox}
+print("Alli" in name)     # Does the text contain "Alli"?
+print("Ali" not in name)  # Does the text contain "Ali"?
+\end{verbatim}
 
 \end{frame}
 
@@ -1168,14 +1135,15 @@ print("Ali" not in name)  # Does it contain "Ali"?
 \begin{frame}[fragile]{If Statements}
 \texttt{if statements} help computers decide what to do based on certain conditions. It's like giving the computer a set of instructions
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 number = 27 
 
 if number % 2 == 0:
     print("The number is even.")
 else:
     print("The number is odd.")
-\end{mintedbox}
+
+\end{verbatim}
 
 \begin{exampleblock}{\textbf{How does it work?}}
 \begin{itemize}
@@ -1193,7 +1161,7 @@ else:
 \begin{frame}[fragile]{If, elif and else Statements}
 For multiple conditions to check: \texttt{if, elif and else} are used. The computer goes through each condition, executing the first one that's true
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 if number < 0:
     print("The number is negative.")
 elif number == 0:
@@ -1201,8 +1169,9 @@ elif number == 0:
 elif number % 2 == 0:
     print("The number is divisible by 2.")
 else:
-    print("The number isn't in any category.")
-\end{mintedbox}
+    print("The number doesn't fall into any category.")
+\end{verbatim}
+
 \begin{block}{\textbf{Code Blocks}}
 \begin{itemize}
     \item Code block is a group of statements that are executed together when a condition (like an \texttt{if statement}) is true
@@ -1224,18 +1193,23 @@ Let the user guess the outcome and tell them if they were right
 
 \pause
 
-\begin{mintedbox}{python}
+\begin{verbatim}
+
 import random
 
+# Simulating coin flipping and user guess
 coin_outcome = random.choice(["heads", "tails"])
-user_guess = input("Guess (heads or tails): ")
+user_guess = input("Guess the outcome (heads or tails): ")
 
+# Checking if the user's guess matches the outcome
 if user_guess.lower() == coin_outcome:
     print("Congratulations! Your guess was correct.")
 else:
-    print(f"Sorry, landed on {coin_outcome}.")
+    print(f"Sorry, the coin landed on {coin_outcome}.")
     print("Your guess was incorrect.")
-\end{mintedbox}
+
+
+\end{verbatim}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1244,14 +1218,14 @@ else:
 
 \texttt{For} loop is like a helpful assistant that goes through a list of items, one by one, and performs a set of instructions for each item.
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 
 names = ["Alice", "Bob", "Ricardo"]
 
 for name in names:
     print("Hello, " + name + "!")
 
-\end{mintedbox}
+\end{verbatim}
 
 \begin{exampleblock}{\textbf{How does it work?}}
     \begin{itemize}
@@ -1273,13 +1247,13 @@ Assume the list = [1, 2, 3, 4, 5]
     \item Exercise 2: Calculate the cumulative sum of the list
     \item Exercise 3: Print only the odd numbers
     \item Exercise 4: Print a pattern using loops
-\begin{mintedbox}{python}
-*
-**
-***
-****
-*****
-\end{mintedbox}
+        \begin{verbatim}
+            *
+            **
+            ***
+            ****
+            *****
+        \end{verbatim}
     \item Exercise 5: Create a list with the square valued of each number
 \end{itemize}    
 \end{alertblock}
@@ -1292,11 +1266,11 @@ Assume the list = [1, 2, 3, 4, 5]
 
 Counting loops are used to iterate through a sequence of numbers or perform an action a certain number of times. In Python, \texttt{for} loops and the \texttt{range()} function are commonly used for counting loops
 
-\begin{mintedbox}{python}
-# Counting from 0 to 9 using a for loop
-for i in range(10): # 10 excluded
-    print(i)
-\end{mintedbox}
+\begin{verbatim}
+    # Counting from 0 to 9 using a for loop
+    for i in range(10): # 10 excluded
+        print(i)
+\end{verbatim}
 
 \begin{exampleblock}{\textbf{How does it work?}}
 \begin{itemize}
@@ -1320,13 +1294,13 @@ For counting loops, \texttt{i} is commonly used as a variable name, especially w
     \item Exercise 2: Calculate the cumulative sum of numbers from 0 to 9
     \item Exercise 3: Create multiplication table of 5
     \item Exercise 4: Print a pattern using loops
-\begin{mintedbox}{python}
-1
-12
-123
-1234
-12345
-\end{mintedbox}
+        \begin{verbatim}
+            1
+            12
+            123
+            1234
+            12345
+        \end{verbatim}
     \item Exercise 5: Print the duplicates of a given list [3, 4, 3, 5, 6, 7, 8, 5]
     \item Exercise 6: Print the first 5 terms of the Fibonacci Series
 \end{itemize}    
@@ -1339,11 +1313,11 @@ For counting loops, \texttt{i} is commonly used as a variable name, especially w
 
 \texttt{while} loops repeatedly execute a block of code as long as a specified condition is true. They are useful when the number of iterations is not fixed beforehand and depends on certain conditions
 
-\begin{mintedbox}{python}
-while condition:
-# code block to execute as long as it stays true
-# the condition is re-evaluated after each iteration
-\end{mintedbox}
+\begin{verbatim}
+    while condition:
+    # code block to execute as long as it stays true
+    # the condition is re-evaluated after each iteration
+\end{verbatim}
 
 \begin{block}{\textbf{Key Points}}
     \begin{enumerate}
@@ -1363,7 +1337,7 @@ while condition:
 
 Let's print numbers from 1 to 5 using a \texttt{while} loop:
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 num = 1
 while num <= 5:
     print(num)
@@ -1371,7 +1345,7 @@ while num <= 5:
     # Incrementing variable `num` 
     num += 1 
     # Break out of the loop when num > 5 (condition)
-\end{mintedbox}
+\end{verbatim}
 
 \begin{block}{\textbf{Advantages}}
     \begin{itemize}
@@ -1399,13 +1373,13 @@ while num <= 5:
     \item Exercise 5: Create an infinite loop of "Hello world!" prints
     \item Exercise 6: Create a team list program
     \begin{center}
-    \begin{mintedbox}{python}
-Register a person or "X" to quit: 
-Ricardo
-
-Your team consists of:
-["Anand", "Ricardo", "Simon"]
-    \end{mintedbox}
+    \begin{verbatim}
+        Register a person or "X" to quit: 
+        Ricardo
+        
+        Your team consists of:
+        ["Anand", "Ricardo", "Simon"]
+    \end{verbatim}
     \end{center}
 \end{itemize}    
 \end{alertblock}
@@ -1417,23 +1391,24 @@ Your team consists of:
 
 The \texttt{break} statement is a control flow statement used to terminate the execution of a loop prematurely
 
-\begin{mintedbox}{python}
-while True:
-if condition:
-    break  # Terminate loop if condition is met
-\end{mintedbox}
+\begin{verbatim}
+    while True:
+    if condition:
+        break  # Terminate loop if condition is met
+    # Other statements
+\end{verbatim}
 
 When encountered within a loop (such as \texttt{for} or \texttt{while}), the \texttt{break} statement causes the loop to immediately stop iterating
 
-\begin{mintedbox}{python}
-while True: # cause infinite loop
-    guess = int(input("Enter a number (0 to exit):"))
-    if guess == 0:
-        print("Exiting the loop.")
-        break
-    else:
-        print(f"You entered: {guess}")
-\end{mintedbox}
+\begin{verbatim}
+    while True: # cause infinite loop
+        guess = int(input("Enter a number (0 to exit): "))
+        if guess == 0:
+            print("Exiting the loop.")
+            break
+        else:
+            print(f"You entered: {guess}")
+\end{verbatim}
 
 \texttt{break} is particularly useful when the loop needs to end before its natural completion based on a specific condition
 
@@ -1452,11 +1427,11 @@ while True: # cause infinite loop
 \end{center}
 
 \begin{block}{\textbf{Empty Codeblocks}}
-\begin{mintedbox}{python}
+\begin{verbatim}
 # TODO: warn the user if path doesn't exist
 if not os.path.exists(my_path):
     pass
-\end{mintedbox}
+\end{verbatim}
 \end{block}
 
 \texttt{if condition: pass} indicates to "do nothing" when a certain condition is met
@@ -1477,21 +1452,20 @@ Statements can span multiple lines by enclosing them in parentheses \texttt{()} 
 \texttt{a = (2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)} can be written across multiple lines for readability
 \end{block}
 
-\begin{mintedbox}{python}
+\begin{verbatim}
                 a = (2 + 3 + 4 + 5 + 6 +
                      7 + 8 + 9 + 10)
-\end{mintedbox}
+\end{verbatim}
 
 \centering
 \texttt{()} or alternatively using newline \texttt{\backslash}
 
-\begin{mintedbox}{python}
+\begin{verbatim}
                 a = 2 + 3 + 4 + 5 + 6 + \
                     7 + 8 + 9 + 10
-\end{mintedbox}
-
-
+\end{verbatim}
 \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[fragile]{Positional and Keyword Parameters}
@@ -1520,6 +1494,7 @@ Statements can span multiple lines by enclosing them in parentheses \texttt{()} 
     \textbf{Example}: In the previous example, parameters \texttt{encoding} and \texttt{mode}
     
 \end{enumerate}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1529,11 +1504,11 @@ Statements can span multiple lines by enclosing them in parentheses \texttt{()} 
 
 \textbf{Syntax} --- \textsc{def function\_name(parameters)}
 
-\begin{mintedbox}{python}
+\begin{verbatim}
     def average(a, b):
     m = (a + b) / 2
     return m
-\end{mintedbox}
+\end{verbatim}
 
 \textbf{Usage} --- Functions encapsulate reusable blocks of code, performing specific tasks
 
@@ -1555,7 +1530,7 @@ Statements can span multiple lines by enclosing them in parentheses \texttt{()} 
 
 \textbf{Function Scope} --- Variables defined within a function have local scope, separate from variables defined outside the function
 
-\begin{mintedbox}{python}
+\begin{verbatim}
 m = "Hello, world"
 
 def average(a, b):
@@ -1563,8 +1538,9 @@ def average(a, b):
     return m
 
 x = average(1, 2)
-print(m) # Prints "Hello, world" as the function creates a local 'm'
-\end{mintedbox}
+print(m)  # Prints "Hello, world" as the function creates a local 'm'
+
+\end{verbatim}
 
 \textbf{Read Access} --- Functions can access variables from the outer scope, but modifications create local variables
 
@@ -1625,15 +1601,15 @@ print(m) # Prints "Hello, world" as the function creates a local 'm'
 \begin{block}{\textbf{Importing Local Modules}}
 Local modules are Python files created and used within the same project
 
-\begin{mintedbox}{python}
+\begin{verbatim}
     def greet(name):
     return f"Hello, {name}!"
-\end{mintedbox}
+\end{verbatim}
 
-\begin{mintedbox}{python}
+\begin{verbatim}
     import my_module
     print(my_module.greet("Alice"))
-\end{mintedbox}
+\end{verbatim}
 
 To create a local module, save a Python file \texttt{(.py)} and import its contents in another Python file using import
 \end{block}
@@ -1689,8 +1665,6 @@ To create a local module, save a Python file \texttt{(.py)} and import its conte
 \Huge Thank you!
 
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %------------------------------------------------
