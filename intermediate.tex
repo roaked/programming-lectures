@@ -929,6 +929,701 @@ first_name, last_name = last_name, first_name
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Dictionaries}
+
+\begin{itemize}
+    \item Mappings of keys to values
+    \item Example dictionary representing my information
+\end{itemize}
+
+\begin{mintedbox}{python}
+individual = {
+    "first_name": "Ricardo",
+    "last_name": "Chin",
+    "nationality": "Portuguese",
+    "birth_year": 1996
+}
+\end{mintedbox}
+
+\begin{itemize}
+    \item Elements in a dictionary can be accessed using the keys
+\end{itemize}
+
+\begin{mintedbox}{python}
+individual["first_name"]  # return "Ricardo"
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Iterations Over Dictionaries}
+
+\begin{mintedbox}{python}
+for key in individual:
+    print(key)
+\end{mintedbox}
+
+\begin{itemize}
+    \item Keys: "first\_name", "last\_name", "nationality", "birth\_year"
+\end{itemize}
+
+\begin{exampleblock}{\textbf{Tip}}
+    Dictionary keys are maintained in insertion order
+\end{exampleblock}
+
+\textbf{Iterations Over Key-Value Pairs}
+\begin{mintedbox}{python}
+for key, value in person.items():
+    print(f'{key}, {value}')
+\end{mintedbox}
+
+\begin{itemize}
+    \item Shows how to iterate over key-value pairs in dictionaries
+    \item Utilizes the \texttt{items()} method for iteration
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionaries}
+
+\textbf{Operations on Dictionaries}
+
+\begin{mintedbox}{python}
+d = {0: 'Ricardo', 1: 'Anand', 2: 'Blazhe'}
+d[2] # value of key 2
+d[2] = 'Thomas'
+d[3]  # raises KeyError
+d.get(3)  # returns None (similar to above, but safe)
+d.setdefault(2, 'n')
+d.setdefault(3, 'n')
+
+d.keys() # get keys from dictionary
+d.items() # get key-value pairs from dictionary
+d1.update(d2) # overwrites if key is existing already
+\end{mintedbox}
+
+\begin{itemize}
+    \item Using \texttt{get()} and \texttt{setdefault()} for safe key retrieval
+    \item Retrieving keys and items (key-value pairs)
+    \item Updating dictionaries using \texttt{update(d)} or \texttt{extend(value)}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionary Exercises}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Later...
+\end{itemize}
+
+\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Object Oriented Programming}
+\begin{frame}[fragile]{Object Oriented Programming (OOP)}
+
+\begin{block}{\textbf{Introduction to OOP}}
+    \begin{itemize}
+        \item Python follows the OOP paradigm
+        \item The mantra: "Everything is an object.
+    \end{itemize}
+\end{block}
+
+\textbf{Examples:}
+
+\begin{mintedbox}{python}
+# Example 1: Integer
+a = 20
+
+# Example 2: Method Call on Integer
+bytes_representation = a.to_bytes(1, "big")
+
+# Example 3: Method Call on String
+uppercase_hello = "hello".upper()
+\end{mintedbox}
+
+The integer \texttt{a}, the method \texttt{to\_bytes()}, and the string method \texttt{upper()}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Types and Instances}
+
+\begin{itemize}
+    \item Everything is an object and each object has a type
+\end{itemize}
+
+\begin{mintedbox}{python}
+message = "hello"
+\end{mintedbox}
+
+\begin{itemize}
+    \item This line creates a variable message and assigns it the value "hello". For terminology reasons, "hello" is an instance of the string type \texttt{str}
+\end{itemize}
+
+\begin{mintedbox}{python}
+type(message)
+isinstance(message, str)
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{type()} returns the type of the object
+    \item \texttt{isinstance()} checks if the object is an instance of a particular type
+    \item the outcome is a Boolean returning \texttt{True} if message is an instance of a \texttt{str} type, otherwise \texttt{False}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{itemize}
+    \item Classes are defined by the keyword \texttt{Class}
+    \item The definition of class usually encompasses:
+    \begin{enumerate}
+        \item \textbf{Attributes} --- Properties of a class where data is stored
+        \item \textbf{Methods} --- Specific behaviours or functionalities of that class
+        \item \textbf{Constructor} --- \texttt{The \_\_init\_\_} method is a special method. It is called when an object is created and is used to initialize the object's attributes
+    \end{enumerate}
+\end{itemize}
+
+\begin{mintedbox}{python}
+class BankAccount(object):
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+    
+    def deposit(self, amount):
+        # Method for depositing money
+    
+    def withdraw(self, amount):
+        # Method for withdrawing money
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+\tiny
+\begin{mintedbox}{python}
+class BankAccount(object):
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self, amount): # Deposit amount 
+        self.balance += amount
+        print(f"New balance: {self.balance}€")
+
+    def withdraw(self, amount): # Withdraw amount
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"New balance: {self.balance}€")
+        else:
+            print("Insufficient funds.")
+
+    def check_balance(self): # Current balance
+        print(f"Current balance: {self.balance}€")
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+\begin{mintedbox}{python}
+# Create an instance of the BankAccount class
+my_account = BankAccount("100_000", 1000)
+# Use the methods of the BankAccount class
+my_account.check_balance()  # Current balance: 1000€
+my_account.deposit(500)     # New balance: 1500€
+my_account.withdraw(200)    # New balance: 1300€
+my_account.withdraw(1500)   # Insufficient funds. 
+my_account.check_balance()  # Current balance: 1300€
+\end{mintedbox}
+
+\begin{itemize}
+    \item The constructor \texttt{\_\_init\_\_} initializes an object with attributes
+\end{itemize}
+
+\begin{alertblock}{\textbf{Warning!}}
+    \begin{itemize}
+        \item The double underscore in the constructor \texttt{\_\_init\_\_} indicates that this method is intended for internal use within the class and should not be accessed or modified directly from outside the class. This is called \textbf{mangling}
+    \end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{itemize}
+    \item We can instance private attributes and methods
+\end{itemize}
+\begin{mintedbox}{python}
+class BankAccount:
+    def __init__(self, account_number, balance):
+        self.__account_number = account_number  
+        self.__balance = balance # Private attrivyte             
+
+    def __validate_withdrawal(self, amount): 
+        """Validate if withdrawal is possible."""
+        return amount <= self.__balance
+\end{mintedbox}
+
+\begin{itemize}
+    \item Attempting to access these directly from outside the class using name mangling is technically possible but not recommended
+\end{itemize}
+
+\begin{mintedbox}{python}
+print(my_account._BankAccount__account_number) 
+my_account._BankAccount__validate_withdrawal(200)
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Classes}
+
+\begin{alertblock}{\textbf{Exercise}}
+\begin{itemize}
+    \item Class \texttt{Rectangle} with attributes length and width. Add methods \texttt{calculate\_area()} and \texttt{calculate\_perimeter()} to compute the area and perimeter of the rectangle
+    \vspace{.1cm}
+
+    \item Class \texttt{Circle} with attribute radius. Add methods \texttt{calculate\_area()} and \texttt{calculate\_circumference()} to compute the area and circumference of the circle
+    \vspace{.1cm}
+
+    \item Class \texttt{Student} with attributes name, age, and grades (a list of grades). Add methods \texttt{add\_grade()} to add a grade to the list and \texttt{average\_grade()} to calculate and return the average
+    \vspace{.1cm}
+
+    \item Class \texttt{Playlist}  with attributes name and songs (a list of song objects). Add methods \texttt{add\_song(song\_title)}, \texttt{remove\_song(song\_title)}, and \texttt{display\_songs()}
+\end{itemize}
+
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance}
+
+\begin{block}{\textbf{What is this fancy word: Inheritance?}}
+It is a mechanism in OOP where a new class is created by inheriting attributes and behaviours from an existing class. The subclass automatically gains the methods and attributes of the superclass
+\end{block}
+\begin{enumerate}
+    \item \textbf{New class} --- \texttt{superclass/base class}
+    \item \textbf{Existing class} --- \texttt{subclass/derived class}
+\end{enumerate}
+
+\begin{mintedbox}{python}
+class User(object):
+    def __init__(self, username):
+        self.username = username
+        
+class AdminUser(User): # inherited attributes from User
+    def __init__(self, username, admin_level):
+        super().__init__(username)
+        self.admin_level = admin_level
+\end{mintedbox}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance}
+
+Inheritance is commonly used in defining database models --- example in a popular web framework \texttt{Django}  
+
+\begin{mintedbox}{python}
+from django.db import models
+
+class Employee(models.Model):
+    name = models.CharField(max_length=50)
+    position = models.CharField(max_length=50)
+    salary = models.DecimalField(max_digits=10, decimal_places=2)
+
+class RegularEmployee(Employee):
+    department = models.CharField(max_length=50)
+
+class Manager(Employee):
+    department_mgmt = models.CharField(max_length=50)
+    team_size = models.PositiveIntegerField()
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Inheritance}
+
+\begin{mintedbox}{python}
+# Creating instances of RegularEmployee and Manager
+...
+
+# Saving instances to the Django database
+regular_employee.save()
+manager.save()
+
+# Querying the database
+all_employees = Employee.objects.all()
+regular_employees = RegularEmployee.objects.all()
+managers = Manager.objects.all()
+
+# Accessing fields
+print(regular_employee.department)
+print(manager.department_managed)
+print(manager.team_size)
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Composition}
+\begin{block}{\textbf{Composition?}}
+Composition is an alternative to inheritance. It involves creating objects from other classes within a class, allowing for more flexibility and avoiding the pitfalls of deep class hierarchies
+\end{block}
+
+
+\begin{mintedbox}{python}
+class TicTacToeGame(object):
+    def __init__(self):
+        # Game logic implementation
+
+class GameGUI(object):
+    def __init__(self):
+        self.game = TicTacToeGame()
+        # GUI implementation using TicTacToeGame
+\end{mintedbox}
+
+\begin{itemize}
+    \item  GameGUI uses composition by having an instance of TicTacToeGame within it. This way, it can access and use the functionality of TicTacToeGame 
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Composition}
+\begin{block}{\textbf{Composition?}}
+Composition is an alternative to inheritance. It involves creating objects from other classes within a class, allowing for more flexibility and avoiding the pitfalls of deep class hierarchies
+\end{block}
+
+
+\begin{mintedbox}{python}
+class TicTacToeGame(object):
+    def __init__(self):
+        # Game logic implementation
+
+class GameGUI(object):
+    def __init__(self):
+        self.game = TicTacToeGame()
+        # GUI implementation using TicTacToeGame
+\end{mintedbox}
+
+\begin{itemize}
+    \item  GameGUI uses composition by having an instance of TicTacToeGame within it. This way, it can access and use the functionality of TicTacToeGame 
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Docstrings}
+These OOP concepts can drastically decrease readibility --- \textbf{This is why docstrings are useful:}
+\vspace{.05cm}
+\begin{enumerate}
+    \item They provide documentation for functions, classes, and modules describing purpose, usage, and behaviour of the code
+    \item Placed at the beginning of the function, class, or module
+\end{enumerate}
+
+\begin{mintedbox}{python}
+def fib(n):
+"""Compute the n-th Fibonacci number.
+
+Parameters:
+- n (int): A nonnegative integer.
+
+Returns:
+int: The n-th Fibonacci number."""
+# Function implementation...
+\end{mintedbox}
+
+\underline{Further info}: \texttt{help()} function or accessing the \texttt{\_\_doc\_\_} attribute
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Control Structures}
+\begin{frame}[fragile]{Control Structures}
+Control structures are essential components in programming languages that enable the control flow of a program
+
+\begin{block}{\textbf{Control Structures}}
+\begin{itemize}
+\item if ... else ...
+\item loops
+\begin{itemize}
+    \item while
+    \item for ... in ...
+    \item for ... in range()
+\end{itemize}
+\item try ... except ... finally
+\end{itemize}
+\end{block}
+
+The structure is usually pretty straightforward
+
+\begin{mintedbox}{python}
+for i in range(5):
+print(i)
+\end{mintedbox}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{If Statements}
+\footnotesize
+Previously we saw conditions for \texttt{if} and \texttt{while} where we usually used expressions that evaluate to boolean values \texttt{(if a == b)}
+
+\begin{center}
+    \arrowdown
+\end{center}
+Any value can be used in a condition as most values are considered "truthy"
+
+\begin{mintedbox}{python}
+name = input("Enter your name: ")
+if name:
+    print(f"Hello, {name}!")
+else:
+    print("Empty.")
+\end{mintedbox}
+
+\begin{center}
+    \arrowdown
+\end{center}
+\begin{mintedbox}{python}
+print(f"Hello, {name}!") if name else print("Empty.")
+\end{mintedbox}
+\begin{minipage}{0.505\textwidth}
+\begin{mintedbox}{python}
+13 <= age and age <= 19
+\end{mintedbox}
+\end{minipage}
+\hfill
+\begin{minipage}{0.485\textwidth}
+\begin{mintedbox}{python}
+13 <= age <= 19
+\end{mintedbox}
+\end{minipage}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{For Loops}
+
+\textbf{Recap:} Tuple unpacking allows to assign multiple variables at once when iterating over a sequence
+
+\begin{itemize}
+    \item \texttt{enumerate()} is a built-in function that returns an iterator of tuples containing indices and values from a list
+\end{itemize}
+
+\begin{mintedbox}{python}
+names = ['Ricardo', 'Anand', 'Khaled']
+
+for i, name in enumerate(names):
+print(f'{i}: {name}')
+\end{mintedbox}
+
+Enumerate returns a data structure that behaves like this list:
+
+\begin{mintedbox}{python}
+0: Ricardo
+1: Anand
+2: Khaled
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{enumerate()} generates pairs of index and value, allowing to iterate over both simultaneously
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Nested For Loops}
+
+\begin{itemize}
+    \item \texttt{os.walk()} is used to iterate over all files and subdirectories in a specified directory. We can also nest \texttt{for} loops for going through all the files in the directories
+\end{itemize}
+
+\begin{mintedbox}{python}
+import os
+
+for directory, dirs, files in os.walk("C:\\"): # all
+    for file in files: # Each file in the directory
+        if not file.endswith(".xlsx"): # Not excel?
+            continue # We skip non-excel files
+        
+        # Process text files
+        file_path = os.path.join(directory, file)
+        print(f"Processing: {file_path}")
+\end{mintedbox}
+
+\begin{itemize}
+    \item \texttt{continue} statement skips the processing for non-xlsx files
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{List Comprehensions}
+
+List comprehensions provide a concise way to create lists based on existing lists, allowing for transformations and filtering
+
+\begin{mintedbox}{python}
+names = ["Ricardo", "Anand", "Khaled"]
+
+uppercase_names = [name.upper() for name in names]
+\end{mintedbox}
+\begin{mintedbox}{python} 
+# Results
+["RICARDO", "ANAND", "KHALED"]
+\end{mintedbox}
+
+Another example:
+
+\begin{mintedbox}{python}
+amounts = [10, -7, 8, 19, -2]
+
+positive_amounts = [amount for amount in amounts if amount > 0]
+\end{mintedbox}
+
+This creates a new list \texttt{positive\_amounts} containing only the positive values from the original list \texttt{amounts}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Dictionary Comprehensions}
+
+Dictionary comprehensions are expressions followed by a \texttt{for} clause inside curly braces {}, and optionally, one or more \texttt{if} clauses
+
+\begin{mintedbox}{python}
+{key_exp: value_exp for item in iterable if condition}
+\end{mintedbox}
+
+Where an iterable (list, tuple, etc.) contains various items
+
+\begin{mintedbox}{python}
+numbers = [1, 2, 3, 4, 5] # Square of numbers
+squares = {num: num**2 for num in numbers}
+\end{mintedbox}
+
+\begin{mintedbox}{python}
+grades = {'Alice': 90, 'Bob': 85, 'Charlie': 92} 
+adjusted_grades = {name: grade + 5 for name, grade in grades.items()}
+\end{mintedbox}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Comprehensions}
+
+\begin{alertblock}{\textbf{Exercises}}
+    \begin{itemize}
+        \item ...later...
+    \end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Exception Handling}
+
+Exception handling allows us to manage errors gracefully
+
+\begin{mintedbox}{python}
+def divide(a, b):
+    try:
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        result = a / b
+        print(f"The result is: {result}")
+    except ValueError as ve:
+        print(f"Error: {ve}")
+    finally:
+        print("This will be executed no matter what")
+
+divide(10, 0) # Try other values
+\end{mintedbox}
+
+\begin{enumerate}
+    \item The \texttt{try} block attempts to execute the division operation
+    \item If a \texttt{ValueError} is raised (due to division by zero), the \texttt{except} block catches it and prints an error message
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Modules}
+\begin{frame}[fragile]{Module Name and Entrypoint}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Virtual Environments}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Arbitrary Number of Arguments (Args / Kwargs)}
+
+....
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{Global and Local Scope}
+
+....
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
