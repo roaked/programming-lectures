@@ -1,3 +1,0 @@
-# Tuple methods
-print(my_tuple.count('apple'))  # Counts occurrences of 'apple'
-print(my_tuple.index(3.5))  # Returns the index of 3.5
