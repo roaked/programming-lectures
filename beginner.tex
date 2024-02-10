@@ -795,10 +795,10 @@ primes[0] = 13
 primes[-1] = 'Ricardo'
 primes[1] = primes[0]
     \end{mintedbox}
-     \underline{Can you guess what happens?} \smallskip
+     \underline{Can you guess what happens?} \bigskip
 
     \item \textbf{Accessing Values} \\ \\ \smallskip
-     Built-in list methods like append(), extend(), insert(), remove(), and pop() to manipulate lists are common. These methods enable various operations like adding elements, removing specific elements, or altering the list's structure
+     Built-in list methods like append(), extend(), insert(), remove(), and pop() to manipulate lists are commo
 
 \end{itemize}
 \end{frame}
@@ -916,7 +916,11 @@ my_tuple = (1, 'apple', 3.5, (4, 5, 6))
 print(my_tuple[1])  # Output: 'apple'
     \end{mintedbox}
 
-    \item \textbf{Tuple Methods}: Tuples have limited methods due to their immutability. However, they have methods like \texttt{count()} and \texttt{index()} for counting occurrences and finding the index of elements within the tuple
+    \smallskip
+
+    \item \textbf{Tuple Methods}: Tuples have limited methods due to their immutability
+
+    \smallskip
 
     \begin{mintedbox}{python}
 # Tuple methods
@@ -1217,6 +1221,84 @@ else:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}[fragile]{While Loops}
+
+\texttt{while} loops repeatedly execute a block of code as long as a specified condition is true. They are useful when the number of iterations is not fixed beforehand and depends on certain conditions
+
+\begin{verbatim}
+    while condition:
+    # code block to execute as long as it stays true
+    # the condition is re-evaluated after each iteration
+\end{verbatim}
+
+\begin{block}{\textbf{Key Points}}
+    \begin{enumerate}
+        \item \texttt{Condition}: Repeats continuously while statement is \texttt{True}
+
+        \item \texttt{Iteration}: The code inside the loop runs repeatedly until the condition becomes False. If the condition is initially False, the code inside the loop will not execute
+
+        \item  \texttt{Updating Condition}: It's crucial to have a way to change the condition inside the loop to avoid an infinite loop. Usually, a variable involved in the condition is modified within the loop
+    \end{enumerate}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{While Loops}
+
+Let's print numbers from 1 to 5 using a \texttt{while} loop:
+
+\begin{verbatim}
+num = 1
+while num <= 5:
+    print(num)
+    
+    # Incrementing variable `num` 
+    num += 1 
+    # Break out of the loop when num > 5 (condition)
+\end{verbatim}
+
+\begin{block}{\textbf{Advantages}}
+    \begin{itemize}
+        \item \texttt{Dynamic Control}: Useful when the number of iterations isn't predetermined and depends on conditions
+
+        \item \texttt{Flexibility}: Allows for a wide range of applications such as user input, iteration based on changing conditions, and more
+
+    \end{itemize}
+\end{block}
+
+ If the condition never becomes \texttt{False} or if there's no logic to change the condition, it causes an infinite loop
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{While Loops}
+
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Exercise 1: Do a countdown from 10 to 0
+    \item Exercise 2: Create a simple guessing game
+    \item Exercise 3: Find the highest number in a list
+    \item Exercise 4: Count and print the number of occurrences of a specific letter ('a') in a string \texttt{"apple and banana are fruits"}
+    \item Exercise 5: Create an infinite loop of "Hello world!" prints
+    \item Exercise 6: Create a team list program
+    \begin{center}
+    \begin{verbatim}
+        Register a person or "X" to quit: 
+        Ricardo
+        
+        Your team consists of:
+        ["Anand", "Ricardo", "Simon"]
+    \end{verbatim}
+    \end{center}
+\end{itemize}    
+\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[fragile]{For Loops}
 
 \texttt{For} loop is like a helpful assistant that goes through a list of items, one by one, and performs a set of instructions for each item
@@ -1238,6 +1320,9 @@ for name in names:
 \end{exampleblock}
 
 \end{frame}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1335,83 +1420,7 @@ For counting loops, \texttt{i} is commonly used as a variable name, especially w
 \end{alertblock}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]{While Loops}
-
-\texttt{while} loops repeatedly execute a block of code as long as a specified condition is true. They are useful when the number of iterations is not fixed beforehand and depends on certain conditions
-
-\begin{verbatim}
-    while condition:
-    # code block to execute as long as it stays true
-    # the condition is re-evaluated after each iteration
-\end{verbatim}
-
-\begin{block}{\textbf{Key Points}}
-    \begin{enumerate}
-        \item \texttt{Condition}: Repeats continuously while statement is \texttt{True}
-
-        \item \texttt{Iteration}: The code inside the loop runs repeatedly until the condition becomes False. If the condition is initially False, the code inside the loop will not execute
-
-        \item  \texttt{Updating Condition}: It's crucial to have a way to change the condition inside the loop to avoid an infinite loop. Usually, a variable involved in the condition is modified within the loop
-    \end{enumerate}
-\end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]{While Loops}
-
-Let's print numbers from 1 to 5 using a \texttt{while} loop:
-
-\begin{verbatim}
-num = 1
-while num <= 5:
-    print(num)
-    
-    # Incrementing variable `num` 
-    num += 1 
-    # Break out of the loop when num > 5 (condition)
-\end{verbatim}
-
-\begin{block}{\textbf{Advantages}}
-    \begin{itemize}
-        \item \texttt{Dynamic Control}: Useful when the number of iterations isn't predetermined and depends on conditions
-
-        \item \texttt{Flexibility}: Allows for a wide range of applications such as user input, iteration based on changing conditions, and more
-
-    \end{itemize}
-\end{block}
-
- If the condition never becomes \texttt{False} or if there's no logic to change the condition, it causes an infinite loop
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]{While Loops}
-
-\begin{alertblock}{\textbf{Exercises}}
-\begin{itemize}
-    \item Exercise 1: Do a countdown from 10 to 0
-    \item Exercise 2: Create a simple guessing game
-    \item Exercise 3: Find the highest number in a list
-    \item Exercise 4: Count and print the number of occurrences of a specific letter ('a') in a string \texttt{"apple and banana are fruits"}
-    \item Exercise 5: Create an infinite loop of "Hello world!" prints
-    \item Exercise 6: Create a team list program
-    \begin{center}
-    \begin{verbatim}
-        Register a person or "X" to quit: 
-        Ricardo
-        
-        Your team consists of:
-        ["Anand", "Ricardo", "Simon"]
-    \end{verbatim}
-    \end{center}
-\end{itemize}    
-\end{alertblock}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
