@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{BankAccount}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{account\PYGZus{}number}\PYG{p}{,} \PYG{n}{balance}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{account\PYGZus{}number} \PYG{o}{=} \PYG{n}{account\PYGZus{}number}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{=} \PYG{n}{balance}
+
+    \PYG{k}{def} \PYG{n+nf}{deposit}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} Deposit amount}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{+=} \PYG{n}{amount}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}New balance: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{€\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{withdraw}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} Withdraw amount}
+        \PYG{k}{if} \PYG{n}{amount} \PYG{o}{\PYGZlt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{\PYGZhy{}=} \PYG{n}{amount}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}New balance: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{€\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Insufficient funds.\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{check\PYGZus{}balance}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} Current balance}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Current balance: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{€\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

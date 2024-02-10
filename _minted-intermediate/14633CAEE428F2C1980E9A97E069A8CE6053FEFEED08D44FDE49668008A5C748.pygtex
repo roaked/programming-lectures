@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{d} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Ricardo\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Anand\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Blazhe\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{n}{d}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} value of key 2}
+\PYG{n}{d}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Thomas\PYGZsq{}}
+\PYG{n}{d}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}  \PYG{c+c1}{\PYGZsh{} raises KeyError}
+\PYG{n}{d}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} returns None (similar to above, but safe)}
+\PYG{n}{d}\PYG{o}{.}\PYG{n}{setdefault}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}n\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{d}\PYG{o}{.}\PYG{n}{setdefault}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}n\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{d}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} get keys from dictionary}
+\PYG{n}{d}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} get key\PYGZhy{}value pairs from dictionary}
+\PYG{n}{d1}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{n}{d2}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} overwrites if key is existing already}
+\end{Verbatim}

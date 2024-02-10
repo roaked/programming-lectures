@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{fib}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Compute the n\PYGZhy{}th Fibonacci number.}
+
+\PYG{l+s+sd}{Parameters:}
+\PYG{l+s+sd}{\PYGZhy{} n (int): A nonnegative integer.}
+
+\PYG{l+s+sd}{Returns:}
+\PYG{l+s+sd}{int: The n\PYGZhy{}th Fibonacci number.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{c+c1}{\PYGZsh{} Function implementation...}
+\end{Verbatim}

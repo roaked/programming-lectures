@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{grades} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}Alice\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{90}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{85}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Charlie\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{92}\PYG{p}{\PYGZcb{}}
+\PYG{n}{adjusted\PYGZus{}grades} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{name}\PYG{p}{:} \PYG{n}{grade} \PYG{o}{+} \PYG{l+m+mi}{5} \PYG{k}{for} \PYG{n}{name}\PYG{p}{,} \PYG{n}{grade} \PYG{o+ow}{in} \PYG{n}{grades}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Example 1: Integer}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{20}
+
+\PYG{c+c1}{\PYGZsh{} Example 2: Method Call on Integer}
+\PYG{n}{bytes\PYGZus{}representation} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n}{to\PYGZus{}bytes}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}big\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Example 3: Method Call on String}
+\PYG{n}{uppercase\PYGZus{}hello} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()}
+\end{Verbatim}

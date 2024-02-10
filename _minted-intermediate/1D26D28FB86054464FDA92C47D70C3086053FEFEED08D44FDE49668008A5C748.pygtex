@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{django.db} \PYG{k+kn}{import} \PYG{n}{models}
+
+\PYG{k}{class} \PYG{n+nc}{Employee}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{)}
+    \PYG{n}{position} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{)}
+    \PYG{n}{salary} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DecimalField}\PYG{p}{(}\PYG{n}{max\PYGZus{}digits}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{decimal\PYGZus{}places}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{RegularEmployee}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{):}
+    \PYG{n}{department} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{Manager}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{):}
+    \PYG{n}{department\PYGZus{}mgmt} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{)}
+    \PYG{n}{team\PYGZus{}size} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{PositiveIntegerField}\PYG{p}{()}
+\end{Verbatim}

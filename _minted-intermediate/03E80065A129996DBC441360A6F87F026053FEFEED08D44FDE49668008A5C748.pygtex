@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+
+\PYG{k}{for} \PYG{n}{directory}\PYG{p}{,} \PYG{n}{dirs}\PYG{p}{,} \PYG{n}{files} \PYG{o+ow}{in} \PYG{n}{os}\PYG{o}{.}\PYG{n}{walk}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}C:}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} all}
+    \PYG{k}{for} \PYG{n}{file} \PYG{o+ow}{in} \PYG{n}{files}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} Each file in the directory}
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{file}\PYG{o}{.}\PYG{n}{endswith}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}.xlsx\PYGZdq{}}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} Not excel?}
+            \PYG{k}{continue} \PYG{c+c1}{\PYGZsh{} We skip non\PYGZhy{}excel files}
+
+        \PYG{c+c1}{\PYGZsh{} Process text files}
+        \PYG{n}{file\PYGZus{}path} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{directory}\PYG{p}{,} \PYG{n}{file}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Processing: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{file\PYGZus{}path}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Create an instance of the BankAccount class}
+\PYG{n}{my\PYGZus{}account} \PYG{o}{=} \PYG{n}{BankAccount}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}100\PYGZus{}000\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Use the methods of the BankAccount class}
+\PYG{n}{my\PYGZus{}account}\PYG{o}{.}\PYG{n}{check\PYGZus{}balance}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Current balance: 1000€}
+\PYG{n}{my\PYGZus{}account}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} New balance: 1500€}
+\PYG{n}{my\PYGZus{}account}\PYG{o}{.}\PYG{n}{withdraw}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} New balance: 1300€}
+\PYG{n}{my\PYGZus{}account}\PYG{o}{.}\PYG{n}{withdraw}\PYG{p}{(}\PYG{l+m+mi}{1500}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} Insufficient funds.}
+\PYG{n}{my\PYGZus{}account}\PYG{o}{.}\PYG{n}{check\PYGZus{}balance}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Current balance: 1300€}
+\end{Verbatim}

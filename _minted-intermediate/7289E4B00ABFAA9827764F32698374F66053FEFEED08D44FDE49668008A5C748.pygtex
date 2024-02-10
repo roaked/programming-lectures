@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{message}\PYG{p}{)}
+\PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{message}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Creating instances of RegularEmployee and Manager}
+\PYG{o}{...}
+
+\PYG{c+c1}{\PYGZsh{} Saving instances to the Django database}
+\PYG{n}{regular\PYGZus{}employee}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+\PYG{n}{manager}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+
+\PYG{c+c1}{\PYGZsh{} Querying the database}
+\PYG{n}{all\PYGZus{}employees} \PYG{o}{=} \PYG{n}{Employee}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{all}\PYG{p}{()}
+\PYG{n}{regular\PYGZus{}employees} \PYG{o}{=} \PYG{n}{RegularEmployee}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{all}\PYG{p}{()}
+\PYG{n}{managers} \PYG{o}{=} \PYG{n}{Manager}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{all}\PYG{p}{()}
+
+\PYG{c+c1}{\PYGZsh{} Accessing fields}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{regular\PYGZus{}employee}\PYG{o}{.}\PYG{n}{department}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{manager}\PYG{o}{.}\PYG{n}{department\PYGZus{}managed}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{manager}\PYG{o}{.}\PYG{n}{team\PYGZus{}size}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{names} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Anand\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Khaled\PYGZdq{}}\PYG{p}{]}
+
+\PYG{n}{uppercase\PYGZus{}names} \PYG{o}{=} \PYG{p}{[}\PYG{n}{name}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()} \PYG{k}{for} \PYG{n}{name} \PYG{o+ow}{in} \PYG{n}{names}\PYG{p}{]}
+\end{Verbatim}
