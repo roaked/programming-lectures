@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{primes} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{]}
+\PYG{n}{users} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Ricardo\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Pedro\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Henrique\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{phones} \PYG{o}{=} \PYG{p}{[\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}iPhone 15 Max Pro\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1699}\PYG{p}{\PYGZcb{},}
+          \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Fairphone\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{599}\PYG{p}{\PYGZcb{},}
+          \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Pixel 8\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{999}\PYG{p}{\PYGZcb{}}    \PYG{p}{]}  
+\end{Verbatim}

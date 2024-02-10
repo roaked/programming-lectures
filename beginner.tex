@@ -287,7 +287,7 @@ print(squared)
         \item Check the option "Add Python 3.x to PATH"
     \end{itemize} \smallskip
 
-    \textbf{Verify the installation using Windows+R -> CMD:}
+    \textbf{Verify the installation using Windows+R ---  CMD:}
     \begin{itemize}
         \item \texttt{python --version} should display the version number
         \item \texttt{pip install requests} should successfully download and install 'requests'
@@ -331,6 +331,7 @@ print(squared)
         \item Search for \texttt{"Python: Select Interpreter."}
         \item Choose the desired Python version (usually only one available)
         \item Create a Powershell integrated terminal
+        \item Install Jupyter Notebook extension
      \end{enumerate}
 
      
@@ -463,7 +464,7 @@ remaining_hours = total_days % 7  # Remaining hours
 \textbf{String (str)}
     \begin{itemize}
         \item Represents sequences of characters enclosed in single (' ') or double (" ") quotes 
-        \item Supports various string manipulation operations: concatenation, slicing, formatting, etc $\rightarrow$ in built functions will be seen later
+        \item Supports various string manipulation operations: concatenation, slicing, formatting, etc
         \item Immutable - once created, a string cannot be modified in place
     \end{itemize}
 
@@ -508,7 +509,7 @@ remaining_hours = total_days % 7  # Remaining hours
  
 \textbf{String Concatenation}   
 \begin{mintedbox}{python}
-s1, s2, name = "Hello", "World", Ricardo
+s1, s2, name = "Hello", "World", "Ricardo"
 result = s1 + " " + s2 + ". This is " + name 
 \end{mintedbox}
 
@@ -528,7 +529,7 @@ substring = text[1:4]  # Slicing to get 'yth'
 
 
 \begin{exampleblock}{\textbf{Tip}}
-    \textbf{String Operations:} slice(), strip(), reverse(), lower() and upper()
+    \textbf{String Operations:} locate(), strip(), find(), lower() and upper()
 \end{exampleblock}
 
 \end{frame}
@@ -586,7 +587,7 @@ last_name = "Chin"
 
 \begin{alertblock}{\textbf{Operations}}
     \begin{itemize}
-        \item \textbf{Type Coercion and Mixed Operations}  $\rightarrow$ When an operation involves both integers and floats, Python automatically promotes integers to floats to maintain precision
+        \item \textbf{Mixed Type Operations}  $\rightarrow$ When an operation involves both integers and floats, Python automatically promotes integers to floats to maintain precision
         \item \textbf{Casting between Integers and Floats} $\rightarrow$ Explicit casting can be done using int() and float() functions \smallskip
 
         \begin{enumerate}
@@ -597,8 +598,6 @@ last_name = "Chin"
 \end{alertblock}
 
 \begin{mintedbox}{python}
-freedom = True and some_function()
-
 pi = 3.1415
 pi_int = int(pi)
 message = "Pi is approximately " + str(pi_int)
@@ -654,15 +653,17 @@ Methods are functions that belong to specific object types, like strings (\textt
 
 \item Composite data structures in programming encompass various types that allow the combination of multiple elements or data types into a single unit
 
+\smallskip
+\smallskip
 
 \item Some composite data structures include \textbf{lists, sets, tuples and dictionaries} 
 \smallskip
-
+\bigskip
 \begin{enumerate}
-    \item \textbf{Lists} represent collections of elements, allowing duplicates and modification of their content $\rightarrow$ \texttt{[1, 2, 1, 'apple', 'banana']}\smallskip
-    \item \textbf{Sets} contain an unordered collection of unique elements, discarding  $\rightarrow$ duplicates \textbf{lists, sets, tuples and dictionaries} \smallskip
-    \item \textbf{Tuples} resemble lists but are immutable, meaning their elements cannot be altered once defined \smallskip
-    \item \textbf{Dictionaries} store key-value pairs, offering a mapping relationship between unique keys and corresponding values
+    \item \textbf{Lists} \smallskip
+    \item \textbf{Sets} \smallskip
+    \item \textbf{Tuples} \smallskip
+    \item \textbf{Dictionaries} 
 \end{enumerate}
 
 \end{itemize}
@@ -676,10 +677,9 @@ Methods are functions that belong to specific object types, like strings (\textt
 \item  Certain objects can undergo direct mutation, such as through methods like \texttt{.append()} or \texttt{.pop()}
 
 \item Mutable objects like lists and dicts fall under this category
-
-\item On the flip side, several basic objects, once created, remain immutable. Yet, they can be substituted by other objects as needed. It includes integers, floats, strings, booleans and tuples
 \end{itemize}
 
+\bigskip
 
 \begin{alertblock}{Summary}
     In the following slides, I will describe briefly each of the composite data structures. For more info:
@@ -736,10 +736,10 @@ print(person["first_name"])  # Output: Ricardo
 print(person.get("age"))  # Output: 27
 \end{mintedbox}
     \\
-    \item \textbf{Accessing Values} \\ \\
+    \item \textbf{Flexibility} \\ \\
      Dictionaries are mutable, allowing the addition, modification, or deletion of key-value pairs
 
-    \item \textbf{ Iterating Through a Dictionary} \\ \\
+    \item \textbf{Iterating Through a Dictionary} \\ \\
      Python provides ways to iterate through \texttt{keys}, \texttt{values}, or both simultaneously using loops or methods like \texttt{keys()}, \texttt{values()} and \texttt{items()}
 \end{itemize}
 \end{frame}
@@ -757,9 +757,9 @@ Lists or arrays are versatile and mutable collections that store ordered sequenc
 \begin{mintedbox}{python}
 primes = [2, 3, 5, 7, 11]           
 users = ["Ricardo", "Pedro", "Henrique"]
-products = [        {"name": "iPhone 15 Max Pro", "price": 1699},
-                    {"name": "Fairphone", "price": 599},
-                    {"name": "Pixel 8", "price": 999}            ]  \end{mintedbox}
+phones = [{"name": "iPhone 15 Max Pro", "price": 1699},
+          {"name": "Fairphone", "price": 599},
+          {"name": "Pixel 8", "price": 999}    ]  \end{mintedbox}
 
 \begin{exampleblock}{\textbf{List Characteristics}}
     \begin{itemize}
@@ -812,9 +812,11 @@ primes[1] = primes[0]
     
 \begin{block}{\textbf{Sets}}
     
-Sets are unique, unordered collections of elements that \textbf{do not allow duplicates}. They're denoted by curly braces {} or using the set() constructor. Primarily used for membership testing, eliminating duplicates from sequences, and performing set operations like union, intersection, and difference
-
+Sets are unique, unordered collections of elements that \textbf{do not allow duplicates}. They're denoted by curly braces {} or using the set() constructor
 \end{block}
+
+\bigskip
+
 \begin{mintedbox}{python}
 # Creating a set directly
 my_set = {1, 2, 3, 4, 5}
@@ -825,8 +827,8 @@ another_set = set([3, 4, 5, 6, 7])
 
 \begin{exampleblock}{\textbf{Sets Characteristics}}
     \begin{itemize}
-        \item \textbf{Uniqueness}: Sets contain unique elements, ensuring that each element appears only once within the set
-        \item \textbf{Hash-based Storage}: Internally, sets utilize hash tables to store elements, allowing for quick membership checks and set operations
+        \item \textbf{Uniqueness}: Sets contain unique elements
+        \item \textbf{Hash-based Storage}: Internally, sets utilize hash tables to store elements
     \end{itemize}    
 \end{exampleblock}
 
@@ -842,7 +844,7 @@ another_set = set([3, 4, 5, 6, 7])
 \begin{itemize}
     \item \textbf{Adding Elements} \\ \\ \smallskip
 
-    Elements can be added to a set using the add() method or by using the union ($\vert$) operator
+    Elements can be added using the add() method or by using the union ($\vert$) operator
     
 \begin{mintedbox}{python} 
 my_set = {1, 2, 3}
@@ -881,11 +883,12 @@ symmetric_difference_set = my_set ^ another_set
 
 
 \begin{frame}[fragile]{Tuples}
-\scriptsize
+\small
     
 \begin{block}{\textbf{Tuples}}
- Tuples are ordered collections of elements, similar to lists, but they are immutable, meaning their contents cannot be modified after creation. Tuples are denoted by parentheses () and can contain various data types, including integers, strings, floats, other tuples, etc
+ Tuples are ordered collections of elements, similar to lists, but they are immutable, meaning their contents cannot be modified after creation
 \end{block}
+\smallskip
 \begin{mintedbox}{python}
 # Creating a tuple
 my_tuple = (1, 'apple', 3.5, (4, 5, 6))
@@ -895,7 +898,7 @@ my_tuple = (1, 'apple', 3.5, (4, 5, 6))
     \begin{itemize}
         \item \textbf{Ordered Sequence}: Maintain order of elements, allowing access via indexing
         \item \textbf{Immutable Nature}: Elements cannot be changed, added, or removed
-        \item \textbf{Flexible Data Types}: Can hold elements of different data types within the same structure, similar to lists
+        \item \textbf{Flexible Data Types}: Can hold elements all types in the same structure, similar to lists
     \end{itemize}    
 \end{exampleblock}
 
@@ -904,11 +907,9 @@ my_tuple = (1, 'apple', 3.5, (4, 5, 6))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[fragile]{Tuples Operations}
-\scriptsize
+\small
 \begin{itemize}
-    \item \textbf{Accessing Elements}: Elements within a tuple are accessed using zero-based indexing or slicing. For example, my\_tuple[0] accesses the first element, my\_tuple[-1] accesses the last element, and slicing my\_tuple[1:3] retrieves elements from index 1 up to, but not including, index 3
-
-    \vspace{.5cm}
+    \item \textbf{Accessing Elements}: Elements are accessed using zero-based indexing or slicing. my\_tuple[0] accesses the first element, my\_tuple[-1] accesses the last element
 
     \begin{mintedbox}{python}
 # Accessing elements in a tuple
@@ -951,7 +952,7 @@ print("Nice to meet you, " + name)
 \end{verbatim}
 
 For increasing readability, we might want to add comments to our code.
-Comments start with # and describe code functionality.
+Comments start with \# and describe code functionality.
 Typically placed above the code they explain.
 
 \begin{verbatim}
@@ -972,11 +973,13 @@ To execute the program type the command line \texttt{python greeting.py} on the 
 \begin{itemize}
     \item Write a program which asks the user for their name. It should respond with the number of letters in the user's name
 
-    For this purpose use the function \texttt{len(...)} to determine the length of a string
+    \textbf{HINT:} For this purpose use the function \texttt{len(...)} to determine the length of a string
+
+    \vspace{.5cm}
 
     \item Write a program called \texttt{age.py} which will ask the user for their birth year and will respond with the user's age in the year 2022
 
-    \item Write a program called \texttt{sum.py} which will ask the user for N numbers and will do the same of numbers in the range from 1 to N
+    \vspace{.5cm}
 
     \item Write a program called \texttt{length\_of\_concatenation.py} which will ask the user for 2 strings, concatenate them and afterwards will return the length of the concatenated strings
 \end{itemize}
@@ -1216,7 +1219,7 @@ else:
 
 \begin{frame}[fragile]{For Loops}
 
-\texttt{For} loop is like a helpful assistant that goes through a list of items, one by one, and performs a set of instructions for each item.
+\texttt{For} loop is like a helpful assistant that goes through a list of items, one by one, and performs a set of instructions for each item
 
 \begin{verbatim}
 
@@ -1290,19 +1293,44 @@ For counting loops, \texttt{i} is commonly used as a variable name, especially w
 
 \begin{alertblock}{\textbf{Exercises}}
 \begin{itemize}
-    \item Exercise 1: Prints numbers from 0 to 9 in separate lines
+    \item Exercise 1: Return numbers from 0 to 9 in separate lines
     \item Exercise 2: Calculate the cumulative sum of numbers from 0 to 9
     \item Exercise 3: Create multiplication table of 5
-    \item Exercise 4: Print a pattern using loops
+    \item Exercise 4: Return the following pattern using loops
         \begin{verbatim}
             1
             12
             123
             1234
-            12345
-        \end{verbatim}
+            12345\end{verbatim}
     \item Exercise 5: Print the duplicates of a given list [3, 4, 3, 5, 6, 7, 8, 5]
-    \item Exercise 6: Print the first 5 terms of the Fibonacci Series
+    \begin{itemize}
+        \item Exercise 5.1: Return the unique values of the list
+        \item Exercise 5.2: Finding common elements between two lists
+    \end{itemize}
+\end{itemize}    
+\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Counting Loops}
+\small
+\begin{alertblock}{\textbf{Exercises}}
+\begin{itemize}
+    \item Exercise 6: Counting vowels in a given input string
+    \item Exercise 7: Finding the longest increasing subarray of a list
+    \item Exercise 8: Move zeroes to the end L = [0, 1, 0, 3, 0, 12, 5]
+    \item Exercise 9: Count occurrences of each char in a string
+    \item Exercise 10: Every element appears twice except one. Return it
+    \item Exercise 11: Return sum(max\_value\_row) - sum(min\_value\_row) 
+    \begin{verbatim}
+                       [1, 3, 2]
+                       [3, 5, 6]
+                       [0, 0, 3]\end{verbatim} 
+    \item Exercise 12: Return sum(primary\_diag) - sum(secondary\_diag)
+    \item Exercise 13:  \href{https://leetcode.com/problems/two-sum/}{\texttt{LeetCode 1} --- \texttt{TwoSum}}
+                       
 \end{itemize}    
 \end{alertblock}
 \end{frame}
@@ -1561,8 +1589,8 @@ print(m)  # Prints "Hello, world" as the function creates a local 'm'
         \item Prime Number Check: Determine whether a number is a prime number or not
         \item Finding Prime Numbers: Create a function that returns all prime numbers within a specified interval
         \item Fibonacci Number Calculation: Compute Fibonacci numbers within a given range
-        \item Lottery Numbers Generation: Generate a list of random lottery numbers
-        \item Yes/No Question Function: Create a function that asks a yes/no question and returns True or False
+        \item Index of the Sum of Two Numbers to Target: \href{https://leetcode.com/problems/two-sum/}{\texttt{LeetCode 1} --- \texttt{TwoSum}}
+        \item Detect if Palindrome String: \href{https://leetcode.com/problems/valid-palindrome/description/}{\texttt{LeetCode 125} --- \texttt{ValidPalindrome}}
     \end{enumerate}
 \end{alertblock}
 
